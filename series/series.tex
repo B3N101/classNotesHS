@@ -1,0 +1,193 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{BC Calculus}\\{Series}}
+\author{\huge{Ben Feuer}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{Sequences And Series}
+
+
+
+\section{Geometric Series}
+
+\dfn{What is a Geometric Series}{
+  A Geomtric Series is a series multipled by a constant 
+}
+\ex{Example of a Geometric Series}{
+    $\sum_{n=1}^{\infty} \frac{1}{n^2}$
+}
+% sum of a geometric series
+\dfn{Sum of a Geometric Series}{
+  The sum of a Geometric Series is $\frac{a}{1-r}$
+}
+
+% test for convergence
+\section{Series convergence}
+% limit test for convergence
+\thm{Limit test for convergence}{
+  % if limit of series is > 1 then it diverges, < 1 converges
+    If the limit of a series is $>$ 1, then it diverges, if it is $<$ 1, then it converges
+}
+\thm{nth term test}{
+  If the limit of $ \lim_{n \to \infty} a_n $ is equal to zero then the series converges.
+}
+\thm{The Ratio Test}{
+  If the limit of $ \lim_{n \to \infty} \frac{a_{n+1}}{a_n} $ is greater than 1 the series will diverge, if it is less than 1 it will converge and if it is equal to 0 then another test is needed to be used.
+}
+
+\thm{The integral test}{
+  Suppos f is continuous, positive, and decreasing on $ [1,\inf)$, and let $ a_n = f(n) $.
+  \begin{enumerate}
+    \item If $ \int_n^{\infty} f(n)dn$ diverges, then $ \sum_{n=1}^{\infty} a_n$ diverges.
+    \item If $ \int_n^{\infty} f(n)dn$ converges, then $ \sum_{n=1}^{\infty} a_n$ converges.
+  \end{enumerate}
+}
+
+\thm{p-series test for convergence}{
+  The series $ \sum_{n=1}^{\infty} \frac{1}{n^p} $ converges if $ p > 1 $ and diverges if $ p \le 1 $
+}
+
+\thm{The comparison test}{
+  Suppose that $ \sum_{n=1}^{\infty} a_n $ and $ \sum_{n=1}^{\infty} b_n $ are series with positive terms.
+  \\
+  Then
+  \begin{enumerate}
+    \item If $ \sum_{n=1}^{\infty} b_n $ is convergent and $ a_n \le b_n $ for all n, then $ \sum_{n=1}^{\infty} a_n $ is also convergent.
+    \item If $ \sum_{n=1}^{\infty} b_n $ is divergent and $ a_n \ge b_n $ for all n, then $ \sum_{n=1}^{\infty} a_n $ is also divergent.
+  \end{enumerate}
+}
+
+\thm{The alternating series test}{
+  If the alternating series
+  $$ \sum_{n=1}^{\infty} (-1)^{n-1}a_n = a_1 - a_2 + a_3 - a_4 + a_5 - a_6 + \dots (a_n > 0) $$
+  satisfies
+  \begin{enumerate}[label=(\alph*)]
+    \item $ a_{n+1} \le a_n$ for all n, and
+    \item $ \lim_{n \to \infty} a_n = 0 $,
+  \end{enumerate}
+  then the series converges.
+}
+
+\thm{Alternating series estimation}{
+  For any alternating series that converges, where S is the sum of that converging alternating series, then 
+  \[
+    \abs{S - S_n} \le a_{n+1}
+  \]
+  where $S_n$  is the sum of the first n terms in the series.
+}
+
+\dfn{Interval of convergence}{
+  The interval of convergence of a series is the set of values of $x$ for which the series converges.
+}
+\thm{Finding the radius of convergence}{
+  The radius of convergence of a series is the largest value of $x$ for which the series converges.
+  \\
+  The radius of convergence is given by the formula: $ \abs{\frac{a_{n+1}}{a_n}} < 1 $ where the value for x is the radius. 
+  \\
+  ex: $ \sum_{n=1}^{\infty} \frac{1}{n^2} $ has a radius of convergence of $ \frac{1}{2} $
+}
+
+
+
+\section{Convergence conditionally/absolutely}
+\dfn{}{
+  A series $ \sum_{n=1}^{\infty} a_n $ is called
+  \begin{itemize}
+    \item absolutely convergent if $ \sum_{n=1}^{\infty} a_n $ and $ \sum_{n=1}^{\infty} \abs{a_n} $ both converge. 
+    \item conditionally convergent if $ \sum_{n=1}^{\infty} a_n $ converges but $ \sum_{n=1}^{\infty} \abs{a_n}$ diverges.
+  \end{itemize}
+}
+
+\chapter{Approximating Function Using Series}
+
+\section{Taylor Series}
+
+\dfn{Taylor Polynomial}{
+  Taylor Polynomials are polynomials that approximate a function at a point $a$ based on the function's derivatives at $a$.
+  \\
+  ex: $ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n $
+  \\
+  ex: $ f(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \dots $
+  \\
+  ex: $ P_n(x) = T_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x-a)^k $
+}
+\dfn{Maclaurin polynomials}{
+  Maclaurin polynomials are Taylor polynomials that are centered at $a=0$.
+  \\
+  ex: $ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n $
+  \\
+  ex: $ f(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3 + \dots $
+  \\
+  ex: $ T_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(0)}{k!}x^k $
+}
+\dfn{Binomial Series Expansion} {
+  The binomial series expansion is a way to expand a binomial to a power.
+  \\
+  $ \binom{n}{k} = \frac{n!}{k!(n-k)!} $
+  \\
+  ex: $ (1+x)^n = \sum_{k=0}^{n} \binom{n}{k}x^k $
+  \\
+  ex: $ (1-x)^p = 1 + px + \frac{p(p-1)}{2!}x^2 + \frac{p(p-1)(p-2)}{3!}x^3 + \dots $
+}
+
+\subsection{Taylor Series to memorize}
+\begin{itemize}
+  \item $ \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots $
+  \begin{itemize}
+    \item General term: $ (-1)^{n}\frac{x^{2n+1}}{(2n+1)!} $
+  \end{itemize}
+  \item $ \cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \dots $
+  \begin{itemize}
+    \item General term: $ (-1)^{n}\frac{x^{2n}}{(2n)!} $
+  \end{itemize}
+  \item $ e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \dots $ 
+  \begin{itemize}
+    \item General term: $ \frac{x^n}{n!} $
+  \end{itemize}
+\item $ \frac{1}{1+x} = 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \dots $
+  \begin{itemize}
+    \item General term: $ (-1)^{n-1}\frac{x^n}{n!} $
+  \end{itemize}
+\end{itemize}
+
+\section{New series by substitution}
+Using known series you can find new series by substituting in a new variable.
+\\
+ex: we already know $ e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \dots $
+\\
+thus we can find $ e^{x^2} $ by substituting $ x^2 $ for $ x $ in the series for $ e^x $\dots
+\\
+$ e^{x^2} = 1 + x^2 + \frac{x^4}{2!} + \frac{x^6}{3!} + \dots $
+
+\section{The error in Taylor Polynomial Approximation}
+\dfn{The error in Taylor Polynomial Approximation}{
+  $ E_n(x) = f(x) - T_n(x) $ 
+  \\
+  $ \abs{E_n(x)} \le \abs{\frac{M (x-a)^{n+1}}{(n+1)!}} $ 
+  \\
+  $ M $ is the maximum absolute value of the $ n+1 $ derivative of $ f(x) $ on $ [a,b] $ 
+}
+
+\section{The convergence of Taylor Series}
+
+\dfn{The convergence of Taylor Series}{
+ex: cos(x) - $ E_n(x) = \cos x - P_n(x) = \cos x - (1 - \frac{x^2}{2!} + \dots (-1)^{\frac{n}{2}} \frac{x^n}{n!}) $,
+\\ giving: $ \cos x = 1 - \frac{x^2}{2!} + \dots (-1)^{\frac{n}{2}} \frac{x^n}{n!} + E_n(x) $
+\\ Thus, for the Taylor series to converge to cox x, we must have $E_n(x) \to 0 \mathrm{as} n \to \infty $.
+}
+
+
+\end{document}

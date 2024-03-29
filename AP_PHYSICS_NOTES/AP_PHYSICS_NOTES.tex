@@ -1,0 +1,760 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{AP Physics 1 Notes}}
+\author{\huge{Ben Feuer}}
+\date{2022-2023}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{AP PHYSICS 1 EXAM TOPICS AND DISTRIBUTION}
+
+The AP test is made of two 90 minute sections. The first is multiple choice and the second is free response. The AP test is made up of 7 topics shown below:
+
+\begin{enumerate}
+  \item Kinematics - 12-18\%
+  \item Dynamics - 16-20\%
+  \item Circular Motion/Gravity - 6-8\%
+  \item Energy - 20-28\%
+  \item Momentum - 12-18\%
+  \item Simple Harmonic Motion - 4-6\%
+  \item Torque/Rotation - 12-18\%
+\end{enumerate}
+
+
+
+\chapter{Kinematics}
+
+\section{Motion}
+\dfn{Motion}{
+  Motion is the change of an object's position or orientation over time. 
+  \\
+  The four basic types of motion are straight-line, circular, projectile, and rotational.
+}
+
+\section{Changes in position}
+\dfn{Displacement}{
+  Displacement is the change in position of an object. It is a vector quantity. Displacement is labeled $ \Delta x $.
+}
+\dfn{Distance}{
+  Distance is the total length of the path traveled by an object. It is a scalar quantity. Distance is often labeled $ d $.
+}
+
+\section{Velocity}
+\dfn{Velocity}{
+  Velocity is the rate of change of an object's position. It is a vector quantity. Velocity is labeled $ v $ and measured in $ \frac{m}{s} $ or meters per second. It is a vector quantity as it is calculated through the following equation: 
+  $$ v = \displaystyle\frac{ \Delta x}{t} $$
+}
+
+\section{Speed}
+\dfn{Speed}{
+  Speed is the magnitude of the change of an object's position. It is a scalar quantity. Speed is labeled $ s $ and measured in $ \frac{m}{s} $ or meters per second. It is a scalar quantity as it is calculated through the following equation:
+  $$ s = \displaystyle\frac{d}{t} $$
+}
+
+\section{Vector vs. Scalar}
+\dfn{Vector}{
+  A vector is a quantity that has both magnitude and direction. We graphically reprecent vectors with an \textit{arrow}!
+}
+\thm{Adding vectors}{
+  To add vectors, we use a vectors magnitude and direction to find the x and y components of each vector and then add the components to get a $ x_{net} $ and $ y_{net} $ and then gets the angle of the vector from the formula: $ \theta = \arctan (\frac{y}{x})$ 
+  \\
+  You can also add vectors visually via the head to tail method.
+}
+
+\dfn{Scaler}{
+  A scaler is a quantity that has only magnitude.
+}
+
+\section{Describing motion}
+\dfn{Uniform motion}{
+  Uniform motion is motion at a constant velocity.
+}
+\dfn{Instantaneous Velocity}{
+  Instantaneous velocity is the velocity of an object at a specific point in time.
+}
+
+\section{Acceleration}
+
+\dfn{Acceleration}{
+  Acceleration is the rate of change of an object's velocity. It is a vector quantity. Acceleration is labeled $ a $ and measured in $ \frac{m}{s^2} $ or meters per second squared. It is a vector quantity as it is calculated through the following equation: 
+  $$ a = \displaystyle\frac{ \Delta v}{t} $$
+  an object's acceleration is the slope of its velocity vs. time graph.
+}
+
+\section{The five equations of motion}
+
+\dfn{The five equations of motion}{
+  \begin{enumerate}
+    \item $$ v_f = v_i + at $$
+    \item $$ \Delta x = v_it + \frac{1}{2}at^2 $$
+    \item $$ v_f^2 = v_i^2 + 2a \Delta x $$
+    \item $$ \Delta x = \frac{1}{2}(v_i + v_f)t $$
+    \item $$ \Delta x = vt $$
+  \end{enumerate}
+}
+
+\section{Free fall}
+\dfn{Free fall}{
+  Free fall is the motion of an object under the influence of gravity only. 
+  \\
+  The acceleration due to gravity is $$ g = 9.8 \frac{m}{s^2} $$
+  \\
+  The acceleration due to gravity is always negative as it is in the opposite direction of the velocity.
+  \\
+  g by definition is \textbf{always positive}! $ \to a_y = -g $ or $ \to a_y = -9.8\frac{m}{s^2} $
+  \\
+  The acceleration in terms of g will always equal: $$ \text{accelration in terms of g's} = \displaystyle\frac{a}{9.8 m / s^2} $$
+}
+
+\section{Motion on a Ramp}
+\dfn{Motion on a Ramp}{
+  Motion on a ramp is the motion of an object on a ramp. 
+  \\
+  The acceleration of an object due to gravity on a ramp is $$ a = g \sin \theta $$
+}
+
+\section{Projectile motion}
+\dfn{Projectile motion}{
+  A projectile is an object that moves in two dimensions under the influence of gravity and nothing else.
+  \\
+  The horizontal and vertical components of projectile motion are independent of each other.
+  \\
+  The horizontal component of projectile motion is constant velocity motion.
+  \\
+  The time in the air is dependent on the vertical component of the motion.
+}
+\ex{Projectile motion}{
+In a soccer free kick, a player kicks a stationary ball toward the goal that is 18 m away. He kicks the ball at an angle of 22° from the horizontal at a speed of 23 m/s. How long does the ball take to reach the goal? And how far off the ground is the ball when it reaches the goal?
+\\
+\textbf{Solution:}
+\\
+$$ v_{ix} = 23 \cos 22° = 21.3 \frac{m}{s} $$
+$$ v_{iy} = 23 \sin 22° = 8.6 \frac{m}{s} $$
+$$ \Delta x = v_{ix}t $$ 
+$$ \Delta t = \frac{\Delta x}{v_{ix}} = \frac{18m}{21.3 \frac{m}{s}} = 0.845s $$
+$$ y_f = v_{iy}0.845s - \frac{1}{2} (9.8 \frac{m}{s^2})(0.845s)^2 = 3.8m $$
+
+}
+
+\section{Relative motion}
+\dfn{Relative motion}{
+  Relative motion is the motion of an object relative to another object.
+  \\
+  The velocity of an object relative to another object is the difference between the velocities of the two objects.
+  \\
+  The velocity of an object relative to another object is the sum of the relative velocities of the two objects.
+}
+
+
+
+
+
+\chapter{Dynamics}
+
+\dfn{Dynamics}{
+  Dynamics is the study of the causes of motion, joining kinematics to form mechanics.
+}
+
+\section{Forces and Newton's Laws of Motion}
+
+\dfn{Forces}{
+  A force is a push or a pull. It is an interaction between two objects (ex: a human and a box). Forces cause objects to accelerate and are vectors. Forces can either be contact forces or long-range forces. Force is measured in Newtons or N which is equal to mass(kg) times acceleration($m/s^2$)
+}
+
+\dfn{Newton's First Law of Motion}{
+  An object at rest will remain at rest and an object in motion will remain in motion at a constant velocity unless acted upon by an unbalanced force.
+}
+\dfn{Newton's Second Law of Motion}{
+  The acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass. 
+  \\
+  The equation for Newton's Second Law of Motion is $$ \Vec{F}_{net} = m \Vec{a} $$
+}
+\dfn{Newton's Third Law of Motion}{
+  For every action there is an equal and opposite reaction. This means that if I push John with 4 Newtons of Force, then I will also be pushed with a reacting force of 4 Newtons.
+}
+
+\section{Types of Forces}
+\begin{itemize}
+  \item Applied Force($ \Vec{F}_A $ or $ \Vec{F} $)
+  \item Normal Force($ \Vec{F}_N $ or $ \Vec{N} $ or $ \Vec{n} $)
+  \item Tension Force($ \Vec{F}_T $ or $ \Vec{T} $)
+  \item Spring Force($ \Vec{F}_{sp}$)
+  \item Weight or Force of gravity($ \Vec{F}_W $ or $ \Vec{W}$ or $\Vec{w}$ or $\Vec{F}_g $)
+  \item Friction($ \Vec{f}_k $ or $ \Vec{f}_s $)
+  \item Drag($ \Vec{F}_D $ or $ \Vec{D} $)
+  \item Thrust($ \Vec{F}_{thrust}$)
+\end{itemize}
+
+\dfn{Weight}{
+  Weight is the force due to gravity on an object. Weight is not the same thing as mass!
+}
+\dfn{The spring force}{
+  The spring force is either a push(when compressed) or a pull (when stretched) that is exerted by a spring on any object that is attached to it.
+}
+
+\dfn{Tension}{
+  Tension is the force of a rope or stringlike object pulling another object in the direction of the rope or string.  
+}
+
+\dfn{Normal force}{
+  The normal force is the force that a surface exerts on an object that is pressing on it. The normal force is always perpendicular to the surface and is equal to the force of gravity acting on the surface. 
+}
+
+\dfn{Friction}{
+  Friction is the force that opposes the motion of an object. Friction is parallel to the surface and is always in the opposite direction of the motion of the object. \\
+  There are two types of friction: kinetic friction and static friction. Kinetic friction is the friction between two objects that are moving relative to each other. Static friction is the friction between two objects that are not moving relative to each other. \\
+  The equation for kinetic friction is $$ f_k = \mu_k N $$ where $ \mu_k $ is the coefficient of kinetic friction and N is the normal force. \\
+  The equation for static friction is $$ f_s \leq \mu_s N $$ where $ \mu_s $ is the coefficient of static friction and N is the normal force. 
+}
+
+\dfn{Drag}{
+  Drag is the force that opposes the motion of an object through a fluid. Drag is parallel to the velocity of the object and is always in the opposite direction of the motion of the object.
+}
+
+\dfn{Thrust}{
+  Thrust is the force that propels an object forward. Thrust is parallel to the velocity of the object and is always in the same direction as the motion of the object. Thrust is caused by the expulsion of gas particles at high speeds(burning jet fuel) with those gas particles applying an equal force back towards the object being thrust upwards. 
+}
+
+\section{Free Body Diagrams}
+\dfn{Free Body Diagrams}{
+  A free body diagram is a diagram that shows all of the forces acting on an object. When making free body diagrams, you should: 
+  \begin{enumerate}
+    \item Identify all forces acting on the object. 
+    \item Draw a dot or box to represent the object.
+    \item Draw vectors representing each  of the identified forces. 
+    \item Draw and label the net force vector. Or write $ \Vec{F}_{net} = 0N$
+  \end{enumerate}
+}
+
+\section{Equilibrium}
+\dfn{Equilibrium}{
+  Equilibrium is when the net force on an object is zero. 
+  \\
+  There are two types of equilibrium: static equilibrium and dynamic equilibrium. Static equilibrium is when an object is at rest. Dynamic equilibrium is when an object is moving at a constant velocity. 
+}
+
+
+\chapter{Circular Motion/Gravity}
+
+\section{Circular Motion}
+\dfn{Uniform circular motion}{
+  Uniform circular motion is motion at a constant speed arround a circle. 
+  \\
+  The acceleration of an object in ciruclar motion is towards the center of a circle and this accleration to the center of the circle is called the centripetal acceleration. 
+  \\ 
+  The equation for th centrileptal acceleration is $$ \Vec{a} = \frac{v^2}{r} $$
+}
+
+\section{Period, Frequency, Speed, Acceleration, and Force for Circular Motion}
+\dfn{Period}{
+  The period(T) of an object in circular motion is the time it takes for the object to complete one revolution around the circle. $$ 1 \text{rev} = 2\pi $$
+}
+
+\dfn{Frequency}{
+  The frequency(f) of an object in circular motion is the number of revolutions per second. $$ f = \frac{1}{T} $$ 
+}
+
+\dfn{Speed}{
+  The speed of an object in circular motion is the distance traveled per unit time. $$ v = \frac{2 \pi r}{T} = 2 \pi r f $$
+}
+
+\dfn{Acceleration}{
+  The acceleration of an object in circular motion is the change in velocity per unit time. $$ a = \frac{v^2}{r} =  (2\pi f)^2 r = (\frac{2\pi }{T})^2 r $$
+}
+
+\dfn{Force}{
+  The force of an object in circular motion is the force that is required to keep the object moving in a circle. $$ F = ma = m \frac{v^2}{r} = m (2\pi f)^2 r = m (\frac{2\pi }{T})^2 r $$
+}
+
+\subsection{Example questions}
+\ex{Maximum speed of a car on a corner}{
+  For a car with a given radius, coefficient of static friction(typically $\mu _s =  1.0$), and mass, you will be asked to find the maximum velocity of a car on a corner. To solve this question, you must get the force due to friction which will be equal to the net force and then with this force you will be able to find the maximum velocity via the following equation: $$ v_{max}^2 = \mu _s \times gr $$ or, $$ v_{max}^2 = \frac{F_x}{m} r  $$
+}
+\qs{Finding a car's speed on a banked turn}{
+A curve on a racetrack of radius 70 m is banked at a $15^\circ$ angle. At what speed can a car take this curve without assistance from friction?
+}
+\sol{
+  With no friction acting on the car, the car's centripetal force will be equal to the horizontal component of the normal force acting on the object.
+  \begin{align*}
+    \sum F_x = n \sin \theta = \frac{mv^2}{r} \\
+    \sum F_y = n \cos \theta - mg = 0 \\
+    n = \frac{mg}{\cos \theta} \\
+    (\frac{mg}{\cos \theta}) \sin \theta = \frac{mv^2}{r} \\
+    v = \sqrt{rg \tan \theta} \\
+    v = \sqrt{70m \times 9.8 \frac{m}{s^2} \times \tan 15^\circ} = 14\frac{m}{s}\\
+  \end{align*}
+}
+
+\section{Apparant forces in circular motion}
+
+\dfn{Centrifugal force}{
+  Centrifugal force is the apparent force that acts outwards on a body moving around a center, arising from the body's inertia. 
+}
+
+\dfn{Apparant Weight}{
+  The apparant weight of an object is equal to the normal force and because of this, the apparant weight of an object in vertical circular motion is the least at the top of a loop and the most at the bottom of a loop. This is why roller coaster's can go in loops and why water stays in a bucket that is spun quickly. 
+  $$ w_{app} = n = mg + \frac{mv^2}{r} $$
+}
+
+\section{Orbital motion}
+
+\dfn{Orbital motion}{
+  Orbital motion is the motion of an object around another object due to the gravitational force between the two objects. An orbiting object is in free fall and the circular motion of the object orbiting in free fall is under the influence of gravity and with a centripetal acceleration equal to the acceleration due to gravity. \\
+  $$ a = \frac{F_{net}}{m} = \frac{w}{m} = \frac{mg}{m} = g $$ 
+  $$ a = \frac{v^2}{r} = g $$ 
+  $$ v_{orbit} = \sqrt{gr} $$
+  $$ T = \frac{2\pi r}{v_{orbit}} = 2\pi \sqrt{\frac{r}{g}} $$
+}
+\nt{
+  \textbf{Weighlessness in orbit:} \\
+  When an object is in orbit, it is in free fall and because of this, the object is weightless. This weightlessness is not from an absense of gravity but is more similar to the weightlessness while in a free falling elevator. 
+}
+
+\section{Newton's law of gravity}
+
+\dfn{Newton's law of gravity}{
+  Gravity is a universal force that affects all objects in the universe. The force of gravity is proportional to the product of the masses of the two objects and inversely proportional to the square of the distance between the two objects. \\
+  $$ F = G \frac{m_1 m_2}{r^2} $$
+  where G is the universal gravitational constant. \\
+  $$ G = 6.67 \times 10^{-11} \frac{N \cdot m^2}{kg^2} $$
+}
+
+\thm{The acceleration on the surface of a planet}{
+  $$ a = g_{planet} = \frac{GM}{r^2} $$
+  where M is the mass of the planet and r is the radius of the planet.
+}
+
+\thm{The speed of a sallite in orbit}{
+  $$ v = \sqrt{\frac{GM}{r}} $$
+  where M is the mass of the planet and r is the radius of the planet.
+}
+
+\thm{The period of a sallite or the time for a sallite to complete an orbit}{
+  $$ T^2 = \frac{4\pi ^2}{GM} r^3 $$
+  where M is the mass of the planet and r is the radius of the planet.
+}
+
+
+
+
+
+\chapter{Energy}
+
+\section{Energy and Work}
+\dfn{Energy}{
+  Energy is the ability to do work. Energy is neither created nor destroyed. It is universally conserved. \\
+  Types of Energy include:
+  \begin{itemize}
+    \item Kinetic Energy - K
+    \item Gravitational potential energy - $ U_g  $ 
+    \item Elastic potential energy - $ U_s $ 
+    \item Thermal energy - $ E_{th} $ 
+    \item Chemical energy - $ E_{chem} $ 
+    \item Nuclear energy - $ E_{nuclear} $
+  \end{itemize}
+}
+
+\dfn{Work}{
+  Work is equal to the displacement caused by a force. $ W = \Vec{F} d $ and work is measured in the Joule which is equal to 1 Newton meter and is the unit of all energy. Work is equal to the force parallel to the displacement times the displacement as that component of the force is the cause of work not the entirety of the force. $$ W = Fd\cos \theta $$
+  This means that the sign of work is dependent on the direction of a force in comparison to its actual displacement.
+  \\
+  Work is also the change in kinetic energy or the transfer of energy. $$ \Delta K = W $$ 
+  \\
+  The forces that do no work either produce no displacement or are perpendicular to the displacement. 
+}
+
+\dfn{Kenetic Energy}{
+  Kenetic energy is the energy of movement. $$ K = \frac{1}{2} mv^2 $$
+  Rotational energy is the energy of rotational movement. $$ K_{rot} = \frac{1}{2} I \omega ^2 $$
+}
+
+\dfn{Potential energy}{
+  Potential energy is stored energy. \\
+  Gravitational potential energy: $ U_g = mg \Delta y $ \\
+  Elastic potential energy: $ U_s = \frac{1}{2} k x^2 $ where k is the spring constant and x being the displacement of a spring. 
+}
+
+\dfn{Thermal energy}{
+  Thermal energy is the kenetic energy lost through the transfer of heat typically due to friction. 
+}
+
+\dfn{Energy in collisions}{
+  Perfectly elastic collisions conserve mechanical energy(kenetic and potential, not thermal energy) whilst inelastic collisions lose mechanical energy to thermal energy.
+}
+
+\section{Power}
+\dfn{Power}{
+  Power is the rate at which energy is transformed. $$ P = \frac{\Delta E}{\Delta t} = \frac{W}{\Delta t} = F \times v $$
+  The unit of power is the watt: W = 1 J / s
+}
+
+
+
+
+
+\chapter{Momentum}
+
+\section{Impulse, collisions, and momentum}
+\dfn{Collisions}{
+  A collision is a short-duration interaction between two objects.
+}
+
+\dfn{Impulse}{
+  Impulse is the area under the curve of a Force vs time graph. Impulse(\textit{J}) = $F_{avg} \Delta t = N / s $. $$ \Vec{\textit{J}} = \Vec{F}_{avg} \Delta t $$
+}
+
+\dfn{Momentum}{
+  Momentum is the product of an object's mass and velocity. $$ \Vec{p} = m\Vec{v} $$
+}
+
+\dfn{Impulse-Momentum Theorem}{
+  An impulse delivered to an object causes the object's momentum to change. $$ \Vec{j} = \Vec{p}_f - \Vec{p}_i = \Delta \Vec{p} $$
+}
+
+\dfn{Total Momentum}{
+  The total momentum $\Vec{P}$ is the vector sum of the momentum of every object. 
+}
+
+\dfn{Conservation of momentum}{
+  The Conservation of Momentum states that momentum is conserved during a collision in an isolated system. If $ \Vec{F}_{net} = 0 $, then the total momentum doesn't change. 
+}
+
+\dfn{Inelastic collisions}{
+  A collision in which the two objects stick together and move with a common final velocity is called a perfectly inelastic collision.
+}
+
+\section{Angular momentum}
+\dfn{Angular momentum}{
+  Angular momentum(L) is the rotational equivalent to linear momentum using the moment of inertia and angular velocity instead. $$ L = I \omega $$
+}
+
+\dfn{The Law of conservation of angular momentum}{
+  The angular momentum of a rotating object subject to no net external torque  is a constant. The final angular momentum $L_f$ is equal to the initial angular momentum $L_i$. This means that foran object with an angular momentum with now a change in its moment of inertia can experience a change in its angular velocity. 
+}
+
+
+\chapter{Simple Harmonic Motion}
+
+\section{The spring force}
+\dfn{Hooke's Law}{
+  $$ F_{sp} = -k \Delta x  $$ where k is the spring constant.
+}
+
+\section{Equilibrium and Oscilation}
+\dfn{Equilibrium position}{
+  The equilibrium position of an object in a bowl is at the bottom where $ F_{net} = 0 $.
+}
+
+\dfn{The restoring force}{
+  The restoring force is the force that brings an object in a bowl back to the equilibrium position. 
+}
+
+\dfn{Oscialtion}{
+  The repetitive motion in a bowl from side to side. 
+}
+
+\section{Frequency and Period}
+
+\dfn{Frequency}{
+  The frequency(f) of an oscilation is the cycles of an oscilation per unit time(typically per second) and is measured in Hz or  ($s^-1$). 
+}
+
+\dfn{Period}{
+  The period(T) of an oscilation is the time it takes for an oscilation to occur.
+}
+
+\section{Pendulum}
+\dfn{Pendulum}{
+  A pendulum is a weight in simple harmonic motion having a force of $ F = -mg\sin \theta $.
+}
+
+\section{Describing SHM}
+\dfn{Describing SHM}{
+  $$ x(t) = A \cos (\frac{2\pi t}{T}) = 2\cos (2\pi ft) $$ 
+  $$ v(t) = -v_{max} \sin (\frac{2\pi t}{T}) = -v_{max} \sin (\frac{2\pi t}{T})  $$
+  $$ a_x = \frac{F}{m} = -a_{max}  \cos (\frac{2\pi t}{T}) = -a_{max} \cos (2\pi ft) $$
+}
+
+
+\section{Connecting SMH to circular motion}
+\dfn{Connecting SMH to circular motion}{
+  $$ x = A \cos \phi $$
+  $$ v = 2\pi fA $$
+  $$ a =  (2\pi f)^2A $$
+  $$ \omega = 2\pi f  $$
+}
+
+\dfn{The maximum velocity and acceleration of SHM}{
+  $$ v_{max} = 2\pi fA $$ 
+  $$ a_{max} = (2\pi f)^2 A $$
+}
+
+\section{Energy in SHM}
+\clm{Energy remains constant}{}
+
+\thm{Finding Frequency in SHM}{
+  $$ f = \frac{1}{2\pi } \sqrt{\frac{k}{m}} $$ 
+}
+
+\thm{Finding Period in SHM}{
+  $$ T = 2\pi \sqrt{\frac{m}{k}} $$
+}
+
+
+\thm{Frequency of a pendulum}{
+  $$ f = \frac{1}{2\pi }  \sqrt{\frac{g}{L}} $$ 
+}
+
+\thm{Period of a pendulum}{
+  $$ T = 2\pi \sqrt{\frac{L}{g}} $$ 
+}
+
+\dfn{The maximum velocity of pendulums}{
+  $$ v_{max} = \sqrt{\frac{g}{L}}A = \sqrt{gL\theta _max} $$  
+}
+
+
+\chapter{Torque + Rotational Motion}
+
+\section{Rotational Kinematics}
+
+\dfn{Rotational Motion}{
+  Rotational motion is the motion of a body that spins about an axis.
+}
+
+\dfn{Angular Position}{
+Angular position is the angle that is formed between a reference line and a line that connects the reference line to a point on a rotating object. Angular position is defined by the angle $\theta$ in radians measured clockwise from the x-axis, the arc length s, and the radius from the center of circular motion. $ \theta (\text{radians}) \frac{s}{r} $
+}
+
+\dfn{Angular Displacement and Velocity}{
+  Angular displacement is the change in angular position and is measured in radians($ \Delta \theta $). Angular velocity is the rate of change of angular displacement and is measured in radians per second. 
+  $$ \omega = \frac{\Delta \theta}{\Delta t} $$
+  $$ \theta _f - \theta _i  = \Delta \theta = \omega \Delta t $$
+}
+
+\dfn{Angular Acceleration}{
+  Angular acceleration is the rate of change of angular velocity and is measured in radians per second squared. 
+  $$ \alpha = \frac{\Delta \omega}{\Delta t} $$
+  $$ \omega _f - \omega _i  = \Delta \omega = \alpha \Delta t $$
+}
+
+
+\newpage
+
+\section{Relating angular and linear motion}
+
+The relationship between angular motion and linear is that linear motion is equal to the radius multiplied by angular motion. 
+\\
+\nt{
+  \textbf{Relationship between linear and angular motion:} \\
+  % table with 4 columns: linear variable, angular variable, linear equation, angular equation 
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    Linear Variable & Linear Symbol & Angular Variable & Angular Symbol \\
+    \hline
+    Position(m) & x & Angle(rad) & $\theta$ \\
+    \hline 
+    Velocity($\frac{m}{s}$) & v & Angular Velocity($\frac{rad}{s}$) & $\omega$ \\
+    \hline 
+    Acceleration($\frac{m}{s^2}$) & a & Angular Acceleration($\frac{rad}{s^2}$) & $\alpha$ \\
+    \hline 
+    Constant Velocity & $ \Delta x = v \Delta t $ & Constant Angular Velocity & $ \Delta \theta = \omega \Delta t $ \\ 
+    \hline  
+    Constant Acceleration & $ \Delta v = a \Delta t $ & Constant Angular Acceleration & $ \Delta \omega = \alpha \Delta t $ \\
+    \hline
+  \end{tabular}
+}
+
+\section{Tangenetial Acceleration}
+
+\dfn{Tangenetial Acceleration}{
+  Tangenital acceleration is the component of acceleration that is tangent to the circular path of an object in circular motion. This is the linear acceleration of non-uniform circular motion!
+  $$ a_t = \alpha r $$
+}
+
+\section{Torque}
+
+\nt{
+  The ability of a force to cause rotation depends on 3 factors:
+  \begin{enumerate}
+    \item The magnitude of the force
+    \item The direction r from the axis of rotation to the point of application of the force
+    \item The angle at which the force is applied
+  \end{enumerate}
+  These factors are combined into a single vector quantity called torque. 
+}
+
+\dfn{Torque}{
+  Torque is the rotational analog of force. Torque($\tau \to \text{Greek letter tau} $) is the product of the perpendicular component of the force acting at a distance r from the pivot.
+  $$ \tau = rF_{\perp} = r_{\perp} F$$ 
+  \\
+  Torque is measured in Newton-meters(Nm). Net torque is the sum of all torques acting on an object. 
+}
+
+\section{Gravitational Torque and the Center of Gravity} 
+
+\dfn{Gravitational Torque and the Center of Gravity}{
+  The gravitational torque is equal to the weight of the object multiplied by the distance from the pivot to the center of gravity. And the center of gravity is the point at which the entire weight of the object can be considered to act. An object that is free to rotate about a pivot will come to rest with the center of gravity below the pivot point.
+}
+
+\thm{Finding the center of gravity}{
+  \begin{enumerate}
+    \item Choose an origin for your coordinate system. 
+    \item Determine the coordinates of the center of gravity of each object ex: (x1, y1), (x2, y2), (x3, y3) for the masses.
+    \item The x coordinate of the center of gravity is the sum of the x coordinates of the masses multiplied by their respective masses divided by the total mass. $$ x_{cg} = \frac{m_1x_1 + m_2x_2 + m_3x_3}{m_1 + m_2 + m_3} $$
+    \item The y coordinate of the center of gravity is the sum of the y coordinates of the masses multiplied by their respective masses divided by the total mass. $$ y_{cg} = \frac{m_1y_1 + m_2y_2 + m_3y_3}{m_1 + m_2 + m_3} $$
+  \end{enumerate}
+}
+
+\section{Rotational Dynamics and Rotational Inertia}
+
+\dfn{Newton's Second Law for Rotation}{
+  Just as $ F = ma $, there is a similar equation involving mass for rotational motion. Because $ \tau = F \times r  $, and F = ma and $ \alpha = \frac{F}{mr} $, $ \tau_1 = m_1 r_1^2 \alpha $ and so $$ \tau_{net} = \alpha (m_1  r_1^2 + m_2 r_2^2 + \dots) = \alpha \sum m_i  r_i^2 $$
+ The moment of inertia is the sum of the products of the masses of the particles in a system and the square of their perpendicular distances from a specified axis. $$ I = m_1 r_1^2 + \dots = \sum m_i r_i^2 $$ 
+ $$ \tau_{net} = I \alpha $$ 
+ \\
+ The moment of inertia is the rotational equivalent of mass.
+}
+
+\nt{
+  \textbf{The moment of inertia for common objects:} \\
+  \begin{tabular}{|c|c|}
+    \hline
+    Object & Moment of Inertia \\
+    \hline
+    Solid sphere & $ \frac{2}{5} mr^2 $ \\
+    \hline
+    Hollow sphere & $ \frac{2}{3} mr^2 $ \\
+    \hline
+    Solid cylinder & $ \frac{1}{2} mr^2 $ \\
+    \hline
+    Hollow cylinder & $ mr^2 $ \\
+    \hline
+    Rod about center & $ \frac{1}{12} ml^2 $ \\
+    \hline
+    Rod about end & $ \frac{1}{3} ml^2 $ \\
+    \hline
+  \end{tabular}
+}
+
+\section{Rolling Motion}
+
+\dfn{Rolling Motion}{
+  An object that is rolling is both rotating and translating. A rolling object's center moves at velocity($ v = \omega r$) while the object has an angular velocity of $ 2v = 2\omega r$.
+  $$ v = \frac{\Delta x}{T} = \frac{2 \pi r}{T} = \omega r $$
+}
+
+\section{Torque and equilibrium}
+
+\dfn{Conditions for static equilibrium of an extended object}{
+  \begin{enumerate}
+    \item The net force acting on the object must be zero. 
+    \item The net torque acting on the object must be zero. 
+  \end{enumerate}
+}
+
+\section{Stability and Balance}
+
+\dfn{Stability and Balance}{
+  An object is considered to be stable when its center of gravity remains above its base of support. Meaning as long as the center of gravity is above the base of support, the object will not topple over because the torque due to gravity will rotate the object back toward its stable equilibrium position. An object is unstable if its gravitational torque is in the direction away from its base of support or pivot point making a hypothetical object turn over. \\
+  An object is stable if $ \theta \le  \theta_c $ and unstable if $ \theta > \theta_c $ with $ \theta_c $ being the critical angle. \\
+  The equation for the critical angle is: $$ \theta_c = \arctan \frac{\frac{1}{2} w}{h} $$
+  with w being the width of the base of support and h being the height of the center of gravity.
+}
+
+
+\appendix
+\chapter{Scientific Notation, Significant Figures, and Unit Conversions}
+
+\section{Scientific Notation}
+\dfn{Scientific Notation}{
+  Scientific notation is a way of writing numbers that are too big or too small to be conveniently written in decimal form by using multiples of 10 to simplify numbers. 
+}
+\ex{Scientific notation}{
+  $$ 6,370,000m = 6.37 \times 10^6m $$
+}
+
+\section{Scientific Figures}
+\dfn{Significant Figures}{
+  Think of significant figures or sig figs as the number of digits that are reliably known. 
+  \\
+  \textbf{Rules:}
+  \begin{enumerate}
+    \item When you multiple/divide numbers, the number of sig figs in the answer should be equal to the sig figs of the least percise number used in your calculation. 
+    \item When you add/subtract numbers, the number of decimal places in the answer should be equal to the number of decimal places in the least precise number used in your calculation.
+    \item Exact numbers have an infinite number of sig figs. Do not consider sig figs at all!
+    \item EXCEPTION!! It is acceptable to keep one or two extra digits during the \textit{intermediate steps} of a calculation. HOWEVER, the final answer must have the right sig figs. 
+  \end{enumerate}
+  \huge{Sig figs aren't that important for AP Physics 1, but don't just dump every digit!}
+}
+
+\section{SI Units}
+Measurements of quantitities require numberical values and a \textit{unit} to represent themselves. 
+\\
+\dfn{The three basic SI units}{
+  \begin{enumerate}
+    \item \textbf{Length} is measured in meters (m)
+    \item \textbf{Mass} is measured in kilograms (kg)
+    \item \textbf{Time} is measured in seconds (s)
+  \end{enumerate}
+}
+
+\section{Unit Prefixes}
+ % table of prefixes
+\begin{table}[h]
+  \caption{Metric Prefixes}
+  \begin{center}
+    % create a table with 3 columns
+    \begin{tabular}{|c|c|c|}
+      \hline
+      \textbf{Prefix} & \textbf{Symbol} & \textbf{Power of 10} \\
+      \hline
+      \hline
+      tera & T & $ 10^{12} $ \\
+      \hline
+      giga & G & $ 10^9 $ \\
+      \hline
+      mega & M & $ 10^6 $ \\
+      \hline
+      kilo & k & $ 10^3 $ \\
+      \hline
+      hecto & h & $ 10^2 $ \\
+      \hline
+      deka & da & $ 10^1 $ \\
+      \hline
+      \hline
+      deci & d & $ 10^{-1} $ \\
+      \hline
+      centi & c & $ 10^{-2} $ \\
+      \hline
+      milli & m & $ 10^{-3} $ \\
+      \hline
+      micro & $\mu$ & $ 10^{-6} $ \\
+      \hline
+      nano & n & $ 10^{-9} $ \\
+      \hline
+      pico & p & $ 10^{-12} $ \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\chapter{Important Overall Concepts}
+
+\section{Closed and Open Systems}
+
+\section{The analysis and use of graphs}
+
+
+\end{document}

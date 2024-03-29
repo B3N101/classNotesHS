@@ -1,0 +1,32 @@
+\contentsline {chapter}{\numberline {1}Introduction to Vectors and Matrices}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Vectors}{2}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Linear Combinations of Vectors}{2}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}The Dot Product $ \vec {v} \cdot \vec {w} $ and its Properties}{2}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Matrices}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Types of Matrices}{4}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Matrix Multiplication}{4}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}The Column Space of a Matrix}{4}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Independent \& Dependent Columns}{4}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}$ \mathbf {A}= \varmathbb {C}\mathbf {R}$}{5}{subsection.1.2.5}%
+\contentsline {chapter}{\numberline {2}Elimination, $ \mathbf {A}= \L \mathbf {U}$, and Inverses}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Elimination}{6}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}The process of elimination}{6}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Augmented Matrices}{7}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Inverse Matrices}{8}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}$ \mathbf {A}= \L \mathbf {U}$}{9}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Permutation Matrices}{9}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Transposes}{10}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}Symmetric Matrices}{10}{subsection.2.1.7}%
+\contentsline {chapter}{\numberline {3}$ \mathbf {A}x = b $, $ \mathbf {A}x = 0 $, Subspaces, Independence, Basis, and Dimension}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}$ \mathbf {A}x = b $ and $ \mathbf {A}x = 0 $}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}The Four Fundamental Subspaces}{11}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Orthoganality and Projections}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Orthoganality of the Four Subspaces}{14}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Projection onto Subspaces}{15}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Orthonormal}{15}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Gram-Schmidt}{15}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Determinants and Linear Transformations}{16}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Determinants}{16}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Cramer's Rule to solve $ \mathbf {A}x = b $}{17}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Linear Transformations}{18}{section.5.3}%
+\contentsfinish 

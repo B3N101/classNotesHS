@@ -1,0 +1,121 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Lab 4 - Impulse and Momentum}}
+\author{\huge{\textbf{Ben Feuer}, Aidan O'Sullivan, and Andrew Matarese}}
+\date{November 9, 2023 $\to$ November 30, 2023}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\pagebreak
+
+
+\section*{First Part}
+
+\subsection*{Procedure}
+
+In the first part of this lab, our group use motion detectors to measure the velocity of a cart on a track being accelerated by the tension in a string that has a hanging mass at its end and is connected to a pulley at the end of the track which has a Logger Pro sensor. We used the Logger Pro sensor to determine the velocity of the string(initial and final) and therefore cart and the impulse of the cart. Our logger pro sensor and computer wasn't working so we were not able to finsih the first part of the lab, but thankfully, we were able to use data from Oliver Ali and Luke Taylor's group (Aidan O'Sullivan gave me the data). The group that we accessed our data from used two different masses and did three experiments for each mass. 
+
+\subsection*{Diagram}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/partOne.png}
+  \end{center}
+  \caption{Diagram of the first part of the lab.}
+\end{figure}
+
+\subsection*{Data}
+
+\begin{table}[h!]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Hanging Weight (N) & Trial & Impulse (N$\cdot$s) & Initial Velocity (m/s) & Final Velocity (m/s) \\ \hline
+0.48804            & 1     & 0.4648        & 0.696                  & 2.588                \\ \hline
+                   & 2     & 0.5137        & 0.65                   & 2.76                 \\ \hline
+                   & 3     & 0.2843        & 1.295                  & 2.703                \\ \hline
+0.68502            & 1     & 0.4698        & 1.264                  & 3.258                \\ \hline
+                   & 2     & 0.4884        & 1.126                  & 3.22                 \\ \hline
+                   & 3     & 0.5049        & 0.919                  & 3.081                \\ \hline
+\end{tabular}
+\end{table}
+
+The mass of the cart is 0.573 kg or 573 g.
+
+
+\subsection*{Error}
+
+To find the percent error of the impulse, we used the values from the sensor as the accepted value and the change in velocity multiplied by the mass of the cart as the experimental value. To find the percent error as well, we averaged the sensor given impulse and the velocity equated impulse. The equations explained are below: 
+
+$$ J_{sensor(avg)} = \frac{0.4648 + 0.5137 + 0.2843 + 0.4698 + 0.4884 + 0.5049}{6} N\cdot s = 0.4568 N \cdot s$$
+$$ J_{experimental(avg)} = $$
+$$\frac{0.573 \cdot (2.588 - 0.696) + 0.573 \cdot (2.76 - 0.65) + 0.573 \cdot (2.703 - 1.295)}{6} N \cdot s$$ + $$\frac{0.573 \cdot (3.258 - 1.264) + 0.573 \cdot (3.22 - 1.126) + 0.573 \cdot (3.081 - 0.919)}{6} N \cdot s$$ $$ = 1.11353 N \cdot s$$
+
+$$ \% error = \frac{|J_{sensor(avg)} - J_{experimental(avg)}|}{J_{sensor(avg)}} \cdot 100\% = \frac{|0.4568 - 1.11353|}{0.4568} \cdot 100\% = 143.8\%$$
+
+This percent error is very large, but because we did not collect the data ourselves and that the data was collected by a different group, our group can't be sure of what errors could have led to this large percent erorr; however, we do know that this group found the same percent error. Some potential sources of error could include frictional forces, lowering the sensors detected impulse. 
+
+\section*{Second Part}
+
+\subsection*{Procedure}
+
+In the second part of this lab, our group used a motion detector to measure the velocity of a cart on a track that we pushed and a impulse sensor to measure the impulse of the cart's collision. Using Logger Pro, successfully, we were able to find the velocity before and after the collision using our motion sensor to compare our motion sensor's recordings with the impulse sensor's recordings. We experimented using three different masses and two trials per mass. 
+
+\subsection*{Diagram}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/partTwo.png}
+  \end{center}
+  \caption{Diagram of the second part of the lab.}
+\end{figure} 
+
+\subsection*{Data}
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+trial & m(g) & v\_i & v\_f  & J      \\ \hline
+1     & 500  & .53  & -.3   & -.5044 \\ \hline
+2     & 500  & 1.08 & -.64  & -.9978 \\ \hline
+3     & 1000 & .85  & -.52  & -1.660 \\ \hline
+4     & 1000 & 0.98 & -0.54 & -1.492 \\ \hline
+5     & 1500 & .74  & -.43  & -2.013 \\ \hline
+6     & 1500 & .75  & -.35  & -2.829 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection*{Error}
+
+We calculated percent error the same way as part one. 
+
+$$ J_{sensor(avg)} = \frac{-0.5044 - 0.9978 - 1.660 - 1.492 - 2.013 - 2.829}{6} N\cdot s = -1.5827 N \cdot s$$ 
+
+$$ J_{experimental(avg)} = \frac{(500) \cdot (-0.53 - 0.3) + (500) \cdot (-1.08 - 0.64) + (1000) \cdot (-0.85 - 0.52)}{6} N \cdot s$$ + $$\frac{(1000) \cdot (-0.98 - 0.54) + (1500) \cdot (-0.74 - 0.43) + (1500) \cdot (-0.75 - 0.35)}{6} N \cdot s$$ $$ = -1.4866666667 N \cdot s$$
+
+$$ \% error = \frac{|J_{sensor(avg)} - J_{experimental(avg)}|}{J_{sensor(avg)}} \cdot 100\% = \frac{|-1.5827 - (-1.4866)|}{-1.5827} \cdot 100\% = -6.07\%$$
+
+This percent error is likely attributable to frictional forces which would reduce the reboud velocity and thus lead to the percent error because the experimental value is less because of the frictional forces as $ (v_f - v_i)m < \vec{J}$. And because when we were using Logger Pro, we likely didn't pick the exact values for the final and inital velocities, and we likley didn't have the proper integral to find the sensor's value for impulse, we likely have some statistical impersision.
+
+\section*{Extra Credit}
+
+An experiment that would test whether $ v_{app} = v_{sep} $ is shown below, where we would test if two (hypothetically) elastic carts after a collision would have the same velocity as before. To do this, we would set up cameras on both sides of the track to find the velocity of both carts before and then after the collision. Using these four pieces of data($v_{1i}$, $v_{2i}$, $v_{1f}$, and $v_{2f}$), we can determine if $ v_{app} = v_{sep} $ by testing if $ v_{1i}m_1 + v_{2i}m_2 = v_{1f}m_1 + v_{2f}m_2 $. Potential sources of error in this experiment include frictional forces decreasing $v_{sep} $, sensor error, and the loss of energy of the system through the collision (if it were not perfectly elastic). 
+
+\subsection*{Diagram}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/extraCredit.png}
+  \end{center}
+  \caption{Diagram of the extra credit part of the lab.}
+\end{figure}
+
+\end{document}

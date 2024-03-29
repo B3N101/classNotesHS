@@ -1,0 +1,501 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Linear Algebra Notes - Math 61 \& 62}}
+\author{\huge{Ben Feuer}}
+\date{2023-2024}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+
+\chapter{Introduction to Vectors and Matrices}
+
+\section{Vectors}
+
+\subsection{Linear Combinations of Vectors}
+
+\dfn{Vector Addition, Scalar Multiplication, and Linear Combinations}{
+  %define
+  \begin{itemize}
+    \item Vector Addition: $ \vec{v} + \vec{w} = \vec{v} + \vec{w} $
+    \item Scalar Multiplication: $ c \vec{v} = c \vec{v} $
+    \item Linear Combination: $ c_1 \vec{v_1} + c_2 \vec{v_2} + \dots + c_n \vec{v_n} $ 
+  \end{itemize}
+}
+
+
+\nt{
+  \textbf{All combinations} \\
+  $ cu $ fills  a line through the origin \\
+  $ cu + dv $ fills a plane through the origin \\
+  $ cu + dv + ew $ fills all of three-dimensional space \\
+}
+
+\subsection{The Dot Product $ \vec{v} \cdot \vec{w} $ and its Properties}
+
+\dfn{The Dot Product}{
+The multiplication of two vectors: \\
+$$ \vec{v} \cdot \vec{w} = \smat{3 \\ 1 \\  7} \cdot \smat{4 \\ 5 \\ 2} = 3 \cdot 4 + 1 \cdot 5 + 7 \cdot 2 = 31 $$
+}
+
+\dfn{The length of a vector}{
+The length of a vector is the square root of the dot product of the vector with itself: \\
+$$ \norm{\vec{v}} = \sqrt{\vec{v} \cdot \vec{v}} $$
+}
+
+\dfn{The unit vector}{
+The unit vector is the vector divided by its length: \\
+$$ \hat{v} = \frac{\vec{v}}{\norm{\vec{v}}} $$ \\
+The unit vector is a vector of length 1 in the same direction as the original vector.
+}
+
+\nt{
+  \textbf{Perpendicular vectors} \\
+  Two vectors are perpendicular if their dot product is zero. \\
+  $ \vec{v} \cdot \vec{w} = 0 $ \\
+  ex: $ \smat{1 \\ 1} \cdot \smat{1 \\ -1} = 0 $ \\
+  \textbf{This has later implications for the nullspace of a matrix.}
+}
+
+\dfn{The Dot Product Cosine Formula}{
+  $$ \cos{\theta} = \frac{\vec{v} \cdot \vec{w}}{\norm{\vec{v}} \norm{\vec{w}}} $$
+}
+
+\dfn{Schwarz Inequality}{
+  $$ \abs{\vec{v} \cdot \vec{w}} \leq \norm{\vec{v}} \norm{\vec{w}} $$
+}
+
+\dfn{Triangle Inequality}{
+  $$ \norm{\vec{v} + \vec{w}} \leq \norm{\vec{v}} + \norm{\vec{w}} $$
+}
+
+\section{Matrices}
+
+\dfn{Matrix}{
+  A matrix is a rectangular array of numbers. \\
+  \begin{itemize}
+    \item $ m \times n $ matrix has m rows and n columns
+    \item $ A_{ij} $ is the entry in the ith row and jth column
+    \item $ A = \smat{1 & 2 & 3 \\ 4 & 5 & 6} $
+  \end{itemize}
+}
+
+\subsection{Types of Matrices}
+
+\dfn{List of Matrices}{
+  \begin{itemize}
+    \item Identity Matrix: $ I = \smat{1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1} $ 
+    \item Zero Matrix: $ 0 = \smat{0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0} $ 
+    \item Diagonal Matrix: $ D = \smat{1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3} $ 
+    \item Upper Triangular Matrix: $ U = \smat{1 & 2 & 3 \\ 0 & 4 & 5 \\ 0 & 0 & 6} $ 
+    \item Lower Triangular Matrix: $ L = \smat{1 & 0 & 0 \\ 4 & 5 & 0 \\ 7 & 8 & 9} $  
+    \item Symmetric Matrix: $ S = \smat{1 & 2 & 3 \\ 2 & 4 & 5 \\ 3 & 5 & 6} $ 
+  \end{itemize}
+}
+
+\subsection{Matrix Multiplication}
+
+\dfn{Matrix times Vector}{
+  $$ A \vec{x} = \smat{1 & 2 & 3 \\ 4 & 5 & 6} \smat{1 \\ 2 \\ 3} = 1 \smat{1 \\ 4} + 2 \smat{2\\5} + 3  \smat{3\\6} = \smat{14 \\ 32} $$
+}
+
+\dfn{Matrix times Matrix}{
+  $$ A B = \smat{1 & 2 & 3 \\ 4 & 5 & 6} \smat{1 & 2 \\ 3 & 4 \\ 5 & 6} = \smat{22 & 28 \\ 49 & 64} $$
+}
+
+\subsection{The Column Space of a Matrix}
+
+\dfn{Column Space}{
+  The column space of a matrix is the set of all possible linear combinations of the columns of the matrix. \\
+  $$ \A x = \text{All possible linear combinations of the columns of A} $$
+  $$ \text{Col } A = \text{span} \{ \vec{a_1}, \vec{a_2}, \dots, \vec{a_n} \} $$
+}
+
+\subsection{Independent \& Dependent Columns}
+
+\dfn{Linear Independence}{
+  A set of vectors is linearly independent if no vector in the set is a linear combination of the other vectors in the set. \\
+  $$ c_1 \vec{v_1} + c_2 \vec{v_2} + \dots + c_n \vec{v_n} = 0 $$
+  $$ c_1 = c_2 = \dots = c_n = 0 $$
+}
+
+\dfn{Linear Dependence}{
+  A set of vectors is linearly dependent if at least one vector in the set is a linear combination of the other vectors in the set. \\
+  $$ c_1 \vec{v_1} + c_2 \vec{v_2} + \dots + c_n \vec{v_n} = 0 $$
+  $$ c_1 = c_2 = \dots = c_n = 0 $$
+}
+
+\dfn{Rank of a Matrix}{
+  The rank of a matrix is the number of linearly independent columns in the matrix. \\
+  $$ \text{rank } A = \text{number of linearly independent columns in A} $$
+  $$ \I = \smat{1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1} \to \R^3 $$
+}
+
+\subsection{$ \A = \C \R $}
+
+\dfn{Matrix Factorization}{
+
+  $ \C $ is a matrix with the columns of $ \A $ that are linearly independent. \\
+  $ \R $ is essentially the \textbf{reduced row echelon form} of $ \A $, which will have later significance. \\
+  $$ \A = \C \R $$
+  $$ \smat{1 & 2 & 3 \\ 2 & 4 & 6 \\ 3 & 6 & 9} = \smat{1 \\ 2 \\ 3} \smat{1 & 2  & 3} $$
+}
+
+\ex{$ \A = \C \R $}{
+  $ \A = \smat{2 & 6 & 4 \\ 4 & 12 & 8 \\ 1 & 3 & 5} $ \\
+  $ \C = \smat{2 & 4 \\ 4 & 8 \\ 1 & 5} \text{ because column 2 is 3 times column 1}$ \\
+  $ \R = \smat{1 & 3 & 0 \\0 & 0 & 1 } $ \\
+  $ \A = \C \R = \smat{2 & 4 \\ 4 & 8 \\ 1 & 5} \smat{1 & 3 & 0 \\0 & 0 & 1 } $
+}
+
+\chapter{Elimination, $ \A = \L \U $, and Inverses}
+
+\section{Elimination}
+
+\dfn{Elimination}{
+  Elimination is the process  of transforming a matrix $ \A $ into a matrix $ \U $ by adding multiples of one row to another row. \\
+  We do this by multiplying $ \A $ by an elimination matrix $ \El $, which is the identity matrix with the row we want to add to another row replaced with the row we want to add. \\
+  $$ \El \A = \U $$ 
+  We use elimination to solve systems of equations. ($ \A x = b $)
+  With elimination, we can transform $ \A x = b $ into $ \U x = c $, where $ c $ is a new vector, and we can determine if $ \A $ is invertible, which is the case if $ \U $ has no zeros on its main diagonal.
+}
+
+\subsection{The process of elimination}
+
+\ex{Elimination}{
+  (May be wrong)
+  
+  $$ \A = \smat{1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9} $$
+  $$ \El_{21} = \smat{1 & 0 & 0 \\ -4 & 1 & 0 \\ 0 & 0 & 1} $$
+  Multiplies row 1 by 4 and subtracts that from row 2 to eliminate the nonzero value in $\A_{21}$. \\
+  $$ \El_{31} = \smat{1 & 0 & 0 \\ 0 & 1 & 0 \\ -7 & 0 & 1} $$ 
+  Multiplies row 1 by 7 and subtracts that from row 3 to eliminate the nonzero value in $\A_{31}$. \\
+  $$ \El_{31} \El_{21} \A = \smat{1 & 2 & 3 \\ 0 & -3 & -6 \\ 0 & -6 & -12} $$
+  $$ \El_{32} = \smat{1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & -2 & 1} $$ 
+  Multiplies row 2 by 2 and subtracts that from row 3 to eliminate the nonzero value in $\A_{32}$. \\
+  $$ \El_{32} \El_{31} \El_{21} \A = \smat{1 & 2 & 3 \\ 0 & -3 & -6 \\ 0 & 0 & 0} $$
+  $$ \U = \El_{32} \El_{31} \El_{21} \A = \smat{1 & 2 & 3 \\ 0 & -3 & -6 \\ 0 & 0 & 0} $$ 
+  $$ \El = \El_{32} \El_{31} \El_{21} = \smat{1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & -2 & 1} \smat{1 & 0 & 0 \\ 0 & 1 & 0 \\ -7 & 0 & 1} \smat{1 & 0 & 0 \\ -4 & 1 & 0 \\ 0 & 0 & 1} = \smat{1 & 0 & 0 \\ -4 & 1 & 0 \\ 1 & -2 & 1} $$
+
+  Because $ \U $ has a zero on its main diagonal(third pivot), $ \A $ is not invertible, not full rank. \\
+}
+
+\nt{
+  \textbf{System of equations} \\
+  $ \A x = b $ \\
+  Exactly one solution if $ \A $ is invertible/has independent columns. \\
+  ex: $ (x,y) = (1,1) $; independent columns: $ (2,4)$ and $ (3,2) $ \\
+  $$ 2x + 3y = 5 $$ 
+  $$ 4x + 2y = 6 $$ \\
+  No solution if $ \A $ is not invertible/has dependent columns. \\
+  ex: dependent columns: $ (2,4) $ and $ (3,6) $ \\
+  $$ 2x + 3y = 5 $$ 
+  $$ 4x + 6y = 15 $$ \\
+  Infinite solutions if $ \A $ is not invertible/has dependent columns. \\
+  There will be infinitely many solutions to $ \A X = 0 $ when columns of $ \A $ are dependent, because for instance $ 2a -2a = 4a -4 a $. So if there is one solution to $ \A x = b $, we have many solutions as shown below: 
+  $$ A(x + cX)= Ax + cAX = b + 0 = b $$
+}
+
+\subsection{Augmented Matrices}
+
+\dfn{Augmented Matrices}{
+  An augmented matrix is a matrix that contains the coefficients of a system of linear equations, as well as an additional column containing the constants. \\
+  $$ \mat{A & |b} = \mat{1 & 2 & 3 & | & 4 \\ 4 & 5 & 6 & | & 7 \\ 7 & 8 & 9 & | & 10} $$
+
+  From the augmented matrix, we can determine if the system of equations has a solution, and if so, how many solutions it has by performing elimination on the matrix as a whole.
+}
+
+\subsection{Inverse Matrices}
+
+\dfn{Inverse Matrices}{
+  The matrix $ \A $ is invertible if there existes a matrix $ \A^{-1} $ such that $ \A \A^{-1} = \A^{-1} \A = \I $ \\
+  $$ \A^{-1} \A x = \A^{-1} b $$ \\
+  \textbf{The inverse exists if and only if:}
+  \begin{enumerate}
+    \item elimination produces n pivots (row exchanges are allowed). Elimination solves Ax = b. 
+    \item The matrix $ \A $ only has one inverse. 
+    \item The one and only solution to $ \A x = b $ is $ x = \A^{-1} b $. 
+    \item If $ \A $ is invertible, then $ \A x = 0 $ has only the trivial solution $ x = 0 $. 
+    \item  A square matrix is invertible if and only if its columns are independent.  
+    \item  A 2 by 2 matrix is invertible if and  only if $ ad - bc \neq 0 $. $$ \A = \smat{a & b \\ c & d} $$ $$ \A^{-1} = \frac{1}{ad - bc} \smat{d & -b \\ -c & a} $$
+  \end{enumerate}
+}
+
+\nt{
+  $ \L $ is the inverse of $ \E $. 
+  $$ \E = \smat{1&0&0\\0&1&0\\0&-\ell_{32}&0} \smat{1 & 0 & 0 \\ 0 & 1 & 0 \\ -\ell{31} & 1 & 0} \smat{1 & 0 & 0 \\ -\ell_{21} & 1 & 0 \\ 0 & 0 & 1} = \smat{1&0&0\\-\ell_{21}&1&0\\(\ell_{32}\ell_{21}-\ell_{31})&-\ell_{32}&1} $$
+  $$ \E^{-1} = L = \smat{1&0&0\\ \ell_{21}&1&0\\ \ell_{31}&\ell_{32}&1} $$
+
+  \textbf{Later we will see how $ \A = \L \U $}
+}
+
+\dfn{Gauss-Jordan Elimination}{
+  $$ \mat{\A & \I} \to  \mat{\I & \A^{-1}}$$ \\
+}
+
+\dfn{Cost of elimination}{
+  Will be added after exam!
+}
+
+
+\subsection{$ \A = \L \U $}
+
+\dfn{Finding $ \A = \L \U $}{
+  $$ \A =  \ell_i u_1 + \ell_2 u_2 + \ell_3 u_3 $$ \\
+  $$ \A =  \mat{\ell_1 & \dots &\ell_n} \mat{u_1 \\ \vdots \\ u_3} = \L \U$$ \\
+}
+
+\dfn{Finding $ \A = \L D \U $}{
+  Same thing as above but with $ D $ in the middle, which is a diagonal matrix and is the same as $ \U $ but with the pivots on the diagonal, meaning the pivots of $\U$ all equal 1.
+}
+
+\subsection{Permutation Matrices}
+
+\dfn{Permutation Matrices}{
+  A permutation matrix is a square binary matrix that has exactly one entry 1 in each row and each column and 0s elsewhere. Each permutation matrix represents a specific permutation of rows of the identity matrix. \\
+  $$ P = \mat{0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1} $$ \\
+  $$ P \A = \mat{0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1} \mat{1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9} = \mat{4 & 5 & 6 \\ 1 & 2 & 3 \\ 7 & 8 & 9} $$ \\
+  A permutation matrix has the same rows as the identity matrix, but in a different order( $n!$ different orders). \\
+  $$ P^{-1} = P^T $$ \\
+}
+
+\dfn{$ P \A = \L \U$ }{
+  $ P \A = \L \U $ is the same as $ \A = \L \U $ just with A's rows properly sorted.
+}
+
+\subsection{Transposes}
+
+\dfn{Transposes}{
+  The transpose of a matrix $ \A $ is denoted by $ \A^T $ and is the matrix formed by turning all the rows of $ \A $ into columns. \\
+  $$ \A = \mat{1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9} $$ \\
+  $$ \A^T = \mat{1 & 4 & 7 \\ 2 & 5 & 8 \\ 3 & 6 & 9} $$ \\
+  $ (AB)^T = B^T A^T $ \\
+  $ (A + B)^T = A^T + B^T $ \\
+  $ (A^T)^T = A $ \\
+  $ (A^{-1})^T = (A^T)^{-1} $ \\
+  $ (A^T)^{-1} = (A^{-1})^T $ \\
+}
+
+\subsection{Symmetric Matrices}
+
+\dfn{Symmetric Matrices}{
+  A symmetric matrix is a square matrix that is equal to its transpose. \\
+  $$ \A = \mat{1 & 2 & 3 \\ 2 & 4 & 5 \\ 3 & 5 & 6} $$ \\
+  $$ \A^T = \mat{1 & 2 & 3 \\ 2 & 4 & 5 \\ 3 & 5 & 6} $$ \\
+  $ \A^T = \A $ \\
+  $ S = \A^T \A $ is symmetric. \\
+  $ S^{-1} $ is symmetric. \\
+}
+
+
+\chapter{$ \A x = b $, $ \A x = 0 $, Subspaces, Independence, Basis, and Dimension}
+
+\section{$ \A x = b $ and $ \A x = 0 $}
+
+\section{The Four Fundamental Subspaces}
+
+\dfn{Subspace}{
+  A subspace of $ \R^n $ is a set of vectors that satisfies two conditions: \\
+  1. The zero vector is in $ S $. \\
+  2. If $ u $ and $ v $ are in $ S $, then the sum of $ u $ and $ v $ is in $ S $. \\
+  3. If $ u $ is in $ S $ and $ c $ is any scalar, then the scalar multiple of $ u $ is in $ S $. \\
+}
+
+\ex{Possible Subspaces of $ \R^3 $}{
+  $$ \R^3 $$
+  $$ \text{The plane through the origin} $$ 
+  $$ \text{The line through the origin} $$
+  $$ \text{The origin/zero vector} $$
+}
+
+\dfn{Span}{
+  The span of a set of vectors is the set of all linear combinations of the vectors. \\
+  $$ \text{Span} \left\{ \mat{1 \\ 2 \\ 3} \right\} = \text{All vectors in } \R^3 \text{ that can be written as } c \mat{1 \\ 2 \\ 3} \text{ for some scalar } c $$ \\
+  $$ \text{Span} \left\{ \mat{1 \\ 2 \\ 3}, \mat{4 \\ 5 \\ 6} \right\} = \text{All vectors in } \R^3 \text{ that can be written as } c_1 \mat{1 \\ 2 \\ 3} + c_2 \mat{4 \\ 5 \\ 6} \text{ for some scalars } c_1 \text{ and } c_2 $$ \\
+}
+
+\qs{When do 10 vectors span $ \R ^5 $ ? This is very possible}{
+  
+}
+
+\dfn{Column Space}{
+  The column space of $ \A $ is the set of all linear combinations of the columns of $ \A $. \\
+  $$ \A = \mat{1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9} $$ \\
+  $$ \text{Col } \A = \text{Span} \left\{ \mat{1 \\ 4 \\ 7}, \mat{2 \\ 5 \\ 8}, \mat{3 \\ 6 \\ 9} \right\} $$ \\
+  $$ \text{Col } \A = \text{Span} \left\{ \mat{1 \\ 4 \\ 7}, \mat{2 \\ 5 \\ 8} \right\} $$ \\
+  $$ \text{Col } \A = \text{Span} \left\{ \mat{1 \\ 4 \\ 7} \right\} $$ \\
+  $$ \text{Col } \A = \text{Span} \left\{ \mat{1 \\ 4 \\ 7}, \mat{2 \\ 5 \\ 8}, \mat{3 \\ 6 \\ 9}, \mat{0 \\ 0 \\ 0} \right\} $$ \\
+  $$ \text{Col } \A = \text{Span} \left\{ \mat{1 \\ 4 \\ 7}, \mat{2 \\ 5 \\ 8}, \mat{3 \\ 6 \\ 9}, \mat{0 \\ 0 \\ 0}, \mat{1 \\ 1 \\ 1} \right\} $$ \\
+}
+
+\dfn{Row Space}{
+  The row space of $ \A $ is the set of all linear combinations of the rows of $ \A $. \\
+  $$ \A = \mat{1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9} $$ \\
+  $$ \text{Row } \A = \text{Span} \left\{ \mat{1 \\ 2 \\ 3}, \mat{4 \\ 5 \\ 6}, \mat{7 \\ 8 \\ 9} \right\} $$ \\
+  $$ \text{Row } \A = \text{Span} \left\{ \mat{1 \\ 2 \\ 3}, \mat{4 \\ 5 \\ 6} \right\} $$ \\
+  $$ \text{Row } \A = \text{Span} \left\{ \mat{1 \\ 2 \\ 3} \right\} $$ \\
+  $$ \text{Row } \A = \text{Span} \left\{ \mat{1 \\ 2 \\ 3}, \mat{4 \\ 5 \\ 6}, \mat{7 \\ 8 \\ 9}, \mat{0 \\ 0 \\ 0} \right\} $$ \\
+  $$ \text{Row } \A = \text{Span} \left\{ \mat{1 \\ 2 \\ 3}, \mat{4 \\ 5 \\ 6}, \mat{7 \\ 8 \\ 9}, \mat{0 \\ 0 \\ 0}, \mat{1 \\ 1 \\ 1} \right\} $$ \\
+}
+
+% latex block comment
+\iffalse
+\chapter{Exam Review}
+
+
+1.1: Linear combinations. \\
+1.2: Lengths of vectors, dot products(3 conceptual versions: cosine of the angle multiplied by the lengths of the vectors, length of the projection vector v onto vector w multiplied by the length of w, $v \cdot v$ is the squared lengths of vector v), cosine formula, schwarz inequality, triangle inequality.  \\
+1.3: Matrices(m rows and n columns) and Column Spaces. \\
+1.4: Matrix Multiplication and $ A = CR $ . \\
+2.1: Idea of elimination. $ Ax = b $ becomes $ Ux = c $ \\
+2.2: Elimination matrices and inverse matrices. Find $ E $ such that $ EA = U $ . \\
+2.3: Matrix computations and $ A = LU $ . Gaussian elimination. $ A = LDU $ . Alternative way to find $ A = LU $ 
+2.4: Permutations and Transposes. $ PA = LU $. Block Matrices. \\
+3.1: Vector Spaces and Subspaces. \\
+3.2: Null Spaces of A. Solving $ Ax = 0 $ . Reduced row echelon form. Minimum number of pivots which are all 1's. 0's above pivots. Only 1's at the beginning of any row. If a column has no pivot, it corresponds to a free variable. Dimension of the nullspace is equal to the number of free variables. To find the nullspace: set each free variable to 1 and find vectors satisfying pivot row equations. And extra equation. \\
+3.3: Complete solution to $ Ax = b$. Need to find one "particular solution" $ x_{complete} = x_{particular} + x_{nullspace} $ where $x_n $ is any vector in the nullspace. 
+3.4: Independence, Basis, and Dimension. \\
+3.5: Dimensions of the four fundamental subspace. Know how to find every space, its basis, and its dimension. Dimensions do not change during elimination, but elimination changes the column space and left nullspace. 
+\fi
+
+\chapter{Orthoganality and Projections}
+
+\section{Orthoganality of the Four Subspaces}
+
+\dfn{Orthogonal}{
+  Two vectors are orthogonal if their dot product is zero. \\
+  $$ \mat{1 \\ 1 \\ 2} \cdot \mat{1 \\ 1 \\ -1} = 0 $$ \\
+}
+
+\nt{
+  The column space and the nullspace are orthogonal complements. \\
+  $$ \text{Col } \A \perp \text{Null } \A $$ \\
+
+  The row space and the left nullspace are orthogonal complements. \\
+  $$ \text{Row } \A \perp \text{Null } \A^T $$ \\
+}
+
+\section{Projection onto Subspaces}
+
+\subsection{Orthonormal}
+
+\dfn{Orthonormal Vectors and Bases}{
+  A set of vectors is orthonormal if they are all orthogonal to each other and they all have length 1. \\
+  $$ \mat{1 \\ 0 \\ 0}, \mat{0 \\ 1 \\ 0}, \mat{0 \\ 0 \\ 1} $$ \\
+  $$ \mat{\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}}, \mat{\frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}}} $$ \\}
+
+\section{Gram-Schmidt}
+
+\dfn{Gram-Schmidt Process}{
+  The Gram-Schmidt process is a method for orthonormalizing a set of vectors. \\
+  $$ v_{1} = a_{1} $$ 
+  $$ v_{2} = a_{2} - \text{proj}_{v_{1}} a_{2} $$ 
+  $$ v_{3} = a_{3} - \text{proj}_{v_{1}} a_{3} - \text{proj}_{v_{2}} a_{3} $$ 
+  $$ \text{proj}_{v_{1}} a_{2} = \frac{a_{2} \cdot v_{1}}{v_{1} \cdot v_{1}} v_{1} $$ 
+  $$ \text{proj}_{v_{2}} a_{3} = \frac{a_{3} \cdot v_{2}}{v_{2} \cdot v_{2}} v_{2} $$ 
+  $$ v_2 = a_2 - \frac{a_{2} \cdot v_{1}}{v_{1} \cdot v_{1}} v_{1} $$ 
+  $$ v_3 = a_3 - \frac{a_{3} \cdot v_{1}}{v_{1} \cdot v_{1}} v_{1} - \frac{a_{3} \cdot v_{2}}{v_{2} \cdot v_{2}} v_{2} $$
+
+  The Gram-Schmidt process is used to find an orthonormal basis for the column space of a matrix. \\
+ $$ q_1 = \frac{v_1}{\norm{v_1}} $$ 
+ $$ q_2 = \frac{v_2}{\norm{v_2}} $$ 
+ $$ q_3 = \frac{v_3}{\norm{v_3}} $$
+
+ Next, we find $ A = QR $, where $ Q $ is the matrix with the orthonormal vectors as its columns and $ R $ is an upper triangular matrix. \\
+ $$ Q^T Q = I \text{ because the columns of Q are orthonormal} $$ 
+ $$ Q^T A = R $$
+}
+
+\chapter{Determinants and Linear Transformations}
+
+\section{Determinants}
+
+\dfn{Determinant}{
+  The determinant of a matrix is a scalar value that can be computed from the elements of a square matrix. \\
+  It is denoted by $ \det{A} $. \\
+  Geometric interpretation: the determinant of a matrix is the factor by which the matrix changes the area of a unit square. \\
+}
+
+\nt{
+  The determinant of a singular matrix is zero. \\
+  The determinant of a diagonal matrix is the product of the diagonal entries. \\
+  The determinant of a triangular matrix is the product of the diagonal entries. \\
+  $ \det{A} = \det{A^T} $ \\
+  $ \det{AB} = \det{A} \det{B} $ \\
+  From a geometric perspective, if B chagnes the area by a factor of $ \det{B} $, then A will change the updated area by a factor of $ \det{A} $, resulting in the original area being changed by a factor of the product of the determinants. \\
+  Orthogonal matrices have products/determinants equal to 1 or -1. \\
+  Invertible matrices have determinants equal to + or - the product of their pivots. \\
+  Consider $ A = LU $, $L$ has 1s on its diagonal. $ U $ has pivots on its diagonal. \\
+  If $ PA = LU $, then depending on the  number of row exchanges $ \det{P} = 1 $ or $ -1 $. \\
+  Linearity of determinant of a matrix: 
+  $$ \det{\smat{a & b \\ c+k & d + l}} = \det{\smat{a & b \\ c & d}} + \det{\smat{a & b \\ k & l}} $$ \\
+}
+
+\dfn{Determinant Rules \& Shortcuts}{
+  \begin{itemize}
+    \item The determinant is unaltered by reflection. 
+    \item The all-zero propety. If all elements are zero, $\det{A} = 0$
+    \item Repition/Proportionality property: if all rows are the same, $\det{A} = 0$ 
+    \item Switching property: if two rows are switched, $\det{A} = -\det{A}$ 
+    \item Scalar multiple property: if a row(or column) is multiplied by a scalar, $\det{A} = k\det{A}$
+    \item Sum property: $ \det{\smat{a_1 + b_1 & c_1 & d_1 \\ a_2 + b_2 & c_2 & d_2 \\ a_3 + b_3 & c_{3} & d_{3}}} = \det{\smat{a_1 & c_1 & d_1 \\ a_2 & c_2 & d_2 \\ a_3 & c_{3} & d_{3}}} + \det{\smat{b_1 & c_1 & d_1 \\ b_2 & c_2 & d_2 \\ b_3 & c_{3} & d_{3}}}$
+    \item Triangle property: $ \det{\smat{a & b & c \\ 0 & d & e \\ 0 & 0 & f}} = a \cdot d \cdot f $
+  \end{itemize}
+}
+
+\dfn{Cofactor}{
+  The cofactor of a matrix is the determinant of the matrix formed by removing the row and column of a specific entry and multiplying the result by $ (-1)^{i+j} $, where $ i $ and $ j $ are the row and column of the entry. \\
+  $$ \text{Cofactor } A_{ij} = (-1)^{i+j} \det{A_{ij}} $$ \\
+
+  \textbf{Each Cofactor is a 2 by 2 determinant for a 3 by 3 determinant} \\
+}
+
+\section{Cramer's Rule to solve $ \A x = b $}
+
+\dfn{Cramer's Rule}{
+  Key idea: we can rewite $ \A x = b $ as follows: \\
+  $$ \smat{ \A } \smat{x_1 \\ x_2 & 1 \\ x_3 & & 1} = \smat{b_1 & a_{12} & a_{13} \\ b_2 & a_{22} & b_{23} \\ b_3 & a_{32} & a_{33}} $$ 
+  Apply the determinant product rule to the above expression: \\
+  $$ \det{\A} x_1 = \det{\smat{b_1 & a_{12} & a_{13} \\ b_2 & a_{22} & b_{23} \\ b_3 & a_{32} & a_{33}}} = \det{B_1} $$ 
+  $$ \text{so } x_1 = \frac{\det{B_1}}{\det{\A}} $$
+}
+\ex{Cramer's Rule}{
+  $$ \A = \smat{1 & 0 & 3 \\ 0 & 1 & 4 \\0 & 2 & 5} $$
+  $$ x = \smat{2 \\ 0 \\ 5} $$ 
+  $$ \det{\A} = -3 $$ 
+}
+
+\section{Linear Transformations}
+
+\dfn{Linear Transformations}{
+  A transformation T assigns an output T(v) to each input vector v in V. \\
+  The transformation is linear if it satisfies the following two properties: \\
+  1. Linearity: $ T(u + v) = T(u) + T(v) $ \\
+  2. $ T(cu) = cT(u) $ for all c
+}
+
+\dfn{The derivitive is a linear transformation}{
+  $$ u(x) = 6-4x+3x^2 $$ 
+  $$ \frac{du}{dx} = -4 + 6x $$ 
+  Nullspace of $ T(u) = \frac{du}{dx} $ For the nullspace we solve $ T(u) = 0 $. \\
+  Column space of $ T(u) = \frac{du}{dx} $ is the set of all possible derivatives. \\
+}
+
+
+
+
+
+
+% end of document
+
+\end{document}

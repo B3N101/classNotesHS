@@ -1,0 +1,59 @@
+\contentsline {chapter}{\numberline {1}AP PHYSICS 1 EXAM TOPICS AND DISTRIBUTION}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Kinematics}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Motion}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Changes in position}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Velocity}{4}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Speed}{4}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Vector vs. Scalar}{5}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Describing motion}{5}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Acceleration}{5}{section.2.7}%
+\contentsline {section}{\numberline {2.8}The five equations of motion}{6}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Free fall}{6}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Motion on a Ramp}{6}{section.2.10}%
+\contentsline {section}{\numberline {2.11}Projectile motion}{6}{section.2.11}%
+\contentsline {section}{\numberline {2.12}Relative motion}{7}{section.2.12}%
+\contentsline {chapter}{\numberline {3}Dynamics}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Forces and Newton's Laws of Motion}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Types of Forces}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Free Body Diagrams}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Equilibrium}{10}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Circular Motion/Gravity}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Circular Motion}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Period, Frequency, Speed, Acceleration, and Force for Circular Motion}{11}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Example questions}{12}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Apparant forces in circular motion}{12}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Orbital motion}{13}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Newton's law of gravity}{13}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Energy}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Energy and Work}{15}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Power}{16}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Momentum}{17}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Impulse, collisions, and momentum}{17}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Angular momentum}{18}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Simple Harmonic Motion}{19}{chapter.7}%
+\contentsline {section}{\numberline {7.1}The spring force}{19}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Equilibrium and Oscilation}{19}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Frequency and Period}{19}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Pendulum}{20}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Describing SHM}{20}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Connecting SMH to circular motion}{20}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Energy in SHM}{20}{section.7.7}%
+\contentsline {chapter}{\numberline {8}Torque + Rotational Motion}{22}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Rotational Kinematics}{22}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Relating angular and linear motion}{23}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Tangenetial Acceleration}{23}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Torque}{23}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Gravitational Torque and the Center of Gravity}{24}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Rotational Dynamics and Rotational Inertia}{24}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Rolling Motion}{25}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Torque and equilibrium}{25}{section.8.8}%
+\contentsline {section}{\numberline {8.9}Stability and Balance}{25}{section.8.9}%
+\contentsline {chapter}{\numberline {A}Scientific Notation, Significant Figures, and Unit Conversions}{26}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Scientific Notation}{26}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Scientific Figures}{26}{section.A.2}%
+\contentsline {section}{\numberline {A.3}SI Units}{27}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Unit Prefixes}{27}{section.A.4}%
+\contentsline {chapter}{\numberline {B}Important Overall Concepts}{28}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Closed and Open Systems}{28}{section.B.1}%
+\contentsline {section}{\numberline {B.2}The analysis and use of graphs}{28}{section.B.2}%
+\contentsfinish 

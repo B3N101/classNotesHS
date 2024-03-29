@@ -1,0 +1,96 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Projectile Mini Lab 1}\\\huge{AP Physics C}}
+\author{\huge{Ben Feuer}}
+\date{Due September 22, 2023}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+% \tableofcontents
+\pagebreak
+
+\section{Introduction}
+
+\textbf{The goal} of this lab is to determine where a marble will land given a 45 degree angle based on data from when the marble was launched at a 0 degree angle.
+\\
+\textbf{The materials} that are used in this lab include measuring sticks, kinematic equations, a marble, and a marble launcher. 
+
+\section{Procedure}
+
+\textbf{The procedure} for this lab is as follows:
+\begin{enumerate}
+  \item First, we found the height of the launcher from the ground, and the displacement of the marble when being launched from 0 degrees. 
+  \item We then perdicted where the marble would land if it was launched at a 45 degree angle.
+  \item Then, we launched the marble at a 45 degree angle, and measured the displacement of the marble from the launcher.
+  \end{enumerate}
+
+
+\section{Diagram of the Procedure}
+        
+%diagram png goes here 
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{diagram.png}
+  \end{center}
+\end{figure}
+
+\section{Data}
+
+\textbf{The data} that we collected for the height of the launcher, and the displacement of the marble when being launched from 0 degrees is as follows:
+
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ Trial & Height of Launcher (m) & Displacement of Marble (m) \\ 
+ \hline
+ 1 & 1.174 & 2.63 \\ 
+ 2 & 1.174 & 2.60 \\ 
+ Avg. & 1.174 & 2.615 \\ 
+ \hline
+
+\end{tabular}
+
+\end{center} 
+
+\section{Perdicting the Displacement of the Marble at 45 Degrees}
+
+To perdict the displacement of the marble at 45 degrees, we first found the velocity that the marble at 0 degrees was launched at. 
+$$ t = \sqrt{\frac{2h}{g}} = \sqrt{\frac{2(1.174 m)}{9.8 \frac{m}{s^2}}} = 0.49 s $$
+$$ v = \frac{\Delta x}{t} = \frac{2.615 m}{0.49 s} = 5.34 \frac{m}{s} $$
+
+We then used the velocity to find the displacement of the marble at 45 degrees by first finding the x and y components of the velocity at 45 degrees to find the time that the marble is in the air to then find the marble's horizontal displacement. 
+
+$$ v_{ix} = v_{iy} = v_i \cos{\theta} = 5.34 \frac{m}{s} \cos{45} = 3.77 \frac{m}{s} $$ 
+
+$$ \Delta y = v_{iy} t + \frac{1}{2} a_y t^2 \implies 3.77 \frac{m}{s} t + \frac{1}{2} (-9.8 \frac{m}{s^2}) t^2 + 1.174m = 0 $$ 
+
+% Quadratic Formula to find t % 
+
+$$ t = \frac{-3.77 \frac{m}{s} \pm \sqrt{(3.77 \frac{m}{s})^2 - 4(0.5)(-9.8 \frac{m}{s^2})(1.174m)}}{2(0.5)(-9.8 \frac{m}{s^2})} = 1.00725s $$
+$$ \Delta x_{\mathrm{perdicted}} = v_{ix} t_{45} = 3.77 \frac{m}{s} (1.00725 s) = 3.80 m $$ 
+
+\section{Experimental result}
+
+\textbf{The experimental result} of the displacement of the marble at 45 degrees is as follows:
+
+$$ \Delta x_{45} = 4.08 m $$
+
+\section{Conclusion}
+
+\subsection{Percent Error}
+
+$$ \% Error = |\frac{\Delta x_{45} - \Delta x_{\mathrm{perdicted}}}{\Delta x_{\mathrm{perdicted}}}| \times 100\% = |\frac{4.08m - 3.80m}{3.80m}| \times 100\% = 7.37\% $$
+
+\subsection{Sources of Error}
+
+\textbf{The sources of error} in this lab include the marble not being launched at exactly 45 degrees, and the marble not being launched at the same velocity as the marble was launched at 0 degrees. If the marble was launched at an angle different from 45 degrees, it would be at a lower angle because the marble is launched above the ground would have a higher horizontal velocity and thus travel for a longer distance. And, if the marble wasn't launched at the same velocity as it was launched at 0 degrees, it would be launched a higher velocity. Lastly, factors such as spin and drag on the marble which we didn't account for could also lead to the error; however, those sources would likely slow the marble down.
+\end{document}

@@ -1,0 +1,28 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Ben Feuer's Guide To Writing Code}}
+\author{\huge{Ben Feuer}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{Comments}
+\clm{Less $ > $ more}{}{
+  Don't write comments. Write code that doesn't need comments. Never write comments that explain your code!
+}
+
+
+
+
+\end{document}

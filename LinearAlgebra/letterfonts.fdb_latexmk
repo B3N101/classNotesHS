@@ -1,0 +1,10 @@
+# Fdb version 3
+["pdflatex"] 1694530498 "letterfonts.tex" "letterfonts.pdf" "letterfonts" 1694530498
+  "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
+  "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1665240450 2826442 433bf6dce69847cd99bacf7d8a1741b2 ""
+  "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
+  "letterfonts.aux" 1694530498 32 3985256e7290058c681f74d7a3565a19 ""
+  "letterfonts.tex" 1694530457 8702 ef32ca12e97530ef5734ca4adcb1f6b1 ""
+  (generated)
+  "letterfonts.log"
+  "letterfonts.pdf"

@@ -1,0 +1,52 @@
+\contentsline {chapter}{\numberline {1}Kinematics}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Forces}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Forces and Free Body Diagrams}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Newton's Laws of Motion}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Friction}{6}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Drag}{6}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Circular Motion}{7}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Work, Energy, and Power}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Work}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Kinetic Energy}{9}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Work-Kinetic Energy Theorem}{9}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Work Done by a Spring}{10}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Conservative vs. Non-Conservative Forces}{10}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Momentum}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Momentum}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Impulse Momentum Theorem}{11}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Center of mass}{12}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Collisions}{13}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Center of Mass \& Collisions}{14}{subsection.4.4.1}%
+\contentsline {chapter}{\numberline {5}Rotational Kinematics}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Angular Quantities}{15}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Angular Kinematic Equations}{15}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Moment of Inertia}{16}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Torque}{16}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Simple Harmonic Motion}{18}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Gravitation}{20}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Newton's Law of Gravitation}{20}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Gravitational Field Strength}{20}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Gravity inside and outside a sphere}{20}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Kepler's Laws}{22}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Electricity, the Electric Field, Electric Potential Energy, and Electric Potential}{24}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Electric Charge \& Electric Force}{24}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Electric Charge}{24}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}Electrical Force}{25}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Electric Field}{26}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Electric Field Lines}{27}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Electric Field from a Continuous Charge Distribution}{28}{subsection.8.3.2}%
+\contentsline {chapter}{\numberline {9}Electric Potential Energy}{29}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Electric Potential}{31}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Voltage}{32}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Equipotential Surfaces/Lines}{32}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Conductors and Equipotential Surfaces}{33}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Electric Potential on and in a conducting sphere}{33}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}Electric Potential on and in a non-conducting sphere}{33}{subsection.10.2.3}%
+\contentsline {chapter}{\numberline {11}Math Review}{35}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Single Variable Calculus}{35}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Derivatives}{35}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}Integrals}{37}{subsection.11.1.2}%
+\contentsline {chapter}{\numberline {12}Miscellaneous}{38}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Fluid Projectiles}{38}{section.12.1}%
+\contentsline {chapter}{\numberline {13}EXAM STUDYING}{39}{chapter.13}%
+\contentsfinish 

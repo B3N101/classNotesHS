@@ -1,0 +1,1122 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{AP Physics C - Mechanics}}
+\author{\huge{Ben Feuer}}
+\date{2023-24}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+
+\chapter{Kinematics}
+
+\dfn{The Five Kinematic Equations}{
+  \begin{enumerate}
+    \item $ v_f = v_i + at $
+    \item $ \Delta x = v_it + \frac{1}{2}at^2 $
+    \item $ v_f^2 = v_i^2 + 2a\Delta x $
+    \item $ \Delta x = \frac{1}{2}(v_i + v_f)t $
+    \item $ \Delta x = vt $
+  \end{enumerate}
+}
+
+\dfn{What is kinematics}{
+  Kinematics is the study of motion. 
+}
+
+\dfn{What is a reference frame}{
+  A reference frame is a coordinate system that is used to describe the motion of an object. 
+}
+
+\dfn{What is a position}{
+  A position is the location of an object relative to a reference frame. 
+}
+
+\dfn{What is a displacement}{
+  A displacement is the change in position of an object. 
+}
+
+\dfn{What is a distance}{
+  A distance is the length of the path traveled by an object. 
+}
+
+\dfn{What is a vector}{
+  A vector is a quantity that has both a magnitude and a direction. 
+}
+
+\dfn{What is a scalar}{
+  A scalar is a quantity that has only a magnitude. 
+}
+
+\dfn{Motion in one dimension}{
+  Motion in one dimension is motion along a straight line.
+}
+
+\dfn{Motion in multiple dimensions}{
+  Motion in multiple dimensions is represented by vectors or components and angles. 
+  $$ \smat{x\\y\\z} = x\hat{i} + y\hat{j} + z\hat{k} $$
+  $$ \smat{x\\y\\z} = r\cos\theta\hat{i} + r\sin\theta\hat{j} + z\hat{k} $$
+}
+
+
+\chapter{Forces}
+
+\section{Forces and Free Body Diagrams}
+
+\dfn{What is a force}{
+  A force is a push or pull on an object. A force requires an agent. Forces are vectors, so they have both a magnitude and a direction. Forces are measured in Newtons (N). \\
+  Some types of forces are: contact forces and long range forces. Some types of contact forces are: tension, normal force, friction, and applied force. Some types of long range forces are: gravity, electric force, magnetic force, and strong and weak forces.
+  \\ 
+  The net force is the sum of all the forces acting on an object. If the net force is zero, then the object is in equilibrium. If the net force is not zero, then the object is not in equilibrium.
+}
+
+\section{Newton's Laws of Motion}
+
+\dfn{Newton's First Law}{
+  Newton's First Law states that an object at rest will stay at rest and an object in motion will stay in motion unless acted upon by an unbalanced force. This is also known as the law of inertia. Inertia is the tendency of an object to resist changes in its motion.
+}
+
+\dfn{Newton's Second Law}{
+  Newton's Second Law states that the acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass. The equation is: $$ \sum F = ma $$
+}
+
+\dfn{Newton's Third Law}{
+  Newton's Third Law states that for every action, there is an equal and opposite reaction. This means that for every force, there is an equal and opposite force. This means that for every force, there is another force that is the same magnitude but in the opposite direction. 
+}
+
+\section{Friction}
+
+\dfn{Friction}{
+  Friction is a force that opposes motion. There are two types of friction: static friction and kinetic friction. Static friction is the friction between two objects that are not moving relative to each other. Kinetic friction is the friction between two objects that are moving relative to each other. Static friction is greater than kinetic friction. 
+  $$ f_s \leq \mu_sN $$ 
+  $$ f_k = \mu_kN $$ 
+  $ f_s $ is the static friction force. $ f_k $ is the kinetic friction force. $ \mu_s $ is the coefficient of static friction. $ \mu_k $ is the coefficient of kinetic friction. $ F_n = \vec{n} = N $ is the normal force. 
+}
+
+\section{Drag} 
+
+\dfn{Drag}{
+  Drag is a force that opposes motion through a fluid. There are two types of drag: high reynolds number drag and low reynolds number drag. High reynolds number drag is the drag that occurs when the object is moving fast(projectile). Low reynolds number drag is the drag that occurs when the object is moving slow. 
+
+  $$ F_d = -kv \text{ (low reynolds number)} $$ 
+  $$ F_d = -kv^2 \text{ (high reynolds number)} $$ 
+
+  $ F_d $ is the drag force. $ k $ is the drag coefficient. $ v $ is the velocity of the object. 
+}
+
+\qs{Low Reynolds Number Drag}{
+  A small light-weight sphere floats horizontally along the still water. It has an initial velocity $ v_0 $. 
+  \\
+  a) Which of the drag equations should we use? \\
+  $$ F_d = -kv \text{ (low reynolds number)} $$
+  b) Derive an expression for velocity as a function of time in terms of m, K, and $ v_0$. \\ 
+  $$ F_d = -kv $$ 
+  $$ ma = -kv $$ 
+  $$ a = -\frac{k}{m}v $$ 
+  $$ \frac{dv}{dt} = -\frac{k}{m}v $$ 
+  $$ \int \frac{1}{v} dv = \int  -\frac{k}{m}dt $$
+  $$ \ln v = -\frac{k}{m}t + C $$ 
+  $$ v = e^{-\frac{k}{m}t + C} $$ 
+  $$ v = e^{-\frac{k}{m}t} \cdot v_0 $$
+
+  c) Derive an expression for stopping distance in terms of m, K,and $ v_0 $ \\
+  $$ v(t) = e^{-\frac{k}{m}t} \cdot v_0 $$
+  $$ \text{Let } \frac{m}{k} = \tau $$ 
+  $$ \text{Let's say that the particle stops when } t = 2 \tau $$ 
+  $$ \Delta x = \int_{0}^{2\tau} v(t) dt $$ 
+  $$ \Delta x = \int_{0}^{2\tau} e^{-\frac{k}{m}t} \cdot v_0 dt $$ 
+  $$ \Delta x = v_0 \cdot (\frac{-m}{kt}) e^{-\frac{k}{m}t} |^{2\tau}_{0}$$
+  $$ \Delta x = v_0 \cdot (\frac{-m}{k(2\tau)}) e^{-\frac{k}{m}(2\tau)} - v_0 \cdot (\frac{-m}{k(0)}) e^{-\frac{k}{m}(0)}$$
+
+
+}
+
+
+\section{Circular Motion}
+
+\dfn{Uniform Circular Motion}{
+  Uniform circular motion is the motion of an object in a circle at a constant speed. The object is constantly changing direction, so it is accelerating. The acceleration is called centripetal acceleration. The centripetal acceleration is always directed towards the center of the circle. The centripetal acceleration is given by the equation: 
+  $$ a_c = \frac{v^2}{r} $$
+  $ a_c $ is the centripetal acceleration. $ v $ is the velocity of the object. $ r $ is the radius of the circle. 
+  The centripetal force is the force that causes the centripetal acceleration. The centripetal force is given by the equation: 
+  $$ F_c = ma_c = m\frac{v^2}{r} $$ 
+  $ F_c $ is the centripetal force. $ m $ is the mass of the object. $ a_c $ is the centripetal acceleration. $ v $ is the velocity of the object. $ r $ is the radius of the circle.
+  The centripetal force is the net force acting on the object. The centripetal force is the sum of all the forces acting on the object. The centripetal force is the vector sum of all the forces acting on the object. Some forces that can be centripetal forces include tension, friction, gravity, and normal force.
+}
+
+
+\nt{
+  Minimum Speed for Virtical Uniform Circular Motion \\ 
+  The minimum speed for uniform circular motion is the speed at which the object will not fall off the circle. The minimum speed is given by the equation: 
+  $$ v_{min} = \sqrt{gr} $$
+}
+
+\qs{Banked Curves}{
+  A car is driving around a banked curve. The radius, mass, coefficient of static friction, and angle of the bank are given as constants: $ r, m, \mu_s, \theta $ 
+  \\
+  \\
+  a) What is the normal force on the car? \\ 
+  $$ \sum F_y = 0 = F_N\cos \theta  - mg $$
+  $$ F_N = \frac{mg}{\cos \theta} $$ 
+  \\ 
+  \\ 
+  b) What is the centripetal force on the car? \\ 
+  $$ F_c = \sum F_x = f_s \cos \theta + F_N \sin \theta $$ 
+}
+
+\chapter{Work, Energy, and Power}
+
+
+\section{Work}
+\dfn{Work}{
+  $$ W \equiv \int _{\vec{r_1}} ^{\vec{r_2}} \vec{F} \cdot d\vec{l} = \vec{F} \cdot \vec{d}\cos \theta  $$
+}
+
+\qs{Work done by gravity near Earth's surface (only force is gravity)}{
+  $$ W_{tot} = W_1 + W_2 +\dots+ W_N $$
+  $$ W_{tot} = m\vec{g} \cdot d\vec{l}_1 + m\vec{g} \cdot d\vec{l}_2 +\dots+ m\vec{g} \cdot d\vec{l}_n $$
+  $$ W_{tot} = -mgdy_1 - mgdy_2 \dots- mgdy_n = - mg \Delta y$$
+}
+
+
+\section{Kinetic Energy}
+\dfn{Kinetic Energy}{
+  $$ K \equiv \frac{1}{2}mv^2 $$
+}
+
+\section{Work-Kinetic Energy Theorem}
+
+\dfn{Work-Kinetic Energy Theorem}{
+  $$ W_{NET} = \Delta K $$
+  $ W_{NET} $ is the total work done on the object. $ \Delta K $ is the change in kinetic energy of the object. 
+}
+
+\qs{Three Objects}{
+  Three objects with the same mass, move the same distance $H$. One falls straight, one slides down a frictionless ramp, and one swings on a string. 
+  \\
+  \textbf{Claim:} All three objects have the same change in kinetic energy because the all have the same $ \Delta y = h $ and $ W = K_f = mgh $ . $ v_f = v_i = v_s $
+}
+
+\qs{Car at constant speed up an incline}{
+  A car drive up a hill with a constant speed. Which statement best describes the total work $ W_{tot} $ done on the car by \textbf{all forces} as it moves up the hill?
+  \\
+    a) $ W_{tot} > 0 $ \\
+    b) $ W_{tot} = 0 $ \\
+    c) $ W_{tot} < 0 $ \\
+  \textbf{Answer:} b) $ W_{tot} = 0 $ \\
+  \textbf{Reason:} The car is moving at a constant speed, so the net force is zero. The net force is the sum of all the forces. The sum of all the forces is zero, so the total work done on the car is zero.
+}
+
+\qs{Integral Practice!}{
+  Derive an expression for the work done by the force of gravity as a satellite moves from $r_1 $ to $ r_2 $.\\
+  $$ dW = - \frac{GMm}{r^2}dr $$ 
+  $$ \vec{F}_g (\vec{r}) = - \frac{GMm}{r^2} \hat{r} $$ 
+  $$ W = \int_{r_1}^{r_2} \vec{F}_g \cdot d\vec{l} = \int_{r_1}^{r_2} \vec{F}_g \cdot \hat{r} dr = \int_{r_1}^{r_2} - \frac{GMm}{r^2} dr = \frac{GMm}{r_2} - \frac{GMm}{r_1} = GMm (\frac{1}{r_1} - \frac{1}{r_2}) $$
+}
+
+\section{Work Done by a Spring}
+
+\dfn{Work Done by a Spring}{
+  $$ F_s = -kx $$ 
+  $$ W_s = \int_{x_1}^{x_2} \vec{F}_s \cdot d\vec{l} = \int_{x_1}^{x_2} \vec{F}_s dx \cos (180) = \int_{x_1}^{x_2} |kx|dx = \frac{1}{2} k[x^2]^{x_2}_{x_1} $$
+}
+
+
+\section{Conservative vs. Non-Conservative Forces}
+
+\dfn{Conservative Forces}{
+  A force is conservative if the work done by the force on an object moving between two points is independent of the path taken by the object. 
+  \\
+  \textbf{Path does not affect work. No change in mechanical energy.}
+}
+
+\dfn{Non-Conservative Forces}{
+  A force is non-conservative if the work done by the force on an object moving between two points is dependent of the path taken by the object.
+  \\
+  \textbf{Path does affect work. Loss in Mechanical Energy.}
+} 
+
+
+\chapter{Momentum}
+
+\section{Momentum}
+\dfn{Momentum}{
+  Momentum is a vector quantity defined as the product of an object's mass and velocity. 
+  $$ \vec{p} \equiv m\vec{v} $$ 
+}
+
+\dfn{Impulse}{
+  Impulse is the change in momentum of an object when the object is acted upon by a force for an interval of time.
+  $$ \vec{J} \equiv \int_{t_1}^{t_2} \vec{F} dt = \int _{v_1}^{v_2} mdv = m(v_2 - v_1) = \Delta \vec{p} $$
+  $$ \vec{J} = \Delta \vec{p} $$
+}
+
+\section{Impulse Momentum Theorem} 
+\dfn{Impulse Momentum Theorem}{
+
+}
+
+\qs{Car Collisions}{
+  A) A 1500 kg car, including a 65 kg person, is traveling 10 m/s when it crashes into a wall. It \textbf{bounces}in 0.05s, and its final speed is 1/4 its initial speed. What is the average force felt by the driver?
+  \\
+  $$ F_{net} = 1500kg x (-12.5 \frac{m}{s} * \frac{1}{0.05s}) = -3.75 x 10^5 N $$
+  $$ F_{person} = \frac{65kg}{1500kg} * -3.75 x 10^5 N = -1.6 x 10^4 N $$
+  \\
+  B) A 1500 kg car, including a 65 kg person, is traveling 10 m/s when it c into a wall. It \textbf{crunches} in 0.25s, and it comes to rest. What is the average force felt by the driver?
+  $$ F_{net} = 1500kg x (-10 \frac{m}{s} * \frac{1}{0.25s}) = -6 x 10^4 N $$ 
+  $$ F_{person} = \frac{65kg}{1500kg} * -6 x 10^4 N = -2.6 x 10^3 N $$
+  \\
+  C) Based on these two examples, what should car manufacturers do to make cars safer?
+  \\
+  \textbf{Answer:} Manufacturers should make cars that crunch instead of bounce. This is because the crunching car experiences a smaller force than the bouncing car.
+}
+
+\qs{Momentum of sliding book}{
+  A 0.5 kg book with an initial velocity of 1 m/s slides to rest on a table. The coefficient of kinetic friction is 0.4. What is the book's momentum as a function of time? What is its momentum after half a second?
+  \\
+  $$ \vec{p(t)} = 0.5kg * \frac{1m}{s} - 0.5kg * $$
+}
+
+
+\section{Center of mass}
+
+\dfn{Center of mass}{
+  The center of mass of a system of particles is the point that behaves as the average position of all the particles in the system. 
+  $$ \vec{R}_{cm} = \frac{1}{M_{total}} \sum_{i=1}^{n} m_i \vec{r}_i \text{ (for Discrete Distributions)}$$
+  $$ \vec{R}_{cm} = \frac{1}{M_{total}} \int \vec{r} dm \text{ (for Continuous Distributions)}$$ 
+  $$ \vec{R}_{cm} = \frac{1}{M_{total}} \sum_{i=1}^{n} $$
+}
+\nt{
+  $$ \text{Density} = \lambda = \frac{dm}{dx} $$
+}
+
+\ex{A stick of length L and linear density $\lambda = bx^2 $, where $b$ is a constant}{
+  \textbf{Density is not uniform!} \\
+  $$ \lambda = bx^2 = \frac{dm}{dx} $$
+  $$ x_{cm} = \frac{\int xdm}{\int dm} $$
+  $$ \int_0^L xdm = \int_0^L xbx^2 dx = \frac{b}{4}x^4 |_0^L = \frac{b}{4}L^4 $$ 
+  $$ \int_0^L dm = \int_0^L bx^2 dx = \frac{b}{3}x^3 |_0^L = \frac{b}{3}L^3 $$
+  $$ x_{cm} = \frac{\frac{b}{4}L^4}{\frac{b}{3}L^3} = \frac{3}{4}L $$
+}
+
+\ex{A uniform stick of length L and linear denisty $ \lambda b(L-\frac{x}{2})$, where $b$ is a constant}{
+  $$ \lambda = b(L - \frac{x}{2}) $$
+  $$ x_{cm} = \frac{\int xdm}{\int dm} $$ 
+  $$ \int_0^L xdm = \int_0^L x b(L - \frac{x}{2}) dx = \frac{bLx^2}{2} -\frac{bx^3}{3\cdot2} |_0^L = \frac{b}{3}L^3 $$
+  $$ \int_0^L dm = \int_0^L b(L - \frac{x}{2}) dx = bLx - \frac{bx^2}{4}  |_0^L = \frac{3b}{4}L^2 $$
+  $$ x_{cm} = \frac{\frac{b}{3}L^3}{\frac{3b}{4}L^2} = \frac{4L}{9} $$
+}
+
+
+\dfn{Kinematic Quantities}{
+  $$ \vec{R}_{cm} = \frac{\sum_{i=1}^{n} m_i \vec{r}_i}{M_{total}} \text{ Displacement of Center of Mass} $$
+  $$ \vec{v}_cm = \frac{\sum_{i=1}^{n} m_i \vec{v}_i}{M_{total}} \text{ Velocity of Center of Mass} $$
+}
+
+\dfn{Conservation of Momentum}{
+  When $ \vec{F}_{net} = 0 $, the total momentum of a system is conserved, because $ \frac{d\vec{P}_{total}}{dt} = 0 \to \vec{P}_{total} = \text{constant} $.
+}
+\dfn{Conservation of Energy}{
+  $$ \Delta E_{mechanical} = W_{NC} $$
+}
+
+\section{Collisions}
+
+\dfn{Collisions}{
+  \textbf{Elastic}: Kinetic energy is conserved. Idealized. Between very hard objects. \\
+  \textbf{Inelastic}: Kinetic energy is not conserved. \\
+  \textbf{Perfectly Inelastic}: Two objects stick together. Explosions in reverse. \\
+}
+
+\qs{Collision Problem}{
+  Two balls of equal mass are thrown horizontally with the same initial velocity. They hit identical stationary boxes resting on a frictionless horizontal surface. The ball hitting box 1 bounces back, while the ball hitting box 2 gets stuck? \\
+  Which box ends up moving faster? \\
+  \textbf{Answer: Box 1 moves faster} because the ball bounces back, giving it a larger impulse, thus giving the box a larger impusle in the opposite direction equal to the balls initial momentum subtracted by the balls final momentum(which is in the negative direction). 
+}
+
+\dfn{Relationship between Momentum and Kenetic Energy}{
+  $$ K = \frac{1}{2}mv^2 = \frac{1m^2v^2}{2m} = \frac{p^2}{2m} $$
+}
+\qs{Elastic Collision}{
+  A green block of mass $m$ collides into a red block of mass $M$ which is initially at rest. After the collision the green block is at rest and the red block is moving to the right. \textbf{How does $ M $ compare to $m$?} \\
+  \textbf{Answer:} $ M = m $ because momentum and kinetic energy is conserved. 
+  $$ p_i = mv_i = p_f = Mv_f $$ 
+  $$ \frac{p_i^2}{2m} = \frac{p_f^2}{2M} $$
+  $$ m = M $$
+}
+
+\subsection{Center of Mass \& Collisions}
+\nt{
+  $$ \vec{F}_{net,ext} = M_{tot} \vec{A}_{cm} = \frac{d\vec{P}}{dt}$$
+}
+
+\qs{Ballistic Pendulum}{
+  A projectile of mass $ m $ moving horizontall with speed $ v $ strikes a stationary mass $ M $ suspended by strings of length $ L $. Subsequently, $ m + M$ rises to a hight of $H$. \textbf{Given $H$, what is the initial speed $ v $ of the projectile?} \\
+  \textbf{Answer:} First, before the collision both momentum and mechanical energy is conserved, and during the collision only momentum is conserved. Therefore, $ mv_i = (m+M)v_f $. $H$ is found with the velocity after the collision. 
+  $$ \frac{1}{2}(m+M)v_f^2 = \frac{1}{2}(m+M)(\frac{mv_i}{m+M})^2 = (m+M)gH $$ 
+  $$ v_i = \sqrt{2gH}\frac{m+M}{m} $$
+}
+
+\chapter{Rotational Kinematics} 
+
+\section{Angular Quantities} 
+% create a table of angular quantities 
+
+\begin{table}[h!]
+  \caption{Angular Quantities}
+  \label{tab:angular-quantities}
+  \begin{center}
+    \begin{tabular}[c]{|c|c|}
+      \hline 
+      Name & Symbol \\
+      \hline
+      Angular Position & $ \theta $ \\ 
+      \hline 
+      Instantaneous Angular Velocity & $ \omega = \frac{d\theta }{dt} $ \\ 
+      \hline 
+      Average Angular Velocity & $ \bar{\omega} = \frac{\Delta \theta}{\Delta t} $ \\
+      \hline
+      Instantaneous Angular Acceleration & $ \alpha = \frac{d\omega}{dt} $ \\ 
+      \hline 
+      Average Angular Acceleration & $ \bar{\alpha} = \frac{\Delta \omega}{\Delta t} $ \\ 
+      \hline
+      Arc Length & $ s = r\theta $ \\
+      \hline 
+      Tangential Velocity & $ v_t = r\omega $ \\
+      \hline 
+      Tangential Acceleration & $ a_t = r\alpha $ \\
+      \hline 
+      Rotational Kinetic Energy & $ K = \frac{1}{2}I\omega^2 $ \\
+      \hline 
+      RPM to rad/s & $ \omega = \frac{2\pi}{60}RPM $ \\
+      \hline 
+      Angular Velocity in terms of frequency & $ \omega = 2\pi f $ \\
+      Torque & $ \tau = rF\sin{\theta} $ \\ 
+      
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\section{Angular Kinematic Equations}
+\dfn{Angular Kinematic Equations}{
+  $$ \omega_f = \omega_i + \alpha t $$
+  $$ \theta = \omega_i t + \frac{1}{2} \alpha t^2 $$
+  $$ \omega_f^2 = \omega_i^2 + 2 \alpha \theta $$
+}
+
+\qs{Constant Angular Acceleration}{
+  A wheel which is initially at rest starts to turn with a constant angular acceleration. After 4 secons it has mad 4 complete revolutions. How many revolutions has it made after 8 seconds? 
+  \\
+  \textbf{Answer:}
+  $$ \omega _i = 0 $$ 
+  $$ t_i = 4 $$ 
+  $$ \delta \theta _i = 4(2\pi) = 8\pi $$ 
+  $$ 8 \pi = \frac{1}{2} \alpha (4)^2 $$ 
+  $$ \alpha  = 8 \pi * \frac{2}{16s^2} = \frac{\pi}{s^2} $$
+$$ \omega _f = \frac{1}{2} \frac{\pi}{s^2} (8)^2 = \mathbf{16} \boldsymbol{\pi} $$
+}
+
+\section{Moment of Inertia}
+\dfn{Moment of Inertia}{
+  $$ I = \sum m_i r_i^2 \text{for discrete distributions} $$
+  $$ I = \int r^2 dm \text{for continuous distributions} $$
+  $$ I = \frac{1}{2} MR^2 \text{for a solid cylinder} $$ 
+  $$ I = \frac{1}{2} MR^2 \text{for a hollow cylinder} $$ 
+  $$ I = \frac{1}{2} MR^2 \text{for a solid sphere} $$ 
+  $$ I = \frac{2}{5} MR^2 \text{for a hollow sphere} $$ 
+
+} 
+
+
+\section{Torque}
+
+\dfn{Torque}{
+  Torque is the rotational equivalent of force. 
+  $$ \tau  = rF \sin \theta $$
+  $ \theta $ is measured between the force and the axis of rotation. 
+  $$ \tau_{net} = I \alpha $$ 
+  $$ \vec{\tau} = \vec{r} \times \vec{F} $$
+}
+
+\qs{Non-Ideal Pulleys}{
+  Find the acceleration of the mass, the tension of the rope, and the speed of the mass having fallen $H$. The pulley has a mass $M$ and a radius $R$, with a moment of inertia $I$. 
+
+  $$ \tau_{net} = I \alpha $$ 
+  $$ \tau = RT = I \alpha $$ 
+  $$ RT = I \frac{a}{R} $$ 
+  $$ T = \frac{Ia}{R^2} $$
+  $$ F_{net} = ma $$ 
+  $$ ma = mg - T $$ 
+  $$ mg - \frac{Ia}{R^2} = ma $$ 
+  $$ mg = a(m + \frac{I}{R^2}) $$ 
+  $$ a = \frac{mg}{m + \frac{I}{R^2}} $$ 
+  $$ v_f^2 = v_i^2 + 2a \Delta x $$
+  $$ v_f^2 = 2aH $$ 
+  $$ v_f = \sqrt{\frac{2Hmg}{m+\frac{I}{R^2}}} $$
+  $$ T = \frac{Ia}{R^2} = \frac{I}{R^2} \frac{mg}{m + \frac{I}{R^2}} $$
+}
+
+\chapter{Simple Harmonic Motion}
+
+\dfn{Simple Harmonic Motion}{
+  Regularaly repeated motion where the acceleration is proportional to the displacement from equilibrium and is directed towards the equilibrium point. 
+  \\
+  $$ x(t) = A \cos(\omega t + \phi) \text{ or} A \sin(\omega t)$$
+  $$ v(t) = x'(t) = -A \omega \sin(\omega t + \phi) \text{ or} A \omega \cos(\omega t)$$
+  $$ a(t) = x''(t) = v'(t) = -A \omega^2 \cos(\omega t + \phi) \text{ or} -A \omega^2 \sin(\omega t)$$
+  Acceleration is zero at the equilibrium point. Acceleration is largest in the positive direction when the displacement is largest in the negative direction and largest in the negative direction when the displacement is largest in the positive direction.
+}
+
+\qs{Derive the period of the oscillation for spring SMH}{
+  $$ F = -kx$$ 
+  $$ ma = -kx $$ 
+  $$ a = -\frac{kx}{m} $$ 
+  $$ a = -\frac{k}{m}x $$ 
+  $$ x(t) = A \cos(\omega t + \phi) $$ 
+  $$ v(t) = -A \omega \sin(\omega t + \phi) $$
+  $$ a(t) = -A \omega^2 \cos(\omega t + \phi) $$
+  $$ a(t) = -x \omega^2 \cos(\omega t + \phi) = -\frac{k}{m}x $$ 
+  $$ \omega  = 2\pi /t $$ 
+  $$ \omega^2 = 4\pi^2 /t^2 $$ 
+  $$ -x \frac{4\pi^2}{t^2} \cos(\omega t + \phi) = -\frac{k}{m}x $$ 
+  $$ -x \frac{4\pi^2}{t^2} \cos(2\pi ) = -\frac{k}{m}x $$
+  $$ -x \frac{4\pi^2}{t^2} = -\frac{k}{m}x $$ 
+  $$ \frac{4\pi^2}{t^2} = \frac{k}{m} $$ 
+  $$ t^2 = \frac{4\pi^2 m}{k} $$ 
+  $$ t = \sqrt{\frac{4\pi^2 m}{k}} $$ 
+  $$ t = 2\pi  \sqrt{\frac{m}{k}} $$
+}
+
+\qs{Spring SMH with initial conditions}{
+  \textbf{Conditions:} $ T = 0.80s $, $ A = .1m $, $ x(0) = -.05m$ and $ v(0) < 0 $. Find $ x(2) $ and $ v(2) $.
+  $$ x(t) = A \cos(\omega t + \phi) $$ 
+  $$ \omega = 2\pi / T = 2\pi / .8 = 2.5\pi $$ 
+  $$ x(t) = .1 \cos(2.5\pi t + \phi) $$ 
+  $$ x(0) = -.05 = .1 \cos(\phi) $$ 
+  $$ \phi = \cos^{-1}(\frac{-.05}{.01}) = \frac{2}{3} \pi $$
+  $$ x(t) = .1 \cos(2.5\pi t + \frac{2}{3} \pi) $$ 
+$$ x(2) = .1 \cos(2.5\pi (2) + \frac{2}{3} \pi) = .1 \cos(5\pi + \frac{2}{3} \pi)= 0.09521 m $$ 
+$$ v(t) = -.1 (2.5\pi) \sin(2.5\pi t + \frac{2}{3} \pi) $$ 
+$$ v(2) = -.1 (2.5\pi) \sin(5\pi + \frac{2}{3} \pi) = -0.2401 m/s $$ 
+}
+
+\nt{Vertical Springs\\
+  The equilibrium point is the point where the spring is neither stretched. 
+  \\
+  $$ F_{net} = ma = -kx - mg $$
+}
+
+
+\chapter{Gravitation}
+
+\section{Newton's Law of Gravitation}
+\dfn{Newton's Law of Gravitation}{
+  $$ F = G \frac{m_1 m_2}{r^2} $$ 
+  $$ G = 6.67 \times 10^{-11} N m^2 / kg^2 $$ 
+  $$ g = \frac{GM}{R^2} \text{ this is gravitational field strength $\to$ ratio of Force to mass}$$
+}
+
+\section{Gravitational Field Strength}
+
+\dfn{Gravitational Field Strength}{ 
+  Gravity is an action-at-a-distance fore ... also called a field force. 
+  \\
+  Fields desribe the influence(force) of an object in the surrounding region. 
+  \\
+  This is why gravity is sometimes represented by an object ontop of a grid that is curved under the influence of mass.
+}
+
+
+\section{Gravity inside and outside a sphere}
+
+\dfn{Gravity inside a sphere}{
+  $$ F_g = \frac{GM_{enc}m}{r^2} $$ 
+  $$ M_{enc} = \frac{4}{3} \pi r^3 \rho $$ 
+  $$ F_g = \frac{4}{3} \pi G \rho m r $$ 
+}
+
+\qs{Will an object dropped into a uniform non-rotating planet exhibit simple harmonic motion}{
+  $$ F_i = \frac{4}{3} \pi G \rho m r $$
+  $$ U_i = - \frac{4}{3} \pi G \rho m r^2 $$
+  $$ K_i = 0 $$
+  $$ F_m = 0 $$
+  $$ U_m = 0 $$ 
+  $$ K_m = \frac{1}{2} mv^2 = U_i $$
+  $$ F_f = - \frac{4}{3} \pi G \rho m r $$ 
+  $$ U_f = \frac{4}{3} \pi G \rho m r^2 $$ 
+  $$ K_f = 0 $$ 
+  \\
+  \textbf{Answer:} Yes, because first the object will accelerate towards the center of the planet, then it will accelerate in the opposite direction as it moves away from the center of the planet. Until it reaches a velocity of zero from which this cycle repeats. Therefore, this is SHM. 
+
+  $$ d^2 x/dt^2 = -\omega^2 x \text{ this is the acceleration of SHM } $$
+  $$ F_g = -4/3 \pi G \rho m r = -GMr/R^3 $$ 
+  $$ F_{net} = ma = -GMr/R^3 $$ 
+  $$ d^2 r/dt^2 = -GMr/mR^3 $$
+  $$ \omega^2 = GM/R^3 $$
+}
+
+\qs{What is the distance between two 5kg objects attracted by a force of 0.004 N?}{
+  $$ F = G m_1 m_2 / r^2 $$ 
+  $$ r = \sqrt{G m_1 m_2 / F} $$ 
+  $$ r = \sqrt{6.67 \times 10^{-11} \times 5 \times 5 / 0.004} = 6.45658579\times10^{-4} m $$
+}
+
+\qs{Given the radius of the earth, the mass of an object, and the gravitational force, determine the mass of the earth.}{
+  $ r = 6.5*10^6 m$ \\
+  $ F = 19.6 N $ \\
+  $ m = 2 kg $ \\
+  $$ F = G \frac{m_1 m_2}{r^2} $$ 
+  $$ m_2 = \frac{F r^2}{G m_1} $$ 
+  $$ m_2 = \frac{19.6 \times 6.5 \times 10^6 \times 6.5 \times 10^6}{6.67 \times 10^{-11} \times 2} = 6.01811094\times10^{24} kg $$
+}
+
+\qs{What will a 150 lb student weigh on a planet with twice the mass of the Earth and only $\frac{1}{2}$ the Earth's radius}{
+  $$ F_1 = 150 lb $$ 
+  $$ F = G \frac{m_1 m_2}{r^2} $$ 
+  $$ F_2 = G \frac{2m_1 m_2}{(\frac{r}{2})^2} = G \frac{2m_1 m_2}{\frac{1}{4}r^2} = G \frac{8m_1 m_2}{r^2} = 8F_1 = 8(150lb) = 1200 lb $$
+}
+
+\qs{At what position(s) between the Sun and the Earth will a satellite experience a 0 net force of Gravity? (ignoring other celestial bodies)}{
+   $ m_{sun} = 1.989 \times 10^{30} kg $ \\
+   $ m_{earth} = 5.972 \times 10^{24} kg $ \\ 
+   $ d_{sun-earth} = 150 \times 10^{9} m $ \\
+   $ r_{sun} = 696,340,000 m $ \\
+   $ r_{earth} = 6,371,000 m $ \\
+   % when will the force of gravity on a satellite be 0?
+   $$ F_{net} = F_{sun} - F_{earth} = 0 $$ 
+   $$ G \frac{m_{sun} m_{sat}}{r_{sat-sun}^2} = G \frac{m_{earth} m_{sat}}{r_{sat-earth}^2} $$
+   $$ \frac{m_{sun}}{r_{sat-sun}^2} = \frac{m_{earth}}{r_{sat-earth}^2} $$ 
+   $$ \frac{m_{sun}}{m_{earth}} = \frac{(r_{sun-earth}-r_{sat-earth})^2}{r_{sat-earth}^2} $$
+   $$ 333054.25 = \frac{(150 \times 10^{9} - r_{sat-earth})^2}{r_{sat-earth}^2} $$ 
+   $$ 577.11 = \frac{(150 \times 10^{9} - r_{sat-earth})}{r_{sat-earth}} $$
+
+}
+
+\section{Kepler's Laws}
+
+\dfn{Kepler's Laws}{
+  \textbf{1st Law:} The orbit of a planet is an ellipse with the Sun at one of the two foci. \\
+  \textbf{2nd Law:} A radius vector joining any planet to the Sun sweeps out equal areas in equal lengths of time. A line segment joining a planet and the Sun sweeps out equal areas during equal intervals of time. \\
+  \textbf{3rd Law:} The square of the orbital period of a planet is directly proportional to the cube of the semi-major axis of its orbit. 
+  $$ T^2 = \frac{4\pi^2}{GM}a^3 $$
+}
+
+\dfn{Elliptical orbits}{
+  Periphilion: Closest point to the sun. \\
+  Aphelion: Furthest point from the sun. \\
+  Eccentricity: $ e = \frac{c}{a} $ \\
+  Semi-major axis(): $ a = \frac{r_{min} + r_{max}}{2} $ \\
+  Semi-minor axis: $ b = \sqrt{a^2 - c^2} $ \\
+}
+\qs{Find the velocity of a satellite at the aphelion}{
+  $$ v_{aphel} = \sqrt{\frac{GM}{r_{max}}} $$
+  $$ L_{periph} = L_{aphel} = mr_{min} v_{periph} = mr_{max} v_{aphel} $$ 
+  $$ v_{aphel} = \frac{r_{min}}{r_{max}} v_{periph} $$
+}
+
+\qs{Find the energy of a satellite at the aphelion and periphilion}{
+  $$ E_{aphel} = \frac{1}{2}mv_{aphel}^2 - \frac{GMm}{r_{max}} $$ 
+  $$ E_{periph} = \frac{1}{2}mv_{periph}^2 - \frac{GMm}{r_{min}} $$
+  $$ E = \frac{1}{2}mv^2 - \frac{GMm}{r} $$
+  $$ v = \sqrt{\frac{GM}{r}} $$
+  $$ E = -\frac{1}{2} G \frac{Mm}{r} $$
+}
+
+\dfn{Circular orbits}{
+  For objects in circular orbit, the force of gravity provides the centripetal force necessary to hold the satellite in orbit. \\
+  Although the general shape of a satellite's orbit is an ellipse, a circel is a special case of this.
+  $$ F_g = F_c $$ 
+  $$ G \frac{m_1 m_2}{r^2} = \frac{mv^2}{r} $$ 
+  $$ v = \sqrt{\frac{GM}{r}} $$
+  $$ T = \frac{2\pi r}{v} = \frac{2\pi r}{\sqrt{\frac{GM}{r}}} = 2\pi \sqrt{\frac{r^3}{GM}} $$ 
+  $$ T^2 = \frac{4\pi^2}{GM}r^3 $$
+}
+
+
+
+\chapter{Electricity, the Electric Field, Electric Potential Energy, and Electric Potential}
+
+\section{Electric Charge \& Electric Force}
+\subsection{Electric Charge}
+\dfn{Electric Charge}{
+  On the macro sale, an object's charge is the sum of the charges of its constituent particles. 
+  \\
+  Charge actually is an intrinsic property of matter just like mass. 
+  \\
+  Charged is measured in Coulombs. 
+  $$ Charge = q = (\#p - \#e)(1.6 \times 10^{-19} C) $$
+}
+\nt{
+  The charge of an electron is $ -1.6 \times 10^{-19} C $ and the charge of a proton is $ 1.6 \times 10^{-19} C $. The charge of a neutron is 0. \\
+  The number of protons in one Coulomb is $ 6.25 \times 10^{18} $ and the number of electrons in negative one Coulomb is $ 6.25 \times 10^{18} $.
+}
+
+\dfn{Change in charge}{
+  Charge of an object can change by adding or removing electrons. 
+  \\
+  The ways in which an object can be charged are:
+  \begin{itemize}
+    \item Friction $\to$ rubbing
+    \item Conduction $\to$ contact   
+    \item Induction $\to$ no contact, except for grounding - polarizing, ground, remove ground, remove polarizing object
+    \item Grounding $\to$ contact with the earth - neutralizes charge
+  \end{itemize}
+}
+\clm{Conservation of Charge}{}{
+  The total charge of an isolated system is constant. 
+  $$ \sum_{i=1}^{n} q_i = \text{constant} $$
+  Charge is neither created nor destroyed. It is quantized. The number of protons and electrons in the universe is constant.
+}
+
+\dfn{Insulator}{
+  An insulator is a material in which electrons are not free to move. 
+  \\
+  Examples: Rubber, glass, plastic, wood, air, etc.
+}
+\dfn{Conductor}{
+  A conductor is a material in which electrons are free to move. 
+  \\
+  Examples: Metals, water, etc.
+}
+
+\dfn{Polarization}{
+  Polarization is the separation of charges within an object. \\
+  This occurs when a charged object is brought near a neutral object that is a conductor.
+  \\
+  \textbf{No net charge is transferred.}
+}
+
+
+\section{Electrical Force}
+
+\dfn{Coulomb's Law}{
+  The electrical force between two charged objects is directly proportional to the product of the quantity of charge on the objects and inversely proportional to the square of the separation distance between the two objects. The direction is determined by charges.
+  $$ F = k \frac{\abs{q_1 q_2}}{r^2} $$ 
+  $$ k = 9 \times 10^9 N m^2 / C^2 $$
+  $$ F = \frac{q_1 q_2}{4\pi \epsilon_0 r^2} $$
+  $$ \epsilon_0 = 8.85 \times 10^{-12} C^2 / N m^2 $$
+}
+\nt{
+  The electrical force is a conservative force. It is also a field force/ action-at-a-distance force / non-contact force.
+}
+
+\qs{Calculate $F_e$ and $F_g$ between an electron and proton in H}{
+  $ r = 5.3 \times 10^{-11} m $ \\
+  $ m_e = 9.11 \times 10^{-31} kg $ \\
+  $ m_p = 1.67 \times 10^{-27} kg $ \\
+  $$ F_e = k \frac{\abs{q_1 q_2}}{r^2} $$ 
+  $$ F_e = \frac{9 \times 10^9 \times 1.6 \times 10^{-19} \times 1.6 \times 10^{-19}}{(5.3 \times 10^{-11})^2} = 8.2 \times 10^{-8} N $$
+  $$ F_g = G \frac{m_1 m_2}{r^2} $$ 
+  $$ F_g = \frac{6.67 \times 10^{-11} \times 9.11 \times 10^{-31} \times 1.67 \times 10^{-27}}{(5.3 \times 10^{-11})^2} = 3.6 \times 10^{-47} N $$
+}
+
+\qs{Hanging Charged Spheres}{
+  2 25 gram spheres hang from light strings that are 35 cm long. They repel each other and carry the same negative charge. The two strings are seperated by 10 degrees. \\
+  \textbf{Find the magnitude of the charge on each sphere.} \\
+  $$ F_e = k \frac{\abs{q_1 q_2}}{r^2} $$ 
+  $$ F_g = 0.025 kg \times 9.8 m/s^2 = 0.245 N $$ 
+  $$ \theta = \frac{10}{2} = 5 $$
+  $$ T\cos(\theta) = F_g =  0.245 N $$ 
+  $$ T = \frac{T}{\cos(\theta)} = \frac{0.245 N}{\cos(5)} = 0.245 N / 0.9962 = 0.246 N $$ 
+  $$ T_x = T\sin(\theta) = 0.246 N \sin(5) = 0.0214 N $$
+  $$ F_e = T_x = k \frac{\abs{q_1 q_2}}{r^2} $$ 
+  $$ r = 0.35 m \sin(\theta) \times 2 = 0.061m $$
+  $$ F_e = T_x = 0.0214 N = 9 \times 10^9 \frac{q^2}{(0.061m)^2} $$
+  $$ q = \sqrt{\frac{0.0214 N \times (0.061m)^2}{9 \times 10^9}} = 9.37 \times 10^{-8} C $$
+}
+
+
+\section{Electric Field}
+
+\dfn{Electric Field}{
+  The electric field is a vector field that associates to each point in space the force experienced by a small positive test charge placed at that point. \\
+  The electric field is the ratio of force to charge.
+  $$ E = \frac{\vec{F_{net}}}{q} $$
+  "Generalized description of electric force that is independent of the test charge." \\
+  The electric field created by a single point particle of charge Q is given by:
+  $$ E = \frac{kQ}{r^2} \hat{r} = \frac{kQ}{r^2} $$
+  $\hat{r}$ is the unit vector pointing from the charge to the point in space where the electric field is being calculated.
+}
+
+\qs{Finding electric field strength and direction}{
+  $ Q = -8 \mu C $ \\
+  $ r = 0.1m $ \\
+  $ q_0 = 0.02 \mu C $ \\ 
+  A) What is the electric field strength and direction $q_0$ experiences at r?
+  $$ E = \frac{kQ}{r^2} = \frac{9 \times 10^9 \times -8 \times 10^{-6}}{0.1^2} = -7.2 \times 10^3 N/C $$
+  B) How would $\vec{E}$ change if you doubled the charge of $q_{0}$? \\
+  \textbf{Answer:} The electric field strength would double.
+}
+
+\subsection{Electric Field Lines}
+
+\dfn{Electric Field Lines}{
+  Lines of force on a test q. Show the direction of the force on a positive test charge. \\
+  \textbf{Negative charges would have field lines pointing towards them.} \\
+  \textbf{Positive charges would have field lines pointing away from them.} \\
+  \textbf{Rules:}
+  \begin{enumerate}
+    \item Lines are perpendiucular to the surface of a conductor. 
+    \item Lines represent direction a positive test charge would b eforced in a region around Q. 
+    \item Lines never cross. 
+    \item Line density is proprotional to field strength.
+  \end{enumerate}
+}
+
+% \subsection{Field from a Dipole}
+
+% \dfn{Electric Dipole}{
+%   A pair of equal and opposite charges separated by a distance $d$ from \textbf{negative to positive. 
+%   These dipoles are defined by a dipoles moment $p$.
+%   $$ \vec{p} = qd $$
+%
+%   $ z $ is the distance from the center of the dipole.
+%   $$ E = \frac{q}{4\pi \epsilon_0} (\frac{1}{(z-\frac{d}{2})^2} - \frac{1}{(z+\frac{d}{2})^2} $$
+%   $$ E = \frac{q}{4 \pi \epsilon_0 z^2} ((1 - \frac{d}{2z})^{-2} - (1 + \frac{d}{2z})^{-2}) $$
+%   $$ E = \frac{q}{4\pi \epsilon_0 z^2} \left( (1+\frac{d}{z}) - (1-\frac{d}{z}) \right) $$  $$ E = \frac{qd}{2\pi \epsilon_0 z^3} = \frac{p}{2\pi \epsilon_0 z^3} $$
+% }
+
+\subsection{Electric Field from a Continuous Charge Distribution}
+
+\dfn{Continous charge distributions}{
+  $$ \vec{E} = \sum_i k \frac{q_i}{r_i^2} \hat{r_i} $$
+  $$ \text{summation becomes an integral} $$
+  $$ \vec{E} = \int k \frac{dq}{r^2} \hat{r} $$ 
+  What does this mean?
+  \\
+  Integrate over all charges (dq) in the distribution. \\
+  r is the vector from dq to the point at which E is defined. 
+  \\
+  Charge Density:
+  $$ \lambda = \frac{Q}{L} \text{ Coulombs/meter - linear}$$ 
+  $$ \sigma = \frac{Q}{A} \text{ Coulombs/meter}^2 \text{ - surface}$$
+  $$ \rho = \frac{Q}{V} \text{ Coulombs/meter}^3 \text{ - volume}$$
+  \\ 
+  GEOMETRY:
+  $$ A_{sphere} = 4\pi r^2 $$ 
+  $$ V_{sphere} = \frac{4}{3} \pi r^3 $$ 
+  $$ A_{cylinder} = 2\pi r^2 + 2\pi rh $$
+  $$ V_{cylinder} = \pi r^2 h $$
+  \\
+  What has more net charge?
+  a) a sphere w/ radius 2m and volume charge density $ \rho = 2 \frac{C}{m^3} $. \\
+  b) a sphere with radius 2m and a surface charge density $ \sigma = 2 \frac{C}{m^2} $. \\
+  c) both A) and B) have the same net charge. \\
+  \textbf{Answer:} 
+  $$ Q_a = \rho V = \rho \frac{4}{3} \pi R^3 $$ 
+  $$ Q_b = \sigma A = \sigma 4\pi R^2 $$ 
+  $$ \frac{Q_a}{Q_b} = \frac{\rho \frac{4}{3} \pi R^3}{\sigma 4\pi R^2} = \frac{\rho R}{3\sigma} = \frac{2R}{3} $$ % double check?
+}
+\nt{
+  Procedure of finding the electric field from a continuous charge distribution:
+  \begin{enumerate}
+    \item Identify an arbitrary charge element $dq$ of the distribution. Label it with appropriate parameters that will depend (in general) on the element's position in the distribution.
+    \item Determine the "tiny" contribution $ dE $  this element makes to the field a tthe point you wish to calculate the field. 
+    \item Apply symmetry considerations. Because the electric field is a vector, 
+  \end{enumerate}
+}
+
+
+% \qs{Using continuous charge distributions}{
+%   Charge is uniformly distributed along the x-axis from the origin $ x =a$. The charge desnity is $ \lambda \frac{C}{m} $. What is the x-component of the electric field at the point P: (x,y) = (a,h)? $ \\
+%   $$ \vec{E} = \int k \frac{dq}{r^2} \hat{r} $$ 
+%   $$ dq = \lambda dx $$ 
+%   $$ r = \sqrt{(a-x)^2 + h^2} $$
+%   $$ \frac{dq}{r^2} = \frac{\lambda dx}{(a-x)^2 + h^2} $$
+%   $$ \theta  = \tan^{-1} \frac{h}{a-x} $$
+%   $$ dE_x = \int dE_x = \int dE \cos \theta $$
+%   $$ \cos \theta = \frac{a-x}{\sqrt{(a-x)^2+h^2}} $$
+%   $$ E_x(P) = \frac{\lambda}{4\pi \epsilon_0} \int_{0}^{a} \frac{a-x}{((a-x)^2+h^2)^{\frac{3}{2}}} $$
+%   $$ = \lambda $$ 
+% }
+%
+
+
+\chapter{Electric Potential Energy}
+
+\dfn{Potential Energy}{
+  Energy due to position in a \textit{field}.
+}
+
+\nt{
+  A comparison between the Gravitational Field and Electric field. \\
+  Gravitational Field: $ F_g = GmM/r^2 = mg \text{ where g is the field strength} $ \\
+  Electric Field: $ F_e = kQ/r^2 = qE \text{ where E is the field strength} $ \\
+  Both are conservative forces, meaning that the work done by the force is independent of the path taken.
+}
+
+\nt{
+  \textbf{Kinematics Recall:}
+  $$ W = \int F \cdot dr = \int F dr \cos \theta = \Delta KE $$ 
+  $$ \Delta U = -W_{conservative} = -\Delta KE $$
+}
+
+\dfn{Electric Potential Energy}{
+  $$ W = \int F \cdot dr $$ 
+  $$ F = k \frac{q_1 q_2}{r^2} $$ 
+  $$ W = - k \frac{q_1 q_2}{r} |^a_b $$
+  $$ U_e = \frac{k q_{1}q_{2}}{r} $$
+}
+
+\qs{Total Energy to bring identical 3 charges from infinity to an equilateral triangle}{
+  $$ W_{q_1} = 0 $$ 
+  $$ W_{q_2} = - k \frac{Q^2}{r} $$
+  $$ W_{q_3} = - k \frac{Q^2}{r} - k \frac{Q^2}{r} = -2k \frac{Q^2}{r} $$
+  $$ W_{total} = - k \frac{Q^2}{r} - k \frac{Q^2}{r} -2k \frac{Q^2}{r} = -3k \frac{Q^2}{r} $$
+  $$ \Delta U = 3k \frac{Q^2}{r} $$
+}
+
+\qs{Now do the same thing if one charge is negative}{
+  Let's say $ q_3 = -Q $ and $ q_1 = q_2 = Q $ \\
+  $$ W_{q_1} = 0 $$ 
+  $$ W_{q_2} = - k \frac{Q^2}{r} $$
+  $$ W_{q_3} = + k \frac{Q^2}{r} + k \frac{Q^2}{r} = 2k \frac{Q^2}{r} $$
+  $$ W_{total} = k \frac{Q^2}{r} $$
+  $$ \Delta U = - k \frac{Q^2}{r} $$
+  Now let's say $ q_1 = -Q $ and $ q_2 = q_3 = Q $ \\
+  $$ W_{q_1} = 0 $$
+  $$ W_{q_2} = + k \frac{Q^2}{r} $$ 
+  $$ W_{q_3} = 0 $$
+  $$ W_{total} = k \frac{Q^2}{r} $$ 
+  $$ \Delta U = - k \frac{Q^2}{r} $$
+}
+
+\qs{Find the work to move a particle of charge +Q to a very far away position}{
+  This charge is originally near a charge of +Q, seperated by a distance -d and a charge of -2Q, seperated by a distance d. 
+  $$ E_{i} = E_{1} + E_{2} = k \frac{Q\times+Q}{d} + k \frac{Q\times-2Q}{d} = -k \frac{Q^2}{d} $$ 
+  $$ E_{f} = 0 $$ 
+  $$ W = \Delta U = E_{f} - E_{i} = k \frac{Q^2}{d} $$
+}
+
+
+\chapter{Electric Potential}
+
+\nt{
+  \textbf{Recall:} \\
+  Electric Fields: $ \vec{E} = \frac{\vec{F}}{q} $ is a property of space, a force per unit charge, generalized description of electric force independent of the test charge. \\
+  \textbf{Goal:} "Energy per charge" property of space, generalized description of energy.
+}
+
+\dfn{Electric Potential}{
+  \textbf{Potential:} $ V = \frac{U}{q} $ \\
+  Electric Potential is measured in Volts (V), which is equivalent to Joules per Coulomb. It is a scalar.
+  $$ \Delta U_{A\to B} = - \int_{A}^{B} \vec{F} \cdot d\vec{l} = - q \int_{A}^{B} \vec{E} \cdot d\vec{l} $$
+  $$ \Delta V_{A\to B} = \frac{-q \int_{A}^{B} \vec{E} \cdot d\vec{l}}{q} = - \int_{A}^{B} E d\vec{l} = - \int_A^B k\frac{q}{r^2} d\vec{l}$$
+  \textbf{The change in electric potential between two points($r_a \to r_b $) is}: $ \Delta V_{AB} = k \frac{q}{r_b} -k  \frac{q}{r_a} $
+}
+
+\qs{Find where potential is zero}{
+  A charge of +2q is at the origin and a charge of -q is 10 cm away from the first charge on the x-axis. $ q = 2 \mu C $ \\
+  $$ V = k \frac{4\times 10^{-6}}{r + .1m} + k\frac{- 2 \times 10^{-6}}{r} = 0 $$
+  $$ \frac{2}{r + .1} - \frac{1}{r} = 0 $$ 
+  $$ 2r = r + .1 $$ 
+  $$ r = .1m $$
+  The potential is zero at 20 cm from the origin. \\ \\
+  \textbf{But there is also a point between the two charges where the potential is zero.}
+  $$ V = k \frac{4\times 10^{-6}}{.1m-r} + k\frac{- 2 \times 10^{-6}}{r} = 0 $$
+  $$ \frac{2}{.1-r} - \frac{1}{r} = 0 $$ 
+  $$ 2r = .1 - r \to 3r = .1 \to r = .0333m $$
+  The potential is zero at 6.67 cm from the origin. \\ \\
+
+  \textbf{Could there be a point where the potential is zero in the negative x direction?}
+  $$ V = k \frac{4\times 10^{-6}}{r} + k\frac{- 2 \times 10^{-6}}{r+.1m} = 0 $$
+  $$ \frac{2}{r} - \frac{1}{r+.1} = 0 \to \frac{2}{r} = \frac{1}{r+.1}$$ 
+  $$ 2r + .2 = r \to r = -.2m $$ 
+  \textbf{Answer:} No, there is no point in the negative x direction where the potential is zero, because the value above is negative in the negative x-direction (aka positive) and therefore gives the same values as our first part.
+}
+
+\section{Voltage}
+\dfn{Voltage}{
+  The change in electric potential. 
+}
+\ex{A 12 Volt Battery}{
+  12 Volts is the difference in electric potential between the positive and negative terminals of the battery.
+}
+
+\thm{Electric field by differentiating the potential}{
+  $$ \vec{E} = - \vec{\nabla} V $$  
+  $$ E_x = - \frac{\partial V}{\partial x} $$
+  $$ E_y = - \frac{\partial V}{\partial y} $$
+}
+
+\section{Equipotential Surfaces/Lines}
+
+\dfn{Equipotential Surfaces}{
+  A surface on which the electric potential is the same at every point. 
+  \\
+  \textbf{Properties:}
+  \begin{itemize}
+    \item Electric field lines are perpendicular to equipotential surfaces. 
+    \item No work is done in moving a charge along an equipotential surface. 
+    \item Equipotential surfaces are always perpendicular to electric field lines. 
+  \end{itemize}
+}
+
+\dfn{Equipotential Lines}{
+  A line on which the electric potential is the same at every point. 
+  \\
+  \textbf{Properties:}
+  \begin{itemize}
+    \item Electric field lines are perpendicular to equipotential lines. 
+    \item No work is done in moving a charge along an equipotential line. 
+    \item Equipotential lines are always perpendicular to electric field lines. 
+  \end{itemize}
+  The change in electric potential between equipotential lines is constant.
+
+}
+
+
+\subsection{Conductors and Equipotential Surfaces}
+\nt{Conductors are equipotential surfaces.}
+
+
+\subsection{Electric Potential on and in a conducting sphere}
+
+\qs{Find the electric potential at radius r of a conducting sphere with charge(+Q) and radius(R)}{
+  Inside the conductor when $ r < R $, the electric potential is constant, because the electric field is zero and the electric potential is therefore zero. \\
+  $$ V_{in} = 0 $$
+  Outside the conductor when $ r > R $, the electric potential is the same as that of a point charge. \\
+  $$ V_{out} = k \frac{Q}{r} $$
+}
+
+\subsection{Electric Potential on and in a non-conducting sphere}
+
+\qs{Find the electric potential at radius r of a non-conducting sphere with charge(+Q) and radius(R)}{
+  When $ r > R $, the electric potential is the same as that of a point charge. \\
+  $$ V_{out} = k \frac{Q}{r} $$
+  When $ r < R $, charge is distributed uniformly throughout the sphere. \\
+  $$ \rho = \frac{Q}{V} = \frac{Q}{\frac{4}{3} \pi R^3} $$ 
+  $$ EA = \frac{Q}{\epsilon_0} $$ 
+  $$ Q = \rho V = \rho \frac{4}{3} \pi R^3 $$ 
+  $$ \rho = \frac{Q}{\frac{4}{3} \pi R^3} $$
+  $$ A = 4\pi r^2 $$ 
+  $$ E = \frac{\rho \frac{4}{3} \pi r^3}{\epsilon_0 4\pi r^2} = \frac{\rho r}{3\epsilon_0} $$
+  $$ V_{in} = \int_{R}^{r} E dr = \int_{R}^{r} \frac{\rho r}{3\epsilon_0} dr = \frac{\rho}{6\epsilon_0} r^2 |^R_r = \frac{\rho}{6\epsilon_0} (r^2 - R^2) $$
+}
+
+
+
+\chapter{Math Review}
+\section{Single Variable Calculus}
+
+\subsection{Derivatives}
+
+\dfn{Derivative}{
+  $$ \frac{df}{dx} = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} $$
+}
+
+\dfn{Chain Rule}{
+  $$ \frac{df}{dx} = \frac{df}{dg} \frac{dg}{dx} $$
+}
+
+\dfn{Product Rule}{
+  $$ \frac{d}{dx} (fg) = f \frac{dg}{dx} + g \frac{df}{dx} $$
+}
+
+\dfn{Quotient Rule}{
+  $$ \frac{d}{dx} \frac{f}{g} = \frac{g \frac{df}{dx} - f \frac{dg}{dx}}{g^2} $$
+}
+
+\dfn{Implicit Differentiation}{
+  $$ \frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx} $$
+}
+
+\dfn{Parametric Differentiation}{
+  $$ \frac{dy}{dx} = \frac{dy}{dt} \frac{dt}{dx} $$
+}
+
+\dfn{Logarithmic Differentiation}{
+  $$ \frac{d}{dx} \ln f(x) = \frac{f'(x)}{f(x)} $$
+}
+
+\dfn{Derivative of Inverse Function}{
+  $$ \frac{d}{dx} f^{-1}(x) = \frac{1}{f'(f^{-1}(x))} $$
+}
+
+\dfn{Derivative of Exponential Function}{
+  $$ \frac{d}{dx} e^{f(x)} = e^{f(x)} f'(x) $$
+}
+
+\dfn{Derivatives of Trigonometric Functions}{
+  $$ \frac{d}{dx} \sin x = \cos x $$
+  $$ \frac{d}{dx} \cos x = -\sin x $$
+  $$ \frac{d}{dx} \tan x = \sec^2 x $$
+  $$ \frac{d}{dx} \cot x = -\csc^2 x $$
+  $$ \frac{d}{dx} \sec x = \sec x \tan x $$
+  $$ \frac{d}{dx} \csc x = -\csc x \cot x $$
+}
+
+\dfn{Derivatives of Inverse Trigonometric Functions}{
+  $$ \frac{d}{dx} \sin^{-1} x = \frac{1}{\sqrt{1-x^2}} $$
+  $$ \frac{d}{dx} \cos^{-1} x = -\frac{1}{\sqrt{1-x^2}} $$
+  $$ \frac{d}{dx} \tan^{-1} x = \frac{1}{1+x^2} $$
+  $$ \frac{d}{dx} \cot^{-1} x = -\frac{1}{1+x^2} $$
+  $$ \frac{d}{dx} \sec^{-1} x = \frac{1}{|x|\sqrt{x^2-1}} $$
+  $$ \frac{d}{dx} \csc^{-1} x = -\frac{1}{|x|\sqrt{x^2-1}} $$
+}
+
+
+\subsection{Integrals}
+
+\dfn{Integral}{
+  $$ \int f(x) dx = F(x) + C $$
+}
+
+\dfn{Integration by Parts}{
+  $$ \int u dv = uv - \int v du $$
+}
+
+\dfn{Integration by Substitution}{
+  $$ \int f(g(x)) g'(x) dx = \int f(u) du $$
+}
+
+\dfn{Partial Fractions}{
+  $$ \frac{P(x)}{Q(x)} = \frac{A}{x-a} + \frac{B}{x-b} + \frac{C}{(x-c)^2} $$
+}
+
+\dfn{Trigonometric Substitution}{
+  $$ \int \sqrt{a^2 - x^2} dx = \frac{1}{2} \sin^{-1} \frac{x}{a} + C $$
+  $$ \int \sqrt{a^2 + x^2} dx = \frac{1}{2} \ln (x + \sqrt{x^2 + a^2}) + C $$
+  $$ \int \sqrt{x^2 - a^2} dx = \frac{1}{2} \ln (x + \sqrt{x^2 - a^2}) + C $$
+}
+
+\dfn{Integration Rules}{
+  
+}
+
+
+\chapter{Miscellaneous}
+
+
+\section{Fluid Projectiles}
+
+When a fluid goes through a pipe from a larger diameter to a smaller diameter, the velocity speeds up and the cross-sectional area decreases according to the equation below: 
+
+$$ A_1v_1 = A_2v_2 $$
+
+\chapter{EXAM STUDYING}
+
+\begin{enumerate}
+  \item Identify knowledge and skill gaps. Difficult past problems
+  \item Fill knowledge and skill gaps. Class powerpoints, textbook(selectively), pearson practice, AP Classroom Daily videos and unit guides. 
+  \item Test yourself
+  \item Avoid "going over your notes" too much. 
+  \item Avoid only studying th eday before the exam. 
+  \item Avoid only doing problems that you are comfortable with.
+\end{enumerate}
+
+
+
+
+\end{document}

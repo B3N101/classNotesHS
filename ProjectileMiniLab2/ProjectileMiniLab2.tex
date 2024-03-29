@@ -1,0 +1,77 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Projectile Mini Lab 2}\\AP Physics C}
+\author{\huge{Ben Feuer}}
+\date{Due September 28, 2023}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\pagebreak
+
+\section*{Introduction}
+
+\textbf{The goal} of this lab is to determine the cross-sectional area of the tip of a water blaster. 
+\\
+\textbf{The materials} that we used include a water blaster, cameras, and a water blaster.
+
+\section*{Procedure}
+
+\begin{enumerate}
+  \item First, we set up the water blaster on top of a bench with a set height that we measured.
+  \item  Then, we filled the water blaster with water, and measured the length of the water blaster. 
+  \item Next, we set up two cameras to determine the time it took for the water blaster to squirt all the water in the blaster and to determine where the water landed from which we used meter sticks to find the displacement of the  water. 
+  \item We then repeated the experiment for a total of 5 trials. 
+\end{enumerate}
+
+
+\section*{Data}
+
+% Create a data table with five columns (trial, displacement, time, velocity 1, and velocity 2)
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+\hline
+Trial \# & Displacement & Time of plunger & v1            & v2          \\
+\hline
+1        & 3.45         & 1.83            & 0.1950819672  & 10.94340959 \\
+\hline
+2        & 3.55         & 1.92            & 0.1859375     & 11.26060987 \\
+\hline
+3        & 1.14         & 4.36            & 0.08188073394 & 3.61608317  \\
+\hline
+4        & 1.23         & 3.71            & 0.09622641509 & 3.901563421 \\
+\hline
+5        & 1.77         & 3.23            & 0.1105263158  & 5.614444922 \\
+\hline
+\end{tabular}
+\end{center}
+
+$$ L = 0.357 m $$   
+$$ H = 0.487 m $$
+
+\subsection*{Calculations}
+$$ \text{velocity of the water blaster} = v_1 = \frac{L}{t} $$ 
+$$ \text{velocity of the water} = v_2 = \Delta x \sqrt{\frac{2H}{g}} $$
+
+\section*{Analysis} 
+
+
+
+With the data we collected, we can find the cross-sectional area of the tip of the water blaster by using the slope of a $v_1 \text{ vs. } v_2 $ graph, and the slope of the graph below is $ 0.0139 m^2 $ which is the cross-sectional area of the tip of the water blaster.
+
+
+\begin{figure}[ht!]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/graph.png}
+  \end{center}
+\end{figure}
+
+\end{document}

@@ -1,0 +1,128 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{AP Physics C - SHM Lab}}
+\author{\huge{Ben Feuer and Kwame Addison}}
+\date{January 13, 2024}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+%\tableofcontents
+\pagebreak
+
+\section*{Part 1: Measure the effective spring constant of two springs}
+
+\subsection*{Data Table}
+\begin{table}[h!]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textbf{Trial \#} & \textbf{Mass(kg)} & \textbf{4 * T (s)} & \textbf{T(s)} & \textbf{$T^2$($s^2$)} \\ \hline
+1                 & 0.497             & 4.32               & 1.08          & 1.1664                                              \\ \hline
+2                 & 0.497             & 4.37               & 1.0925        & 1.19355625                                          \\ \hline
+3                 & 0.497             & 4.5                & 1.125         & 1.265625                                            \\ \hline
+4                 & 0.597             & 4.99               & 1.2475        & 1.55625625                                          \\ \hline
+5                 & 0.597             & 4.81               & 1.2025        & 1.44600625                                          \\ \hline
+6                 & 0.597             & 4.79               & 1.1975        & 1.43400625                                          \\ \hline
+7                 & 0.797             & 5.48               & 1.37          & 1.8769                                              \\ \hline
+8                 & 0.797             & 5.67               & 1.4175        & 2.00930625                                          \\ \hline
+9                 & 0.797             & 5.5                & 1.375         & 1.890625                                            \\ \hline
+10                & 0.997             & 6.07               & 1.5175        & 2.30280625                                          \\ \hline
+11                & 0.997             & 6.05               & 1.5125        & 2.28765625                                          \\ \hline
+12                & 0.997             & 5.95               & 1.4875        & 2.21265625                                          \\ \hline
+13                & 1.197             & 6.49               & 1.6225        & 2.63250625                                          \\ \hline
+14                & 1.197             & 6.42               & 1.605         & 2.576025                                            \\ \hline
+15                & 1.197             & 6.51               & 1.6275        & 2.64875625                                          \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection*{Graph}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/graph1.png}
+  \end{center}
+\end{figure}
+
+
+\subsection*{Result}
+
+The slope of the line of best fit is $k = 19.54181671 $ N/m as it is equal to the slope of the line of best fit in the graph above multiplied by $4\pi^2$.
+
+\section*{Part 2: Measure the spring constant of a each individual spring}
+
+\subsection*{Data Table for Spring 1}
+\begin{table}[h!]
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Mass(kg)} & \textbf{Force(N)} & \textbf{Displacement(m)} \\ \hline
+0.05              & 0.49              & 0.15                     \\ \hline
+0.1               & 0.98              & 0.285                    \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection*{Data Table for Spring 2}
+
+\begin{table}[h!]
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Mass(kg)} & \textbf{Force(N)} & \textbf{Displacement(m)} \\ \hline
+0.05              & 0.49              & 0.03                     \\ \hline
+0.1               & 0.98              & 0.065                    \\ \hline
+0.15              & 1.47              & 0.1                      \\ \hline
+0.2               & 1.96              & 0.133                    \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection*{Graph for Spring 1}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/graph2.png}
+  \end{center}
+\end{figure}
+
+\newpage
+
+\subsection*{Graph for Spring 2}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/graph3.png}
+  \end{center}
+\end{figure}
+
+\subsection*{Result}
+
+Using the slope of the line of best fit for each graph, we can calculate the spring constant for each spring. For spring 1, the spring constant is $k = 3.63$ N/m. For spring 2, the spring constant is $k = 0.07$ N/m (it may be hard to see the values in the graph due to its low resolution).
+
+\section*{Part 3: Find $k_{eff}$ for the two springs using Newton's Laws}
+
+\subsection*{Diagram of the System}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/diagram.png}
+  \end{center}
+\end{figure}
+
+\subsection*{Derivation of $k_{eff}$}
+
+At the system equilibrium position, $F_{net} = $. If you pull the cart towards spring 1, then spring 2 will pull with an additional force $k_2 x$ and spring 1 will have a reduced force of $ -k_1 x$ and therefore $ F_{net} = k_2 x - (-k_1 x) = (k_2 + k_1)x $. Therefore, $k_{eff} = k_1 + k_2 $.
+
+\subsection*{Error Anlysis}
+
+Because, using Part Two of the lab, we found the values of $ k_1 $ and $ k_2 $, we can calculate $ k_{eff} $ which is $ 3.63 + 0.07 = 4 N/m$. This value is very different than the value we got from Part One of the lab: $ 19.54 N/m $. This means our percent error is equal to: $$ \%E = \frac{4-19.54}{19.54} * 100\% = -79.5 \%$$
+
+This large error is attributable to inaccurate measurings, and the effect of the mass of the spring. The non-zero mass of the spring when implemented in part one of the lab means that the period is larger as it is part of the period equation: $ T = 2 \pi \sqrt{\frac{m}{k}} $. Therefore, the mass of the springs is directly attributable to the error. 
+
+
+
+\end{document}

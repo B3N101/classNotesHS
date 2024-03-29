@@ -1,0 +1,565 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{AP Physics C - Electricity and Magnetism}}
+\author{\huge{Ben Feuer}}
+\date{2023-24}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\pagebreak
+
+
+% \dfn{}{}
+% \ex{}{}
+% \qs{}{}
+% \nt{}
+% \sol 
+% \clm{}{}{}
+% \thm{}{}
+
+
+
+\chapter{Electrostatics}
+
+\section{Electric Charge, Electric Force, and Electric Field}
+
+\subsection{Electric Charge}
+\dfn{Electric Charge}{
+  On the macro sale, an object’s charge is the sum of the charges of its constituent particles. \\
+  Electric charge is a fundamental property of matter. It is quantized, meaning that it comes in discrete units. The unit of charge is the \textbf{coulomb} (C). \\
+  \begin{enumerate}
+    \item Charge is quantized. 
+    \item Charge comes in two flavors: positive and negative. 
+    \item Charges experience a force at a distance. 
+    \item Charge is conserved. 
+    \item Most mobile charge carriers are electrons.
+    \item The Coulomb is the SI unit of charge.
+  \end{enumerate}
+}
+\nt{
+  The charge of an electron is $-e = -1.6 \times 10^{-19} \, \text{C}$, and the charge of a proton is $+e = 1.6 \times 10^{-19} \, \text{C}$. \\
+  The mass of an electron is $9.11 \times 10^{-31} \, \text{kg}$, and the mass of a proton is $1.67 \times 10^{-27} \, \text{kg}$. \\
+}
+\dfn{Change in charge}{
+  Charge of an object can change by adding or removing electrons. \\
+  The ways in which an object can be charged are:
+  \begin{itemize}
+    \item Friction $ \to $ rubbing 
+    \item Conduction $ \to $ contact
+    \item Induction $ \to $ no contact, except for grounding - polarizing, ground, remove ground, remove polarizing object
+    \item Grounding $ \to $ contact with the earth - neutralizes charge 
+  \end{itemize}
+}
+\clm{Conservation of Charge}{}{
+  The total charge of an isolated system is constant.
+  $$ \sum_{i=1}^{n} q_i = \text{constant} $$
+  Charge is neither created nor destroyed. It is quantized. The number of protons and electrons in the universe is constant.
+}
+
+\subsection{Conductors and Insulators}
+\dfn{Insulators}{
+  An insulator is a material in which electrons are not free to move.\\
+  Examples: Rubber, glass, plastic, wood, air, etc.
+}
+\dfn{Conductors}{
+  A conductor is a material in which electrons are free to move.\\
+  Examples: Metals, salt water, etc.
+}
+\dfn{Superconductors}{
+  A superconductor is a material that has zero resistance to the flow of electric charge. Perfect conductors \\
+  Examples: Mercury, lead, etc.
+}
+
+\dfn{Semiconductors}{
+  A semiconductor is a material that has a conductivity between that of an insulator and a conductor. \\
+  Examples: Silicon, germanium, etc.
+}
+
+
+\subsection{Polarization}
+\dfn{Polarization}{
+  Polarization is the separation of charges within an object.\\
+  This occurs when a charged object is brought near a neutral object that is a conductor. \\
+  \textbf{No net charge is transferred.}
+}
+
+\subsection{Coulomb's Law / Electric Force}
+\dfn{Coulomb's Law}{
+  The electrical force between two charged objects is directly proportional to the product of the quantity of charge on the objects and inversely proportional to the square of the separation distance between the two objects. The direction is determined by charges.
+  $$ F = k \frac{|q_1 q_2|}{r^2} $$
+  $$ k = 8.99 \times 10^9 \, \text{N} \cdot \text{m}^2/\text{C}^2 \approx 9.0 \times 10^9 \, \text{N} \cdot \text{m}^2/\text{C}^2 $$
+  $$ F = \frac{1}{4\pi \varepsilon_0} \frac{|q_1 q_2|}{r^2} $$
+  $$ \varepsilon_0 = 8.85 \times 10^{-12} \, \text{C}^2/\text{N} \cdot \text{m}^2 $$
+}
+\nt{
+  The electrical force is a conservative force. It is also a field force/ action-at-a-distance force / non-contact force. Therefore, work doesn't depend on the path taken.
+}
+
+\nt{
+  The four fundamental forces are:
+  \begin{enumerate}
+    \item Gravitational Force
+    \item Electromagnetic Force
+    \item Strong Nuclear Force
+    \item Weak Nuclear Force 
+  \end{enumerate} 
+  Columb's Law is a special case of the electromagnetic force.
+}
+
+\qs{Calculate $F_e$ and $F_g$ between an electron and proton}{
+  $ r = 5.3 \times 10^{-11} m $ \\
+  $ m_e = 9.11 \times 10^{-31} kg $ \\
+  $ m_p = 1.67 \times 10^{-27} kg $ \\
+  $$ F_e = k \frac{\abs{q_1 q_2}}{r^2} $$ 
+  $$ F_e = \frac{9 \times 10^9 \times 1.6 \times 10^{-19} \times 1.6 \times 10^{-19}}{(5.3 \times 10^{-11})^2} = 8.2 \times 10^{-8} N $$
+  $$ F_g = G \frac{m_1 m_2}{r^2} $$ 
+  $$ F_g = \frac{6.67 \times 10^{-11} \times 9.11 \times 10^{-31} \times 1.67 \times 10^{-27}}{(5.3 \times 10^{-11})^2} = 3.6 \times 10^{-47} N $$
+}
+
+\qs{Hanging Charged Spheres}{
+  2 25 gram spheres hang from light strings that are 35 cm long. They repel each other and carry the same negative charge. The two strings are seperated by 10 degrees. \\
+  \textbf{Find the magnitude of the charge on each sphere.} \\
+  $$ F_e = k \frac{\abs{q_1 q_2}}{r^2} $$ 
+  $$ F_g = 0.025 kg \times 9.8 m/s^2 = 0.245 N $$ 
+  $$ \theta = \frac{10}{2} = 5 $$
+  $$ T\cos(\theta) = F_g =  0.245 N $$ 
+  $$ T = \frac{T}{\cos(\theta)} = \frac{0.245 N}{\cos(5)} = 0.245 N / 0.9962 = 0.246 N $$ 
+  $$ T_x = T\sin(\theta) = 0.246 N \sin(5) = 0.0214 N $$
+  $$ F_e = T_x = k \frac{\abs{q_1 q_2}}{r^2} $$ 
+  $$ r = 0.35 m \sin(\theta) \times 2 = 0.061m $$
+  $$ F_e = T_x = 0.0214 N = 9 \times 10^9 \frac{q^2}{(0.061m)^2} $$
+  $$ q = \sqrt{\frac{0.0214 N \times (0.061m)^2}{9 \times 10^9}} = 9.37 \times 10^{-8} C $$
+}
+
+\subsection{Electric Field}
+
+\dfn{Electric Field}{
+  The electric field is a vector field that associates to each point in space the force experienced by a small positive test charge placed at that point. \\
+  The electric field is the ratio of force to charge.
+  $$ E = \frac{\vec{F_{net}}}{q} $$
+  "Generalized description of electric force that is independent of the test charge." \\
+  The electric field created by a single point particle of charge Q is given by:
+  $$ E = \frac{kQ}{r^2} \hat{r} = \frac{kQ}{r^2} $$
+  $\hat{r}$ is the unit vector pointing from the charge to the point in space where the electric field is being calculated.
+}
+\qs{Finding electric field strength and direction}{
+  $ Q = -8 \mu C $ \\
+  $ r = 0.1m $ \\
+  $ q_0 = 0.02 \mu C $ \\ 
+  A) What is the electric field strength and direction $q_0$ experiences at r?
+  $$ E = \frac{kQ}{r^2} = \frac{9 \times 10^9 \times -8 \times 10^{-6}}{0.1^2} = -7.2 \times 10^3 N/C $$
+  B) How would $\vec{E}$ change if you doubled the charge of $q_{0}$? \\
+  \textbf{Answer:} The electric field strength would double.
+}
+
+
+
+\subsection{Calculating Electric Field}
+\dfn{Continous charge distributions}{
+  $$ \vec{E} = \sum_i k \frac{q_i}{r_i^2} \hat{r_i} $$
+  $$ \text{summation becomes an integral} $$
+  $$ \vec{E} = \int k \frac{dq}{r^2} \hat{r} $$ 
+  What does this mean?
+  \\
+  Integrate over all charges (dq) in the distribution. \\
+  r is the vector from dq to the point at which E is defined. 
+  \\
+  Charge Density:
+  $$ \lambda = \frac{Q}{L} \text{ Coulombs/meter - linear}$$ 
+  $$ \sigma = \frac{Q}{A} \text{ Coulombs/meter}^2 \text{ - surface}$$
+  $$ \rho = \frac{Q}{V} \text{ Coulombs/meter}^3 \text{ - volume}$$
+  \\ 
+  GEOMETRY:
+  $$ A_{sphere} = 4\pi r^2 $$ 
+  $$ V_{sphere} = \frac{4}{3} \pi r^3 $$ 
+  $$ A_{cylinder} = 2\pi r^2 + 2\pi rh $$
+  $$ V_{cylinder} = \pi r^2 h $$
+  \\
+  What has more net charge?
+  a) a sphere w/ radius 2m and volume charge density $ \rho = 2 \frac{C}{m^3} $. \\
+  b) a sphere with radius 2m and a surface charge density $ \sigma = 2 \frac{C}{m^2} $. \\
+  c) both A) and B) have the same net charge. \\
+  \textbf{Answer:} 
+  $$ Q_a = \rho V = \rho \frac{4}{3} \pi R^3 $$ 
+  $$ Q_b = \sigma A = \sigma 4\pi R^2 $$ 
+  $$ \frac{Q_a}{Q_b} = \frac{\rho \frac{4}{3} \pi R^3}{\sigma 4\pi R^2} = \frac{\rho R}{3\sigma} = \frac{2R}{3} $$ % double check?
+}
+\nt{
+  Procedure of finding the electric field from a continuous charge distribution:
+  \begin{enumerate}
+    \item Identify an arbitrary charge element $dq$ of the distribution. Label it with appropriate parameters that will depend (in general) on the element’s position in the distribution.
+    \item Determine the "tiny" contribution $ dE $  this element makes to the field a tthe point you wish to calculate the field. 
+    \item Apply symmetry considerations. Because the electric field is vector, the direction of the field contributed by an element will depend on the element’s position. Look for a symmetrically placed element that might produce canceling effects. From these considerations, identify the “effective” contribution $ dE_{eff} $ from the element. 
+    \item Express $ dE_{eff} $ in terms of just one variable. Determine the limits of this variable.
+    \item Perform the integration.
+  \end{enumerate}
+}
+
+\qs{Calculate the electric field at the center of a uniformly charged semi-circle.}{
+  Given a semi-circle with radius R and charge density $ \lambda $.
+  $$ \lambda = \frac{Q}{L} = \frac{Q}{\pi R} $$
+  $$ dq = \lambda dL = \lambda R d\theta = \frac{Q}{\pi} d\theta $$ 
+  $$ dE = \frac{kdq}{r^2} = \frac{kQ}{\pi r^2} d\theta  $$ 
+  $$ dE_{eff} = dE \sin \theta = \frac{kQ}{\pi r^2} \sin \theta d\theta $$
+  $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\pi} \sin \theta d\theta = \frac{kQ}{\pi r^2} (-\cos \theta |^{\pi}_0) = \frac{2kQ}{\pi r^2} = \frac{Q}{2\pi \varepsilon_0 r^2} $$
+}
+\qs{Now do this for a three quarters circles.}{
+$$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \frac{kQ}{\pi r^2} (-\cos \theta |^{\frac{3\pi}{2}}_0) = \frac{kQ}{\pi r^2} = \frac{Q}{4\pi \varepsilon_0 r^2} $$
+}
+
+\subsection{Electric Field from Electric Dipole}
+\dfn{Electric Dipole}{
+  An electric dipole is a pair of equal and opposite point charges separated by a distance. \\
+  The electric dipole moment is a measure of the separation of positive and negative charges in the dipole. \\
+  The electric dipole moment is a vector pointing from the negative charge to the positive charge and has a magnitude equal to the product of the charge and the separation distance: $ p = qd $.
+  \textbf{Calculating the electric field from a dipole:} \\
+  The distance from the dipole to the point in space where the electric field is being calculated is r and the distance between the charges is d. 
+  $$ E = \frac{kq}{(z+d/2)^2} - \frac{kq}{(z-d/2)^2} $$ 
+  $$ E = \frac{kq}{z^2} \left[ \left(1-\frac{d}{2z} \right)^{-2} - \left(1+\frac{d}{2z}\right)^{-2} \right] $$
+  $$ E = \frac{kq}{z^2} \left[ \left(1+\frac{d}{z}\right) - \left(1-\frac{d}{z}\right) \right] $$
+  $$ E = \frac{kq}{z^2} \left[ 2\frac{d}{z} \right]  = \frac{2kqd}{z^3} = \frac{p}{2\pi \varepsilon_0 z^3} \text{ where } p = qd $$
+}
+
+\subsection{Electric Field Lines}
+
+\dfn{Electric Field Lines}{
+  Lines of force on a test q. Show the direction of the force on a positive test charge. \\
+  \textbf{Negative charges would have field lines pointing towards them.} \\
+  \textbf{Positive charges would have field lines pointing away from them.} \\
+  \textbf{Rules:}
+  \begin{enumerate}
+    \item Lines are perpendiucular to the surface of a conductor. 
+    \item Lines represent direction a positive test charge would b eforced in a region around Q. 
+    \item Lines never cross. 
+    \item Line density is proprotional to field strength. 
+    \item Electric field lines have arrows to show direction unlike equipoential lines.
+  \end{enumerate}
+}
+
+\subsection{Electric Flux}{
+  \dfn{Electric Flux}{
+    The electric flux through a surface is the product of the electric field and the component of the area perpendicular to the field. \\
+    $$ \Phi = \vec{E} \cdot \vec{A} = EA \cos \theta $$ 
+    \textbf{Electric flux is a measure of the number of electric field lines passing through a surface.}
+  }
+  \dfn{Gauss's Law}{
+    The electric flux through a closed surface is equal to the net charge enclosed by the surface divided by the permittivity of free space. \\
+    $$ \Phi = \oint \vec{E} \cdot d\vec{A} = \frac{Q_{enc}}{\varepsilon_0} $$ 
+    \textbf{Gauss's Law is a powerful tool for calculating electric fields.}
+  }
+  \nt{
+    \textbf{Gauss's Law is a powerful tool for calculating electric fields.}
+  }
+}
+
+\subsection{Parallel Plate Capacitors}
+\dfn{Parallel Plate Capacitors}{
+  Two plates of charge +Q and -Q evenly distributed across either surface. \\
+  Inside the capacitor, $ \vec{E} $ is uniform (lines parallel to each other, strenght is constant). \\
+  There are bendy edge cases; however, we will assume that the electric field is uniform. \\
+  The electric field is uniform between the plates and zero outside the plates. \\
+  The Electric Field in a parallel plate capacitor is equal to: $ \vec{E} = \frac{Q}{\varepsilon_0 A} $ \\
+  \textbf{Kinematic equations are valid in a parallel plate capacitor as there is constant acceleration!}
+}
+
+\section{Electric Potential Energy}
+
+\dfn{Potential Energy}{
+  Energy due to position in a \textit{field}.
+}
+
+\nt{
+  A comparison between the Gravitational Field and Electric field. \\
+  Gravitational Field: $ F_g = GmM/r^2 = mg \text{ where g is the field strength} $ \\
+  Electric Field: $ F_e = kQ/r^2 = qE \text{ where E is the field strength} $ \\
+  Both are conservative forces, meaning that the work done by the force is independent of the path taken.
+}
+
+\nt{
+  \textbf{Kinematics Recall:}
+  $$ W = \int F \cdot dr = \int F dr \cos \theta = \Delta KE $$ 
+  $$ \Delta U = -W_{conservative} = -\Delta KE $$
+}
+
+\dfn{Electric Potential Energy}{
+  $$ W = \int F \cdot dr $$ 
+  $$ F = k \frac{q_1 q_2}{r^2} $$ 
+  $$ W = - k \frac{q_1 q_2}{r} |^a_b $$
+  $$ U_e = \frac{k q_{1}q_{2}}{r} $$
+}
+
+
+\qs{Total Energy to bring identical 3 charges from infinity to an equilateral triangle}{
+  $$ W_{q_1} = 0 $$ 
+  $$ W_{q_2} = - k \frac{Q^2}{r} $$
+  $$ W_{q_3} = - k \frac{Q^2}{r} - k \frac{Q^2}{r} = -2k \frac{Q^2}{r} $$
+  $$ W_{total} = - k \frac{Q^2}{r} - k \frac{Q^2}{r} -2k \frac{Q^2}{r} = -3k \frac{Q^2}{r} $$
+  $$ \Delta U = 3k \frac{Q^2}{r} $$
+}
+
+\qs{Now do the same thing if one charge is negative}{
+  Let's say $ q_3 = -Q $ and $ q_1 = q_2 = Q $ \\
+  $$ W_{q_1} = 0 $$ 
+  $$ W_{q_2} = - k \frac{Q^2}{r} $$
+  $$ W_{q_3} = + k \frac{Q^2}{r} + k \frac{Q^2}{r} = 2k \frac{Q^2}{r} $$
+  $$ W_{total} = k \frac{Q^2}{r} $$
+  $$ \Delta U = - k \frac{Q^2}{r} $$
+  Now let's say $ q_1 = -Q $ and $ q_2 = q_3 = Q $ \\
+  $$ W_{q_1} = 0 $$
+  $$ W_{q_2} = + k \frac{Q^2}{r} $$ 
+  $$ W_{q_3} = 0 $$
+  $$ W_{total} = k \frac{Q^2}{r} $$ 
+  $$ \Delta U = - k \frac{Q^2}{r} $$
+}
+
+\qs{Find the work to move a particle of charge +Q to a very far away position}{
+  This charge is originally near a charge of +Q, seperated by a distance -d and a charge of -2Q, seperated by a distance d. 
+  $$ E_{i} = E_{1} + E_{2} = k \frac{Q\times+Q}{d} + k \frac{Q\times-2Q}{d} = -k \frac{Q^2}{d} $$ 
+  $$ E_{f} = 0 $$ 
+  $$ W = \Delta U = E_{f} - E_{i} = k \frac{Q^2}{d} $$
+}
+
+\section{Electric Potential}
+
+\nt{
+  \textbf{Recall:} \\
+  Electric Fields: $ \vec{E} = \frac{\vec{F}}{q} $ is a property of space, a force per unit charge, generalized description of electric force independent of the test charge. \\
+  \textbf{Goal:} "Energy per charge" property of space, generalized description of energy.
+}
+
+\dfn{Electric Potential}{
+  \textbf{Potential:} $ V = \frac{U}{q} $ \\
+  Electric Potential is measured in Volts (V), which is equivalent to Joules per Coulomb. It is a scalar.
+  $$ \Delta U_{A\to B} = - \int_{A}^{B} \vec{F} \cdot d\vec{l} = - q \int_{A}^{B} \vec{E} \cdot d\vec{l} $$
+  $$ \Delta V_{A\to B} = \frac{-q \int_{A}^{B} \vec{E} \cdot d\vec{l}}{q} = - \int_{A}^{B} E d\vec{l} = - \int_A^B k\frac{q}{r^2} d\vec{l}$$
+  \textbf{The change in electric potential between two points($r_a \to r_b $) is}: $ \Delta V_{AB} = k \frac{q}{r_b} -k  \frac{q}{r_a} $
+}
+
+\qs{Find where potential is zero}{
+  A charge of +2q is at the origin and a charge of -q is 10 cm away from the first charge on the x-axis. $ q = 2 \mu C $ \\
+  $$ V = k \frac{4\times 10^{-6}}{r + .1m} + k\frac{- 2 \times 10^{-6}}{r} = 0 $$
+  $$ \frac{2}{r + .1} - \frac{1}{r} = 0 $$ 
+  $$ 2r = r + .1 $$ 
+  $$ r = .1m $$
+  The potential is zero at 20 cm from the origin. \\ \\
+  \textbf{But there is also a point between the two charges where the potential is zero.}
+  $$ V = k \frac{4\times 10^{-6}}{.1m-r} + k\frac{- 2 \times 10^{-6}}{r} = 0 $$
+  $$ \frac{2}{.1-r} - \frac{1}{r} = 0 $$ 
+  $$ 2r = .1 - r \to 3r = .1 \to r = .0333m $$
+  The potential is zero at 6.67 cm from the origin. \\ \\
+
+  \textbf{Could there be a point where the potential is zero in the negative x direction?}
+  $$ V = k \frac{4\times 10^{-6}}{r} + k\frac{- 2 \times 10^{-6}}{r+.1m} = 0 $$
+  $$ \frac{2}{r} - \frac{1}{r+.1} = 0 \to \frac{2}{r} = \frac{1}{r+.1}$$ 
+  $$ 2r + .2 = r \to r = -.2m $$ 
+  \textbf{Answer:} No, there is no point in the negative x direction where the potential is zero, because the value above is negative in the negative x-direction (aka positive) and therefore gives the same values as our first part.
+}
+
+\subsection{Voltage}
+
+\dfn{Voltage}{
+  The change in electric potential. 
+}
+\ex{A 12 Volt Battery}{
+  12 Volts is the difference in electric potential between the positive and negative terminals of the battery.
+}
+
+\thm{Electric field by differentiating the potential}{
+  $$ \vec{E} = - \vec{\nabla} V $$  
+  $$ E_x = - \frac{\partial V}{\partial x} $$
+  $$ E_y = - \frac{\partial V}{\partial y} $$
+}
+
+\subsection{Equipotential Surfaces \& Lines}
+
+\dfn{Equipotential Surfaces}{
+  A surface on which the electric potential is the same at every point. 
+  \\
+  \textbf{Properties:}
+  \begin{itemize}
+    \item Electric field lines are perpendicular to equipotential surfaces. 
+    \item No work is done in moving a charge along an equipotential surface. 
+    \item Equipotential surfaces are always perpendicular to electric field lines. 
+  \end{itemize}
+}
+
+\dfn{Equipotential Lines}{
+  A line on which the electric potential is the same at every point. 
+  \\
+  \textbf{Properties:}
+  \begin{itemize}
+    \item Electric field lines are perpendicular to equipotential lines. 
+    \item No work is done in moving a charge along an equipotential line. 
+    \item Equipotential lines are always perpendicular to electric field lines. 
+  \end{itemize}
+  The change in electric potential between equipotential lines is constant.
+
+}
+
+
+\subsection{Conductors and Equipotential Surfaces}
+\nt{Conductors are equipotential surfaces.}
+
+
+\subsection{Electric Potential on and in a conducting sphere}
+
+\qs{Find the electric potential at radius r of a conducting sphere with charge(+Q) and radius(R)}{
+  Inside the conductor when $ r < R $, the electric potential is constant, because the electric field is zero and the electric potential is therefore zero. \\
+  $$ V_{in} = 0 $$
+  Outside the conductor when $ r > R $, the electric potential is the same as that of a point charge. \\
+  $$ V_{out} = k \frac{Q}{r} $$
+}
+
+\subsection{Electric Potential on and in a non-conducting sphere}
+
+\qs{Find the electric potential at radius r of a non-conducting sphere with charge(+Q) and radius(R)}{
+  When $ r > R $, the electric potential is the same as that of a point charge. \\
+  $$ V_{out} = k \frac{Q}{r} $$
+  When $ r < R $, charge is distributed uniformly throughout the sphere. \\
+  $$ \rho = \frac{Q}{V} = \frac{Q}{\frac{4}{3} \pi R^3} $$ 
+  $$ EA = \frac{Q}{\epsilon_0} $$ 
+  $$ Q = \rho V = \rho \frac{4}{3} \pi R^3 $$ 
+  $$ \rho = \frac{Q}{\frac{4}{3} \pi R^3} $$
+  $$ A = 4\pi r^2 $$ 
+  $$ E = \frac{\rho \frac{4}{3} \pi r^3}{\epsilon_0 4\pi r^2} = \frac{\rho r}{3\epsilon_0} $$
+  $$ V_{in} = \int_{R}^{r} E dr = \int_{R}^{r} \frac{\rho r}{3\epsilon_0} dr = \frac{\rho}{6\epsilon_0} r^2 |^R_r = \frac{\rho}{6\epsilon_0} (r^2 - R^2) $$
+}
+
+\section{Capacitance}
+\dfn{Capacitance}{
+  Because each conductor is an equipotential surface, there is a potential difference(voltage) between the two conductors. \\
+  The ratio of the charge seperated to the potential difference created is called the capacitance. \\ 
+  It is a measure of the capacity of a capacitor to store charge. \\
+  $$ C \equiv \frac{Q}{V} $$ 
+  $$ \text{Units:} \frac{Coulombs}{Volt} = Farad(F) $$
+  Capacitance is a scalar. \\
+  Capacitance only depends on the geometry of the conductors and the permittivity of the medium between the conductors. \\
+}
+
+\thm{Calclating Capacitance}{
+  \begin{itemize}
+    \item Assume the two conductors carry +Q and -Q respectively. 
+    \item Determin the electric field in the region between the conductors. This will often involve using Gauss's Law. 
+    \item Determine the potential difference between the conductors using the definition of potential difference. $$ V = \int_{a}^{b} \vec{E} \cdot d\vec{l} $$
+    \item Use the definition of capacitance to find the ratio of Q to V. 
+    \item Q will always cancel out of the ratio. 
+    \item You can be careless with signs.
+  \end{itemize}
+}
+
+\ex{Calculating the capacitance of a parallel plate capacitor}{
+  The two plates are seperated by distance $d$ and have a charge of +Q and -Q. \\
+  $$ E = \frac{\sigma}{\varepsilon_0} $$ 
+  $$ \sigma = \frac{Q}{A} $$
+  $$ \Delta V = - \int _0^d \vec{-E} \cdot d\vec{y} = \int _0^d \vec{E} \cdot d\vec{y} $$
+  $$ \Delta V = \int _0^d \frac{\sigma}{\varepsilon_0} dy = \frac{\sigma}{\varepsilon_0} y |^d_0 = \frac{\sigma d}{\varepsilon_0} = \frac{Qd}{A\varepsilon_0} $$
+  $$ C = \frac{Q}{\Delta V} = \frac{A\varepsilon_0}{d} $$
+}
+
+
+
+\subsection{Parallel Plate Capacitors}
+\dfn{Parallel Plate Capacitors}{
+  Electrode = positive or negative conductor, usually used in circuits. \\
+  Notice that the difference (not finished)
+}
+
+\qs{Derive the capacitance of a spherical capacitor}{
+  1. Gauss \\
+  $$ EA = \frac{Q_enc}{\varepsilon_0} $$ 
+  $$ E (4\pi r^2) = \frac{Q}{\varepsilon_0} $$ 
+  2. Integrate \\
+  $$ \delta V = - \int \vec{E} \cdot d\vec{l} \text{ dot product is negative} =  + \int^r_R \frac{Q}{4r\pi l^2 \varepsilon_0} d\vec{l} $$ 
+  $$ = \frac{Q}{4\pi \varepsilon_0} \left[-\frac{1}{l} \right]_R^r = \frac{Q}{4\pi \varepsilon_0} \left[\frac{1}{R} - \frac{1}{r} \right] = \frac{Q}{4\pi \varepsilon_0} \left[\frac{r-R}{rR} \right] $$
+  3. Capacitance \\
+  $$ C = \frac{Q}{\Delta V} $$
+  $$ C = \frac{Q}{\frac{Q}{4\pi \varepsilon_0} \left[\frac{r-R}{rR} \right]} = 4\pi \varepsilon_0 \frac{rR}{r-R} $$
+}
+
+\subsection{Energy Stored in a Capacitor}
+\dfn{Energy Stored in a Capacitor}{
+  The energy stored in a capacitor is equal to the work done to charge the capacitor. \\
+  $$ dU = dq \cdot V $$ 
+  $$ U = \int_0^Q \Delta V dq = \int ^Q_0 \frac{q}{C} dq = \frac{1}{2} \frac{Q^2}{C} = \frac{1}{2} CV^2 $$ 
+  $$ U = \frac{1}{2} CV^2 = \frac{1}{2} QV = \frac{1}{2} \frac{Q^2}{C} $$ 
+  $$ U = \frac{1}{2} \frac{Q^2}{C} = \frac{1}{2} QV = \frac{1}{2} CV^2 $$
+  \\
+  Energy Density(Energy per unit volume): $ u = \frac{1}{2} \varepsilon_0 E^2 $j
+}
+
+\qs{How much potential should you charge a $1.0 \mu F$ capacitor to store 1J?}{
+  $$ U = \frac{1}{2} CV^2 $$ 
+  $$ 1J = \frac{1}{2} (1 \mu F) V^2 $$ 
+  $$ 2 * 10^6 J = V^2 $$ 
+  $$ V = \sqrt{2 * 10^6 \frac{J}{F}} = 1414.2 V $$
+}
+
+\qs{A 2.0 cm diameter capacitor with a 0.5mm distance is charged to 200V.}{
+  What is the total energy stored in the electric field and energy density? \\
+  a)\\
+  $$ U = \frac{1}{2} C (\Delta V)^2 $$ 
+  $$ r = 1.0 cm = 0.01 m $$ 
+  $$ d = 0.5mm = 0.0005 m $$
+  $$ A = \pi r^2 = \pi * 10^{-4} $$
+  $$ C = \frac{\varepsilon_0 A}{d} $$ 
+  $$ V = 200V $$ 
+  $$ U = \frac{1}{2} \frac{\varepsilon_0 A}{d} V^2 = 1.1 * 10^{-7}$$
+  b) Double check\\
+  $$ u_E = \frac{U}{volume} $$
+  $$ V = \frac{4}{3} \pi r^3 = \frac{4}{3} \pi (0.01)^3 = 4.19 * 10^{-6} m^3 $$ 
+  $$ u_E = \frac{1.1 * 10^{-7}}{4.19 * 10^{-6}} = 0.026 J/m^3 $$
+}
+
+\qs{60pJ of energy is stored in a 2cm cube. What is the electric field strength?}{
+  $$ U = 60 pJ = 60 \cdot 10^{-12} J $$
+  $$ u_E = \frac{1}{2} \varepsilon_0 E^2 = \frac{60 \cdot 10^{-12} J}{(0.02m)^3} $$
+  $$ E = \sqrt{2 \frac{60 \cdot 10^{-12} J}{(0.02m)^3 \varepsilon_0}} = 1302 \frac{N}{C} = 1302 V/m $$
+}
+
+\subsection{Dielectrics}
+\dfn{Dielectrics}{
+  A dielectric is a non-conducting material.\\
+  When a dielectric is placed between the conductors of a capacitor it: 
+  \begin{enumerate}
+    \item ensures that the plates do not "short out"
+    \item increases the capacitance of the capacitor
+  \end{enumerate}
+
+  The dielectric material will distort at the molecular level and become an induced dipole. \\
+  At the surfaces of the dielectric, an induced surface charge density appears, with polarity opposite the neighboring plate. \\
+
+  From positive to negative of the entire capacitor their is an $ E_{\text{applied}} $ and $ E_{\text{induced}} $from positive to negative of the capacitor in the capaitor that goes the opposite way of the $ E_{\text{applied}}$. Thus, $E_{\text{total}} = E_{\text{applied}} - E_{\text{induced}} $ \\
+
+  $$ C_{\text{dielectric}} = \frac{Q}{\Delta V} = \frac{Q}{E_{\text{applied}}-E_{\text{induced}}} > \frac{Q}{E_{\text{applied}}} $$ 
+  $$ C_{\text{dielectric}} = \kappa C_{\text{without dielectric}} $$
+}
+
+\nt{
+  Change induced from a dielectric: \\
+  $$ C' = \kappa C = \kappa \frac{Q}{V} = \frac{Q}{V'} $$ 
+  $$ V' = \frac{V}{\kappa} $$ 
+  $$ E' = \frac{E}{\kappa} $$
+}
+
+\qs{A capacitor uses 0.6mm paper as a dielectric to its max sustainable voltage}{
+  Max sustainable Voltage: $ E_{\text{max}} = 16 \cdot 10^6 V/m $ \\
+  $$ \kappa = 3.7 \text{ for paper} $$
+  a) What is the max voltage the capacitor can hold? \\
+  $$ \Delta V = E \cdot d = 16 \cdot 10^6 V/m \cdot 0.6 \cdot 10^{-3} m = 9600 V = 9.6 kV$$ 
+  b) what is the strength of the induced field? \\
+  $$ E = E_{\text{applied/without dielectric}} - E_{\text{induced}} = 16 \cdot 10^6 V/m $$ 
+  $$ E = 16 \cdot 10^6 V/m - 16 \cdot 10^6 V/m \cdot 3.7 = -43.2 \cdot 10^6 V/m = - E_{\text{induced}} $$ 
+  $$ E_{\text{induced}} = 43.2 \cdot 10^6 V/m = 4.32 \cdot 10^7 $$
+}
+
+\end{document}

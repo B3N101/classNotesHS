@@ -1,0 +1,108 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{AP Physics 1}\\Electric Fields and Forces}
+\author{\huge{Ben Feuer}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{}
+
+\section{Equations for Electric Fields and Forces}
+
+\begin{itemize}
+  \item $ m_{electron} = 9.11* 10^{-31} $ 
+  \item $ m_{proton} = 1.67* 10^{-27}$
+  \item $ q_{electron} = -1.6 * 10^{-19} C $ 
+  \item $ q_{proton} = +1.6 * 10^{-19} C $
+  \item $ F_{1 on 2} = F_{2 on 1} = \frac{k*q_1*q_2}{r^2} $
+  \item $ E = \frac{F_{on q}}{q} $ 
+  \item $ E = \frac{kQ}{r^2} $ 
+  \item $ E_{capacitor} = \frac{Q}{\epsilon_0A} $
+  \item $ k = 9.0 * 10^9 \frac{N \cdot m^2}{C^2} $
+  \item $ \epsilon_0 = 8.85 * 10^{-12} \frac{C^2}{N\cdot m^2} $
+\end{itemize}
+
+
+\section{Charges and Forces}
+
+\begin{itemize}
+  \item Frictional forces, such as rubbing, add something called charge to an object or remove it from the object. The process itself is called charging. More vigorous rubbing produces a larger quantity of charge.
+  \item There are two kinds of charges: positive and negative
+  \item Two objects with the same charge repel each other while two objects with differing charges attract each other. The forces of repulsion and attraction here are called \textit{electric forces}. 
+  \item The forces of two charged objects are long-range forces. The magnitude increases as charge increases and decreases as the distance between charges increases. 
+  \item Neutral objects have an \textit{equal mixture} of positive and negative charges. 
+  \item Rubbing processes charges objects by transferring charges from one to another. The objects aquire opposite charges. 
+  \item charge is conserved: It can't be destroyed nor created.
+  \item There are two types of material: insulators and conductors. Insulators do not allow for the exchange of charge whilst conductors do allow for the exchange of charge. 
+\end{itemize}
+
+\dfn{Polorization}{
+  Polorization is the slight seperation of the positive and negative charge in a neutral object when a charged object is brought near. Seen here in Figure~\ref{fig:diagram}
+}
+\begin{figure}
+  \includegraphics[width=1\textwidth]{figures/polarization_diagram.jpg}
+  \caption{Polarization Diagram}
+  \label{fig:diagram}
+\end{figure}
+
+\section{Charges, Atoms, and molecules}
+\dfn{Electric Dipoles}{
+  Two equal but opposite charges with a seperation  between them are called an electric dipole. In the figure below(Figure~\ref{fig:dipole}) where an external charge has caused polarization, the atom has become an induced electric dipole.
+}
+\begin{figure}
+  \includegraphics[width=0.3\textwidth]{figures/dipole.jpg}
+  \caption{Figure of an electric dipole}
+  \label{fig:dipole}
+\end{figure}
+
+\section{Coulomb's Law}
+\begin{equation}
+  F = K \frac{\abs{q_1} \abs{q_2}}{r^2}
+  \label{eq:Coulomb's Law}
+\end{equation}
+
+The equation above gives the magnitude of force of Electric Forces; however, Electric forces are additionally vectors in which direction is based on attraction and repulsion.
+
+\section{Electric Fields} 
+\begin{enumerate}
+  \item A group of charges, which we call the source charges, alter the space around them by creating an electric field $\vec{E}$
+  \item If another charge is then placed in this electric field, it experiences a force $/vec{F}$ exerted by the field.
+  \item The electric field due to multiple charges is the vector sum of the electric field due to each of the charges.   
+
+\end{enumerate}
+\dfn{Parallel-plate capacitors}{
+  Parallel-plate capacitors are when you have two plates one uniformly positively charged and the other negatively in which the only electric fields are between the plates as charges within the plates are cancelled out. This gives uniform electric fields from plate to plate in which the equation for the electric field is \begin{equation}
+    \vec{E}_{capacitor} = \frac{Q}{\epsilon_0A}
+    \label{eq:E capacitor}
+  \end{equation}
+}
+
+
+
+\section{Electric field lines}
+\begin{enumerate}
+  \item Electric field lines are imaginary lines drawn through a region of space. 
+  \item The tangent to any field line at any point is in the direction  of the electric field at that point.
+  \item The  field lines are closer together where the electric field strenth is greater.
+  \item Electric field lines cannot cross!
+  \item The electric field is created by charges. Field lines start  on positive charges and end on negative charges.
+  \item Dipoles when interacting with an  electric field will  rotate do to the torque caused when the positive side goes toward the direction of the field lines whilst the negative side goes away from the direction of the field lines.
+\end{enumerate}
+
+
+
+
+
+\end{document}

@@ -1,0 +1,9 @@
+\contentsline {chapter}{\numberline {1}}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Equations for Electric potential and electric potential energy}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Electric potential Energy}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Electric potential}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Conservation of Energy for a charged particle moving in an electric Potential \textit {V}}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Electric potential in a parallel-plate capacitor}{3}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Equipotential lines}{3}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Capacitance and capacitors}{3}{section.1.7}%
+\contentsfinish 
