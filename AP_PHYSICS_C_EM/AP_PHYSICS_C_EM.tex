@@ -562,4 +562,77 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
   $$ E_{\text{induced}} = 43.2 \cdot 10^6 V/m = 4.32 \cdot 10^7 $$
 }
 
+\qs{Energy of a capcitor with vs. without a dielectric with the same voltage}{
+  $$ U_0 = \frac{1}{2} CV^2 $$ 
+  $$ U_1 = \frac{1}{2} \kappa C'V^2 $$ 
+  $$ \kappa > 1 $$ 
+  $$ U_0 < U_1 $$ 
+}
+
+\chapter{Circuits}
+
+\section{Circuits with Capacitors}
+
+\subsection{Parallel Capacitor Circuits}
+\dfn{Parallel Capacitor Circuits}{
+  \begin{itemize}
+    \item The voltage across each capacitor is the same. 
+    \item The charge on each capacitor is different. 
+    \item The total charge is the sum of the charges on each capacitor. 
+    \item The total capacitance is the sum of the capacitances of each capacitor. 
+  \end{itemize}
+  $$ C_{\text{total}} = C_1 + C_2 + C_3 + \dots $$
+}
+\begin{figure}[h!]
+  \centering
+  \resizebox{0.5\textwidth}{!}{%
+  \begin{circuitikz}
+    \tikzstyle{every node}=[font=\LARGE]
+    \draw (6,14.25) to[battery ] (6,10.25);
+    \draw [](6,14.25) to[short] (9.5,14.25);
+    \draw [](9.5,14.25) to[short] (9.5,13.25);
+    \draw[] (9.5,13.25) to[short] (7.75,13.25);
+    \draw [](9.5,13.25) to[short] (11.5,13.25);
+    \draw [](7.75,13.25) to[short] (7.75,12.75);
+    \draw [](11.5,13.25) to[short] (11.5,12.75);
+    \draw (7.75,12.75) to[C] (7.75,11.75);
+    \draw (11.5,12.75) to[C] (11.5,11.75);
+    \draw [](7.75,11.75) to[short] (11.5,11.75);
+    \draw [](9.5,11.75) to[short] (9.5,10.25);
+    \draw [](6,10.25) to[short] (9.5,10.25);
+  \end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+\subsection{Series Capacitor Circuits}
+\dfn{Series Capacitor Circuits}{
+  \begin{itemize}
+    \item The voltage across each capacitor is different. 
+    \item The charge on each capacitor is the same. 
+    \item The total voltage is the sum of the voltages across each capacitor. 
+    \item The total capacitance is the reciprocal of the sum of the reciprocals of the capacitances of each capacitor. 
+  \end{itemize}
+  $$ \frac{1}{C_{\text{total}}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} + \dots $$
+}
+\begin{figure}[h!]
+  \centering
+  \resizebox{0.5\textwidth}{!}{%
+  \begin{circuitikz}
+    \tikzstyle{every node}=[font=\LARGE]
+    \draw (6.75,12.5) to[battery ] (6.75,10);
+    \draw [](6.75,12.5) to[short] (10.5,12.5);
+    \draw [](10.5,12.5) to[short] (10.5,12);
+    \draw (10.5,12) to[C] (10.5,11);
+    \draw (10.5,11) to[C] (10.5,9.75);
+    \draw [](6.75,10) to[short] (6.75,9.75);
+    \draw[] (10.5,9.75) to[short] (6.75,9.75);
+  \end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+
 \end{document}

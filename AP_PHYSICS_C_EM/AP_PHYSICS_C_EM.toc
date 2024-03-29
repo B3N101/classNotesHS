@@ -21,4 +21,8 @@
 \contentsline {subsection}{\numberline {1.4.1}Parallel Plate Capacitors}{14}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Energy Stored in a Capacitor}{15}{subsection.1.4.2}%
 \contentsline {subsection}{\numberline {1.4.3}Dielectrics}{16}{subsection.1.4.3}%
+\contentsline {chapter}{\numberline {2}Circuits}{18}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Circuits with Capacitors}{18}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Parallel Capacitor Circuits}{18}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Series Capacitor Circuits}{19}{subsection.2.1.2}%
 \contentsfinish 

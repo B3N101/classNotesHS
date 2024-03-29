@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1711640780 "AP_PHYSICS_C_EM.tex" "AP_PHYSICS_C_EM.pdf" "AP_PHYSICS_C_EM" 1711640787
+["pdflatex"] 1711725209 "AP_PHYSICS_C_EM.tex" "AP_PHYSICS_C_EM.pdf" "AP_PHYSICS_C_EM" 1711725215
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm0900.tfm" 1136768653 1536 c4f439db76ef96a9c53bc437f35ffe20 ""
@@ -299,9 +299,9 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1665240450 2826442 433bf6dce69847cd99bacf7d8a1741b2 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "AP_PHYSICS_C_EM.aux" 1711640786 13877 65ef67e79d1f237beb31ee07ca9cee72 "pdflatex"
-  "AP_PHYSICS_C_EM.tex" 1711640779 25887 f0c280feccb3d1cc354f164d167f4104 ""
-  "AP_PHYSICS_C_EM.toc" 1711640786 2158 5e3a79f6f56648e7c3724ae1bda53c15 "pdflatex"
+  "AP_PHYSICS_C_EM.aux" 1711725215 16208 2845c143f6c6ef4bf21bdef5715e0420 "pdflatex"
+  "AP_PHYSICS_C_EM.tex" 1711725203 28311 bd3e630d76d28ee1df22962fc818ad44 ""
+  "AP_PHYSICS_C_EM.toc" 1711725215 2502 4ce8e5a9fe003b0a157c52ad932d7752 "pdflatex"
   "letterfonts.tex" 1709148228 8702 ef32ca12e97530ef5734ca4adcb1f6b1 ""
   "macros.tex" 1709148228 3389 93000260d2aea292d29c76d4ace77a29 ""
   "preamble.tex" 1709148228 20104 117f53d978753ce139aca04fe12207d0 ""
