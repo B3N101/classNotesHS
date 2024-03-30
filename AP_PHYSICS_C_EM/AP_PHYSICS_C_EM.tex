@@ -562,12 +562,23 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
   $$ E_{\text{induced}} = 43.2 \cdot 10^6 V/m = 4.32 \cdot 10^7 $$
 }
 
-\qs{Energy of a capcitor with vs. without a dielectric with the same voltage}{
+\qs{Energy of a capacitor with vs. without a dielectric with the same voltage}{
   $$ U_0 = \frac{1}{2} CV^2 $$ 
   $$ U_1 = \frac{1}{2} \kappa C'V^2 $$ 
   $$ \kappa > 1 $$ 
   $$ U_0 < U_1 $$ 
 }
+
+\qs{Capacitor with a dielectric of thickness d/2}{
+  $$ C_0 = \frac{\varepsilon_0 A}{d} = C_{\text{without dielectric}}$$ 
+  $$ \frac{1}{C} = \frac{1}{C_1} + {C_2} = \frac{1}{C_{\text{with half dielectric}}} $$ 
+  $$ C_1 = \frac{\varepsilon_0 A}{d/2} = 2C_0$$ 
+  $$ C_2 = \kappa \frac{\varepsilon_0 A}{d/2} = \kappa 2C_0 $$
+  $$ \frac{1}{C} = \frac{1}{2C_0} + \frac{1}{\kappa 2C_0} $$ 
+  $$ C = \frac{\kappa 2C_0 + 2C_0}{\kappa+1} $$
+}
+
+
 
 \chapter{Circuits}
 
@@ -679,5 +690,48 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
 \dfn{Alternating Current}{
   Current that changes direction periodically. 
 }
+
+\section{Resistance and Resistivity}
+\dfn{Resistance}{
+  The opposition to the flow of charge. \\
+  $$ R = \frac{V}{I} \leftarrow I = \frac{V}{R}$$ 
+  $$ R = \rho \frac{L}{A} $$ 
+  \textbf{Units:} Ohm($\Omega$) = Volt/Ampere \\
+  When a potential difference is maintained across a conductor, a current will be established within the conductor. \\ 
+  We could plot V vs. I, and if the graph is linear, the resistance is constant and the material/resistor obeys Ohm's Law as $ V = IR $.
+}
+
+\subsection{Ohm's Law}
+\dfn{Ohm's Law}{
+  The current in a conductor is directly proportional to the potential difference across the conductor. \\
+  $$ V = IR $$ 
+  $$ I = \frac{V}{R} $$ 
+  \textbf{Ohmic Materials:} Materials that obey Ohm's Law. 
+  $$ J = \sigma E $$ 
+  $$ \sigma = \text{conductivity} = \frac{1}{\rho} $$
+  $$ R = \text{resistance} $$
+  $$ \rho = \text{resistivity} = \frac{1}{\sigma} $$
+}
+\nt{
+  Because, 
+  $$ V = EL $$ 
+  $$ I = JA $$ 
+  $$ \to \frac{I}{A} = \sigma \frac{V}{L} \to I = \frac{V}{\frac{L}{\sigma A}} $$
+  Therefore, 
+  $$ \frac{L}{\sigma A} = R $$
+}
+
+\qs{Two 5cm diameter disks seperated by pyrex glass are charged to 1000V}{
+  $$ r = 2.5cm = 0.025m $$ 
+  $$ d = 0.61mm = 0.00061m $$ 
+  $$ V = 1000V $$
+  $$ A = \pi r^2 = \pi (0.025)^2 = 0.00196 m^2 $$ 
+  What is the charge density on the disks? \\ 
+  $$ C = \frac{\varepsilon_0 A}{d} = \frac{8.85 \cdot 10^{-12} \cdot 0.00196}{0.00061} = 2.85 \cdot 10^{-11} F $$
+  $$ Q = CV = 2.85 \cdot 10^{-11} \cdot 1000 = 2.85 \cdot 10^{-8} C $$
+  $$ \rho = \frac{Q}{V_{ol}} = \frac{Q}{A\cdot d} = 0.2379 \frac{C}{m^x}$$
+}
+
+
 
 \end{document}
