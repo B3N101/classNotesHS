@@ -27,8 +27,9 @@
 \contentsline {subsection}{\numberline {2.1.2}Series Capacitor Circuits}{19}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}Electric Current}{19}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Thermal Effects of Current}{19}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Current Density}{20}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Direct Current vs. Alternating Current}{20}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.2}Drift Motion}{20}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Current Density}{20}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Direct Current vs. Alternating Current}{20}{subsection.2.2.4}%
 \contentsline {section}{\numberline {2.3}Resistance and Resistivity}{21}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Ohm's Law}{21}{subsection.2.3.1}%
 \contentsfinish 

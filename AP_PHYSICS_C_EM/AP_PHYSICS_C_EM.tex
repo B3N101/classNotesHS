@@ -661,18 +661,21 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
   $$ v_{\text{thermal}} \approx 10^6 m/s $$ 
 }
 
+\subsection{Drift Motion}
+
 \dfn{Drift Motion}{
   Drift motion: electrons move slowly in the direction of the electric field. 
-  $$ v_{\text{drift}} \approx 10^{-4} m/s $$ 
+  $$ v_{\text{drift}} \approx 10^{-4} m/s \text{ DEPENDS ON MATERIAL!} $$ 
   $$ I = nAeV_d $$ 
-  $$ V_d = \frac{I}{nAe} $$ 
+  $$ \mathbf{V_d = \frac{I}{nAe}} \text{ n is the electron density}$$ 
 }
 
 \dfn{Drift velocity and current density}{
   $$ Q = n_e \cdot A \cdot L $$ 
   $$ i = \frac{Q}{t} = \frac{n_e \cdot A \cdot L}{\frac{L}{v_d}} = n_e \cdot A \cdot v_d $$ 
   $$ J = \frac{i}{A} = n_e \cdot v_d $$
-  $$ J = n_e \cdot v_d = \rho v_d \text{ where } \rho  \text{ is the number of electrons } $$
+  $$ \mathbf{J = n_e \cdot v_d = \rho v_d} \text{ where } \rho  \text{ is the number of electrons and e is the charge of an electron } $$ 
+
 }
 
 \subsection{Current Density}
@@ -707,7 +710,7 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
   $$ V = IR $$ 
   $$ I = \frac{V}{R} $$ 
   \textbf{Ohmic Materials:} Materials that obey Ohm's Law. 
-  $$ J = \sigma E $$ 
+  $$ \mathbf{J = \sigma E} $$ 
   $$ \sigma = \text{conductivity} = \frac{1}{\rho} $$
   $$ R = \text{resistance} $$
   $$ \rho = \text{resistivity} = \frac{1}{\sigma} $$
@@ -732,7 +735,16 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
   $$ \rho = \frac{Q}{V_{ol}} = \frac{Q}{A\cdot d} = 0.2379 \frac{C}{m^x}$$
 }
 
-$$ \oiiint\limits_{\mathrm{Surface}} $$
+\qs{Comparing voltages across resistors}{
+  $$ R \propto \frac{L}{A} $$ 
+  $$ V = IR \propto \frac{L}{A} $$
+  \textbf{A cylindrical resistor with radius d vs 2d:} \\
+  Because the area of the resistor with radius 2d is 4 times the area of the resistor with radius d, the resistance of the resistor with radius 2d is 4 times less the resistance of the resistor with radius d. $ R_{2d} < R_d $ \\
+  \\
+  \textbf{A cylindrical resistor with length 2L vs L:} \\
+  Because the length of the resistor with length 2L is 2 times the length of the resistor with length L, the resistance of the resistor with length 2L is 2 times the resistance of the resistor with length L. $ R_{2L} > R_L $
+}
+
 
 
 \end{document}
