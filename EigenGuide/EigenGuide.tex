@@ -1,0 +1,88 @@
+\documentclass[6pt]{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\begin{document}
+
+\begin{itemize}
+  \item Eigenvalues and eigenvectors
+  \item Diagonalization
+  \item Symmetric Positive Definite matrices
+  \item Systems of Differential Equations
+\end{itemize}
+
+\subsection*{Eigenvalues and Eigenvectors}
+\dfn{Eigenvalues and Eigenvectors}{
+  Let $A$ be an $n \times n$ matrix. A scalar $\lambda$ is called an eigenvalue of $A$ if there exists a nonzero vector $\vec{v}$ such that $A\vec{v} = \lambda \vec{v}$. The vector $\vec{x}$ is called an eigenvector of $A$ corresponding to $\lambda$.
+  $$ (A-\lambda I) x = 0 $$
+}
+\dfn{Eigenvector properties}{
+  Let $A$ be an $n \times n$ matrix with eigenvalues $\lambda_1, \lambda_2, \ldots, \lambda_n$ and corresponding eigenvectors $\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n$. Then the following properties hold:
+  \begin{itemize}
+    \item The eigenvectors are linearly independent.
+    \item The matrix $A$ can be diagonalized as $A = X\Lambda X^{-1}$, where $X$ is the matrix whose columns are the eigenvectors of $A$ and $\Lambda $ is the diagonal matrix with the eigenvalues of $A$ on the diagonal.
+    \item The eigenvectors of similar matrices are the same. EX: the eigenvectors of A are the same as the eigenvectors of $A^9 + cI$.
+  \end{itemize}
+}
+\dfn{Eigenvalue properties}{
+  Let $A$ be an $n \times n$ matrix with eigenvalues $\lambda_1, \lambda_2, \ldots, \lambda_n$ and corresponding eigenvectors $\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n$. Then the following properties hold:
+  \begin{itemize}
+    \item The sum of the eigenvalues is equal to the trace of the matrix: $\sum \lambda_i = \text{Trace}$.
+    \item The product of the eigenvalues is equal to the determinant of the matrix: $\prod_{i=1}^n \lambda_i = \det(A)$.
+    \item For a markov matrix, the largest eigenvalue is 1. A markov matrix is a matrix whose columns add to 1.
+    \item For a singular matrix, the determinant is 0 and at least one eigenvalue is 0. A singular matrix is a matrix whose columns are linearly dependent.
+    \item For a symmetric matrix, the eigenvalues are real and the eigenvectors are orthogonal.
+  \end{itemize}
+}
+\nt{
+  Imaginary Eigenvalues: If a matrix has imaginary eigenvalues, then the matrix is not diagonalizable. \\
+  Complex Eigenvectors: If a matrix has complex eigenvectors, then the matrix is not diagonalizable. \\
+  Eigenvalues of AB and A+B: Eigenvalues are not the same for AB and A+B. A and B share n independent Eigenvectors if AB=BA.
+}
+
+
+\subsection*{Diagonalization}
+% use lambda and X and X^{-1}
+\dfn{Diagonalization}{
+  A matrix $A$ is diagonalizable if it can be written as $A = X\Lambda X^{-1}$, where $X$ is the matrix whose columns are the eigenvectors of $A$ and $\Lambda$ is the diagonal matrix with the eigenvalues of $A$ on the diagonal.
+}
+
+\subsection*{Symmetric Positive Definite Matrices}
+\dfn{Symmetric Positive Definite Matrices}{
+  A symmetric matrix has n real eigenvalues $\lambda _i$ and n orthogonal eigenvectors $q_i$. \\
+  S is diagonalized by an orthogonal matrix Q: $S = Q\Lambda Q^T = Q\Lambda Q^{-1}$. \\
+  S is positive definite if all eigenvalues are positive. \\
+  Positive Semi-Definite: All eigenvalues are non-negative (allows $\lambda = 0 $ ).
+}
+\dfn{Positive Definite Matrices Tests}{
+  \textbf{Energy Test: }A matrix $A$ is positive definite if for all nonzero vectors $\vec{x}$, $\vec{x}^T A \vec{x} > 0$. \\
+  \textbf{Eigenvalue Test: }A matrix $A$ is positive definite if all of its eigenvalues are positive. \\
+  \textbf{Cholesky Decomposition: }A matrix $A$ is positive definite if it can be written as $A = LL^T$, where $L$ is a lower triangular matrix with positive diagonal entries. Works when L has independent columns. \\
+  \textbf{Pivot Test: }A matrix $A$ is positive definite if all of its pivots are positive. \\
+  \textbf{Upper Left Determinants: }A matrix $A$ is positive definite if all of its upper left determinants are positive.
+}
+\nt{
+  $$ S=C A C^T \text{ is pos definite if C is invertible} $$ 
+  $$ \text{If S1 and S2 are pos def, then S1 + S2 is pos def} $$
+}
+
+\subsection*{Systems of Differential Equations}
+\dfn{Systems of Differential Equations}{
+  If $ Ax = \lambda x $, then $ u(t) = e^{\lambda t} x $ will solve $ \frac{du}{dt} = Au $. Each $ \lambda $ and $ x $ is a solution $ e^{\lambda t} x $. \\
+  If $ A = X \Lambda X^{-1} $, then $ u(t) = e^{At}u(0) = X e^{\Lambda t} X^{-1} u(0) $ will solve $ \frac{du}{dt} = Au $. \\
+  Matrix Exponential: $ e^{At} = I + At + \frac{A^2 t^2}{2!} + \frac{A^3 t^3}{3!} + \ldots $. \\
+  Taylor Series:
+  \begin{itemize}
+    \item $ e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots $. 
+    \item $ \cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \ldots $. 
+    \item $ \sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \ldots $. 
+  \end{itemize}
+  A is stable and u(t) approaches 0 as t approaches infinity if all eigenvalues of A have negative real parts < 0. \\
+  Second order eqn: $ \frac{d^2u}{dt^2} + 2\zeta \omega_n \frac{du}{dt} + \omega_n^2 u = 0 $\dots
+  First order System: $ \frac{du}{dt} = Au $, where $ A = \begin{bmatrix} 0 & 1 \\ -\omega_n^2 & -2\zeta \omega_n \end{bmatrix} $. 
+  $$ u'' + Bu' + Cu = 0 \to \begin{bmatrix} u \\ u' \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ -C & -B \end{bmatrix} \begin{bmatrix} u \\ u' \end{bmatrix} $$
+}
+
+\end{document}
