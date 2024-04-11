@@ -1,35 +1,37 @@
-\contentsline {chapter}{\numberline {1}Electrostatics}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Electric Charge, Electric Force, and Electric Field}{2}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Electric Charge}{2}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Conductors and Insulators}{3}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Polarization}{3}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Coulomb's Law / Electric Force}{4}{subsection.1.1.4}%
-\contentsline {subsection}{\numberline {1.1.5}Electric Field}{5}{subsection.1.1.5}%
-\contentsline {subsection}{\numberline {1.1.6}Calculating Electric Field}{6}{subsection.1.1.6}%
-\contentsline {subsection}{\numberline {1.1.7}Electric Field from Electric Dipole}{7}{subsection.1.1.7}%
-\contentsline {subsection}{\numberline {1.1.8}Electric Field Lines}{8}{subsection.1.1.8}%
-\contentsline {subsection}{\numberline {1.1.9}Electric Flux}{8}{subsection.1.1.9}%
-\contentsline {subsection}{\numberline {1.1.10}Parallel Plate Capacitors}{8}{subsection.1.1.10}%
-\contentsline {section}{\numberline {1.2}Electric Potential Energy}{9}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Electric Potential}{10}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Voltage}{11}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Equipotential Surfaces \& Lines}{12}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Conductors and Equipotential Surfaces}{12}{subsection.1.3.3}%
-\contentsline {subsection}{\numberline {1.3.4}Electric Potential on and in a conducting sphere}{12}{subsection.1.3.4}%
-\contentsline {subsection}{\numberline {1.3.5}Electric Potential on and in a non-conducting sphere}{13}{subsection.1.3.5}%
-\contentsline {section}{\numberline {1.4}Capacitance}{13}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Parallel Plate Capacitors}{14}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Energy Stored in a Capacitor}{15}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Dielectrics}{16}{subsection.1.4.3}%
-\contentsline {chapter}{\numberline {2}Circuits}{18}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Circuits with Capacitors}{18}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Parallel Capacitor Circuits}{18}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Series Capacitor Circuits}{19}{subsection.2.1.2}%
+\contentsline {chapter}{\numberline {1}Electrostatics}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Electric Charge, Electric Force, and Electric Field}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Electric Charge}{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Conductors and Insulators}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Polarization}{4}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Coulomb's Law / Electric Force}{5}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Electric Field}{6}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}Calculating Electric Field}{7}{subsection.1.1.6}%
+\contentsline {subsection}{\numberline {1.1.7}Electric Field from Electric Dipole}{8}{subsection.1.1.7}%
+\contentsline {subsection}{\numberline {1.1.8}Electric Field Lines}{9}{subsection.1.1.8}%
+\contentsline {subsection}{\numberline {1.1.9}Electric Flux}{9}{subsection.1.1.9}%
+\contentsline {subsection}{\numberline {1.1.10}Parallel Plate Capacitors}{9}{subsection.1.1.10}%
+\contentsline {section}{\numberline {1.2}Electric Potential Energy}{10}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Electric Potential}{11}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Voltage}{12}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Equipotential Surfaces \& Lines}{13}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Conductors and Equipotential Surfaces}{13}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Electric Potential on and in a conducting sphere}{13}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}Electric Potential on and in a non-conducting sphere}{14}{subsection.1.3.5}%
+\contentsline {section}{\numberline {1.4}Capacitance}{14}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Parallel Plate Capacitors}{15}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Energy Stored in a Capacitor}{16}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Dielectrics}{17}{subsection.1.4.3}%
+\contentsline {chapter}{\numberline {2}Circuits}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Circuits with Capacitors}{19}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Parallel Capacitor Circuits}{19}{subsection.2.1.1}%
 \contentsline {section}{\numberline {2.2}Electric Current}{19}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Thermal Effects of Current}{19}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}Thermal Effects of Current}{20}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Drift Motion}{20}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Current Density}{20}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}Direct Current vs. Alternating Current}{20}{subsection.2.2.4}%
 \contentsline {section}{\numberline {2.3}Resistance and Resistivity}{21}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Ohm's Law}{21}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Resistors in Series}{22}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Resistors in Parallel}{23}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Kirchhoff's Rules}{23}{subsection.2.3.4}%
 \contentsfinish 

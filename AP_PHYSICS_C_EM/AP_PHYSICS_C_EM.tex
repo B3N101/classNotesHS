@@ -28,6 +28,22 @@
 % \thm{}{}
 
 
+NEXT ORGANIZATION:
+\begin{itemize}
+  \item Coulomb's Law - Electric Force and Field 
+  \item Gauss's Law - Electric Flux 
+  \item Electric Potential Energy and Electric Potential 
+  \item Capacitance, Capacitors, and Dielectrics
+  \item Circuits - Current, Resistance, Capacitors, and Ohm's Law
+  \item Magnetic Fields 
+  \item Magnetic Forces and Fields 
+  \item Magnetic Induction 
+  \item Inductance
+  \item Electromagnetic Waves
+  \item Light and Optics
+  \item Modern Physics
+\end{itemize}
+
 
 \chapter{Electrostatics}
 
@@ -596,9 +612,8 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
 }
 \begin{figure}[h!]
   \centering
-  \resizebox{0.5\textwidth}{!}{%
-  \begin{circuitikz}
-    \tikzstyle{every node}=[font=\LARGE]
+  \resizebox{0.25\textwidth}{!}{%
+  \begin{circuitikz}    
     \draw (6,14.25) to[battery ] (6,10.25);
     \draw [](6,14.25) to[short] (9.5,14.25);
     \draw [](9.5,14.25) to[short] (9.5,13.25);
@@ -613,36 +628,6 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
     \draw [](6,10.25) to[short] (9.5,10.25);
   \end{circuitikz}
 }%
-
-\label{fig:my_label}
-\end{figure}
-
-\subsection{Series Capacitor Circuits}
-\dfn{Series Capacitor Circuits}{
-  \begin{itemize}
-    \item The voltage across each capacitor is different. 
-    \item The charge on each capacitor is the same. 
-    \item The total voltage is the sum of the voltages across each capacitor. 
-    \item The total capacitance is the reciprocal of the sum of the reciprocals of the capacitances of each capacitor. 
-  \end{itemize}
-  $$ \frac{1}{C_{\text{total}}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} + \dots $$
-}
-\begin{figure}[h!]
-  \centering
-  \resizebox{0.5\textwidth}{!}{%
-  \begin{circuitikz}
-    \tikzstyle{every node}=[font=\LARGE]
-    \draw (6.75,12.5) to[battery ] (6.75,10);
-    \draw [](6.75,12.5) to[short] (10.5,12.5);
-    \draw [](10.5,12.5) to[short] (10.5,12);
-    \draw (10.5,12) to[C] (10.5,11);
-    \draw (10.5,11) to[C] (10.5,9.75);
-    \draw [](6.75,10) to[short] (6.75,9.75);
-    \draw[] (10.5,9.75) to[short] (6.75,9.75);
-  \end{circuitikz}
-}%
-
-\label{fig:my_label}
 \end{figure}
 
 
@@ -745,21 +730,6 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
   Because the length of the resistor with length 2L is 2 times the length of the resistor with length L, the resistance of the resistor with length 2L is 2 times the resistance of the resistor with length L. $ R_{2L} > R_L $
 }
 
-NEXT ORGANIZATION:
-\begin{itemize}
-  \item Coulomb's Law - Electric Force and Field 
-  \item Gauss's Law - Electric Flux 
-  \item Electric Potential Energy and Electric Potential 
-  \item Capacitance, Capacitors, and Dielectrics
-  \item Circuits - Current, Resistance, Capacitors, and Ohm's Law
-  \item Magnetic Fields 
-  \item Magnetic Forces and Fields 
-  \item Magnetic Induction 
-  \item Inductance
-  \item Electromagnetic Waves
-  \item Light and Optics
-  \item Modern Physics
-\end{itemize}
 
 \dfn{Electrical Power}{
   The rate at which electrical energy is converted to another form of energy. \\
@@ -770,11 +740,71 @@ NEXT ORGANIZATION:
   \textbf{Units:} Watt(W) = Joules/second
 }
 
-Resistor Summary:
-Series: $ V_{\text{total}} = V_1 + V_2 + V_3 + \dots $ $ I_{\text{total}} = I_1 = I_2 = I_3 = \dots $ $ R_{\text{total}} = R_1 + R_2 + R_3 + \dots $ $ R_{\text{total}} = \frac{V_{\text{total}}}{I_{\text{total}}} $ \\
+\subsection{Resistors in Series}
+\dfn{Resistors in Series}{
+  \begin{itemize}
+    \item The current is the same through each resistor. 
+    \item The voltage across each resistor is different. 
+    \item The total voltage is the sum of the voltages across each resistor. 
+    \item The total resistance is the sum of the resistances of each resistor. 
+  \end{itemize}
+  $$ R_{\text{total}} = R_1 + R_2 + R_3 + \dots $$
+}
 
-Parallel: $ V_{\text{total}} = V_1 = V_2 = V_3 = \dots $ $ I_{\text{total}} = I_1 + I_2 + I_3 + \dots $ $ \frac{1}{R_{\text{total}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \dots $ $ R_{\text{total}} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \dots} $ \\
+\begin{figure}[!ht]
+\centering
+\resizebox{.25\textwidth}{!}{%
+\begin{circuitikz}
+\draw (5.5,13) to[battery ] (5.5,9.5);
+\draw [](5.5,13) to[short] (7,13);
+\draw (7,13) to[R] (8.75,13);
+\draw (8.75,13) to[R] (11.75,13);
+\draw [](11.75,13) to[short] (11.75,9.5);
+\draw [](5.5,9.5) to[short] (11.75,9.5);
+\end{circuitikz}
+}%
 
-Opposite of capacitance.
+\end{figure}
+
+\subsection{Resistors in Parallel}
+\dfn{Resistors in Parallel}{
+  \begin{itemize}
+    \item The voltage is the same across each resistor. 
+    \item The current through each resistor is different. 
+    \item The total current is the sum of the currents through each resistor. 
+    \item The total resistance is the reciprocal of the sum of the reciprocals of the resistances of each resistor. 
+  \end{itemize}
+  $$ \frac{1}{R_{\text{total}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \dots $$
+}
+
+\begin{figure}[!ht]
+\centering
+\resizebox{.25\textwidth}{!}{%
+\begin{circuitikz}
+\draw (4.75,12.5) to[battery ] (4.75,9.5);
+\draw [](4.75,12.5) to[short] (8,12.5);
+\draw [](8,12.5) to[short] (8,11.5);
+\draw [](7.5,11.5) to[short] (8.5,11.5);
+\draw (7.5,11.5) to[R] (7.5,9.5);
+\draw (8.5,11.5) to[R] (8.5,9.5);
+\draw [](7.5,9.5) to[short] (8.5,9.5);
+\draw [](8,9.5) to[short] (8,8.75);
+\draw[] (8,8.75) to[short] (4.75,8.75);
+\draw [](4.75,8.75) to[short] (4.75,9.5);
+\end{circuitikz}
+}%
+\end{figure}
+
+
+\subsection{Kirchhoff's Rules}
+\dfn{Kirchhoff's Rules}{
+  \begin{itemize}
+    \item \textbf{Junction Law:} The sum of the currents entering a junction is equal to the sum of the currents leaving the junction. 
+    \item \textbf{Loop Law:} The sum of the potential differences around any closed loop in a circuit is zero. 
+  \end{itemize}
+}
+
+
+
 
 \end{document}
