@@ -35,4 +35,8 @@
 \contentsline {subsection}{\numberline {2.3.3}Resistors in Parallel}{23}{subsection.2.3.3}%
 \contentsline {subsection}{\numberline {2.3.4}Kirchhoff's Rules}{23}{subsection.2.3.4}%
 \contentsline {subsection}{\numberline {2.3.5}Terminal Voltage}{24}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}RC Circuits}{24}{subsection.2.3.6}%
+\contentsline {subsubsection}{RC Time Constant}{24}{section*.2}%
+\contentsline {subsubsection}{Charging a Capacitor}{25}{section*.3}%
+\contentsline {subsubsection}{Charge, Current, and Voltage in a Charging Capacitor}{25}{section*.4}%
 \contentsfinish 

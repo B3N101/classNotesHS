@@ -835,6 +835,40 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
   $$ V_{\text{terminal}} = \epsilon - Ir $$
 }
 
+\subsection{RC Circuits}
+\dfn{RC Circuits}{
+  Circuits that contain resistors and capacitors. \\
+  \textbf{Charging:} The capacitor charges up to the battery voltage. \\
+  \textbf{Discharging:} The capacitor discharges through the resistor. \\
+  \textbf{Time Constant:} The time it takes for the charge on the capacitor to reach 63.2\% of its final value. \\
+}
 
+\subsubsection{RC Time Constant}
+\dfn{RC Time Constant}{
+  The time it takes for the charge on the capacitor to reach 63.2\% of its final value. \\
+  $$ \tau = RC $$
+}
+
+\subsubsection{Charging a Capacitor}
+\dfn{Charging a Capacitor}{
+  The capacitor charges up to the battery voltage. \\
+  $$ \epsilon - \frac{q}{c} - iR = 0 $$
+  $$ i = \frac{dq}{dt} $$ 
+  $$ \frac{dq}{dt} = \frac{\epsilon - q/c}{R} = \frac{c\epsilon -q}{Rc}$$
+  $$ \frac{dq}{c\epsilon - q} = \frac{dt}{Rc} $$
+  $$ \int_{0}^{q} \frac{dq}{c\epsilon - q} = \int_{0}^{t} \frac{dt}{Rc} $$
+  $$ \int_{0}^{q} \frac{dq}{q - c\epsilon} = - \frac{1}{Rc} \int_{0}^{t} dt $$
+  $$ \ln(q - c\epsilon) |^q_0 = - \frac{t}{Rc} $$
+  $$ \ln \left(\frac{q - c\epsilon}{-c\epsilon} \right) = - \frac{t}{Rc} $$ 
+  $$ \frac{q - c\epsilon}{-c\epsilon} = e^{- \frac{t}{Rc}} $$ 
+  $$ q = c\epsilon (1 - e^{- \frac{t}{Rc}}) = Q(1-e^{-\frac{r}{RC}}) $$
+}
+
+\subsubsection{Charge, Current, and Voltage in a Charging Capacitor}
+\dfn{Change in C, A, and V}{
+  $$ q = Q(1-e^{-\frac{r}{RC}}) $$ 
+  $$ I = \frac{\epsilon}{R} e^{-\frac{t}{RC}} $$ 
+  $$ V = \epsilon (1 - e^{-\frac{t}{RC}}) $$
+}
 
 \end{document}
