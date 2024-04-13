@@ -34,4 +34,5 @@
 \contentsline {subsection}{\numberline {2.3.2}Resistors in Series}{22}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Resistors in Parallel}{23}{subsection.2.3.3}%
 \contentsline {subsection}{\numberline {2.3.4}Kirchhoff's Rules}{23}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Terminal Voltage}{24}{subsection.2.3.5}%
 \contentsfinish 

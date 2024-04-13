@@ -803,7 +803,37 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
     \item \textbf{Loop Law:} The sum of the potential differences around any closed loop in a circuit is zero. 
   \end{itemize}
 }
+\begin{figure}[!ht]
+\centering
+\resizebox{.35\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw[step=1.25cm,lightgray,very thin] (3.25,16.75) grid (13.5,9);
+\draw (4.25,15.25) to[battery ] (4.25,10);
+\draw [](4.25,15.25) to[short] (9.25,15.25);
+\draw (9.25,15.25) to[short, -*] (9.25,15.25);
+\draw [](9.25,15.25) to[short] (9.25,12.5);
+\draw [](9.25,15.25) to[short] (12.5,15.25);
+\draw [](12.5,15.25) to[short] (12.5,10);
+\draw [](9.25,12.5) to[short] (9.25,10);
+\draw[] (12.5,10) to[short] (4.25,10);
+\node [font=\normalsize] at (6.75,15.75) {i1};
+\node [font=\normalsize] at (8.75,13) {i2};
+\node [font=\normalsize] at (10.25,15.5) {i3};
+\node [font=\normalsize] at (5.75,10.25) {i4};
+\node [font=\normalsize] at (6,12.5) {\textbf{\underline{i1=i2+i3=i4}}};
+\end{circuitikz}
+}%
 
+\label{Junction Rule}
+\end{figure}
+
+\subsection{Terminal Voltage}
+\dfn{Terminal Voltage}{
+  When charges move through a battery, they experience an "internal resistance" that ordinarily reduces the potential difference between the two terminals of the battery. \\
+  One can model a real battery as an ideal battery (with no internal resistance) in series with a resistor equal to the internal resistance. 
+  $$ V_{\text{terminal}} = \epsilon - Ir $$
+}
 
 
 
