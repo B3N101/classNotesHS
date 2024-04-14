@@ -39,4 +39,5 @@
 \contentsline {subsubsection}{RC Time Constant}{24}{section*.2}%
 \contentsline {subsubsection}{Charging a Capacitor}{25}{section*.3}%
 \contentsline {subsubsection}{Charge, Current, and Voltage in a Charging Capacitor}{25}{section*.4}%
+\contentsline {subsubsection}{Discharging a Capacitor}{26}{section*.5}%
 \contentsfinish 

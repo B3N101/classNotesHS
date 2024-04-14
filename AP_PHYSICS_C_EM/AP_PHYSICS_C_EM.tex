@@ -847,6 +847,7 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
 \dfn{RC Time Constant}{
   The time it takes for the charge on the capacitor to reach 63.2\% of its final value. \\
   $$ \tau = RC $$
+  $$ 1-\frac{1}{e} = 0.632 $$
 }
 
 \subsubsection{Charging a Capacitor}
@@ -869,6 +870,26 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
   $$ q = Q(1-e^{-\frac{r}{RC}}) $$ 
   $$ I = \frac{\epsilon}{R} e^{-\frac{t}{RC}} $$ 
   $$ V = \epsilon (1 - e^{-\frac{t}{RC}}) $$
+}
+
+\subsubsection{Discharging a Capacitor}
+\dfn{Discharging a Capacitor}{
+  The capacitor discharges through the resistor. \\
+  $$ \frac{q}{c} + iR = 0 \to \frac{q}{c} = - iR \to - \frac{q}{RC} = i $$ 
+  $$ i = \frac{dq}{dt} = - \frac{q}{RC} $$ 
+  $$ \frac{dq}{q} = - \frac{dt}{RC} $$
+  $$ \int_{Q_\infty}^{Q} \frac{dq}{q} = - \int_{0}^{t} \frac{dt}{RC} $$
+  $$ \ln(q) |^Q_{Q_0} = - \frac{t}{RC} $$
+  $$ \ln \left(\frac{Q}{Q_0} \right) = - \frac{t}{RC} $$
+  $$ \frac{Q}{Q_0} = e^{- \frac{t}{RC}} $$ 
+  $$ Q = Q_0 e^{- \frac{t}{RC}} $$ 
+}
+
+\subsubsection{Charge, Current, and Voltage in a Discharging Capacitor}
+\dfn{Change in C, A, and V}{
+  $$ q = Q_0 e^{- \frac{t}{RC}} $$ 
+  $$ I = - \frac{Q_0}{RC} e^{- \frac{t}{RC}} = I_{0}e^{-\frac{t}{RC}}$$ 
+  $$ V = - Q_0 e^{- \frac{t}{RC}} $$
 }
 
 \end{document}
