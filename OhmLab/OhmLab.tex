@@ -6,16 +6,183 @@
 
 \title{\Huge{Ohm's Law Lab}}
 \author{\huge{Ben Feuer}}
-\date{April 4, 2024}
+\date{April 13, 2024}
 
 \begin{document}
 
 \maketitle
 \newpage% or \cleardoublepage
 % \pdfbookmark[<level>]{<title>}{<dest>}
-\pdfbookmark[section]{\contentsname}{toc}
-\pagebreak
+\pdfbookmark[section]{\contentsname}{toc} 
 
+
+\subsection*{Objective}
+The objective of this lab is analyze the relationship between voltage and current for  four common electrical components: two resistors, a light bulb, and a LED.
+
+\subsection*{Procedure}
+\begin{enumerate}
+    \item Construct a circuit that includes a voltmeter, an ammeter, voltage source, and an electrical component. 
+    \item Collect data for the voltage and current across the electrical component. 
+    \item Change the voltage source and repeat the data collection six times total. 
+    \item Repeat the above steps for the remaining electrical components.
+\end{enumerate}
+
+\nt{
+  Due to issues with the voltmeters and ammeters in the lab, the data collected is from a PHET simulation and not from the actual lab; henceforth, most of the findings and data is idealized.}
+
+\subsection*{Component \#1 - 10 $\Omega$ Resistor}
+
+\begin{figure}[h]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{circuitikz}
+\draw[step=1.25cm,lightgray,very thin] (4,21.25) grid (13.5,14.25);
+\draw (5,20.25) to[battery] (5,15.25);
+\draw [](5,20.25) to[short] (10,20.25);
+\draw (10,20.25) to[R, l=$10\Omega$] (10,15.25);
+\draw [](10,20.25) to[short] (12.5,20.25);
+\draw [](10,15.25) to[short] (12.5,15.25);
+\draw (12.5,20.25) to[rmeterwa, t=V](12.5,15.25);
+\draw (10,15.25) to[rmeterwa, t=A, i=$i$] (5,15.25);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline 
+Voltage (V) & Current (A) \\
+\hline 
+9 & 0.9 \\
+\hline 
+8 & 0.8 \\
+\hline 
+7 & 0.7 \\
+\hline 
+6 & 0.6 \\
+\hline 
+5 & 0.5 \\
+\hline 
+4 & 0.4 \\
+\hline 
+\end{tabular}
+\end{table}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/10ohm.png}
+  \end{center}
+\end{figure}
+
+
+\newpage
+
+\subsection*{Component \#2 - 20 $\Omega$ Resistor}
+
+\begin{figure}[h]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{circuitikz}
+\draw[step=1.25cm,lightgray,very thin] (4,21.25) grid (13.5,14.25);
+\draw (5,20.25) to[battery] (5,15.25);
+\draw [](5,20.25) to[short] (10,20.25);
+\draw (10,20.25) to[R, l=$20\Omega$] (10,15.25);
+\draw [](10,20.25) to[short] (12.5,20.25);
+\draw [](10,15.25) to[short] (12.5,15.25);
+\draw (12.5,20.25) to[rmeterwa, t=V](12.5,15.25);
+\draw (10,15.25) to[rmeterwa, t=A, i=$i$] (5,15.25);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline 
+Voltage (V) & Current (A) \\
+\hline 
+9 & 0.45 \\
+\hline
+8 & 0.4 \\
+\hline
+7 & 0.35 \\
+\hline 
+6 & 0.3 \\ 
+\hline 
+5 & 0.25 \\ 
+\hline 
+4 & 0.2 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/20ohm.png}
+  \end{center}
+\end{figure}
+
+\newpage
+
+\subsection*{Component \#3 - Light Bulb}
+\nt{The light bulb in PHET has a resistance of 10 $\Omega$. In reality, the resistance of a light bulb is not constant and changes as the temperature of the filament changes.}
+
+\begin{figure}[h]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{circuitikz}
+\draw[step=1.25cm,lightgray,very thin] (4,21.25) grid (13.5,14.25);
+\draw (5,20.25) to[battery] (5,15.25);
+\draw [](5,20.25) to[short] (10,20.25);
+\draw (10,20.25) to[lamp, l=$10\Omega$] (10,15.25);
+\draw [](10,20.25) to[short] (12.5,20.25);
+\draw [](10,15.25) to[short] (12.5,15.25);
+\draw (12.5,20.25) to[rmeterwa, t=V](12.5,15.25);
+\draw (10,15.25) to[rmeterwa, t=A, i=$i$] (5,15.25);
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline 
+Voltage (V) & Current (A) \\
+\hline 
+9 & 0.9 \\
+\hline 
+8 & 0.8 \\
+\hline 
+7 & 0.7 \\
+\hline 
+6 & 0.6 \\
+\hline 
+5 & 0.5 \\
+\hline
+
+\end{tabular}
+\end{table}
+
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/bulb.png}
+  \end{center}
+\end{figure}
+
+\newpage
+
+\subsection*{Analysis \& LED Research}
+
+The graphs for each of the above components show a linear relationship between voltage and current, given through the least squares value of one. This is consistent with Ohm's Law, which states that the current through a conductor between two points is directly proportional to the voltage across the two points. The slope of the line is equal to the resistance of the component: 10 $\Omega$ for the 10 $\Omega$ resistor, 20 $\Omega$ for the 20 $\Omega$ resistor, and 10 $\Omega$ for the light bulb. If this wasn't a simulation, the resistance of the systems would be greater than the idealized values due to the resistance of the wires and the internal resistance of the voltmeters and ammeters. This would result in a lower current than expected. 
+
+If this experiment was conducted with an LED, our results would be different. An LED is a diode, which means it only allows current to flow in one direction. This means that the current will be zero until the voltage reaches a certain threshold, called the forward voltage. Once the forward voltage is reached, the current will increase exponentially. LEDs are also simply not conductors. They are semiconductors, which means they have a band gap that the electrons must overcome to move from the valence band to the conduction band. The size of the band gap is actually what determines the frequency of EM waves, determining color. This means that the resistance of an LED is not constant and will change with the voltage. Ohm's law is meant for conductors, so it does not apply to LEDs and therefore the relationship between voltage and current is not linear. I pretty much knew all of this beforehand from youtube (Veritasium) and just searched from google to make sure I was right. 
 
 
 \end{document}
