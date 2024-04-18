@@ -40,4 +40,5 @@
 \contentsline {subsubsection}{Charging a Capacitor}{25}{section*.3}%
 \contentsline {subsubsection}{Charge, Current, and Voltage in a Charging Capacitor}{25}{section*.4}%
 \contentsline {subsubsection}{Discharging a Capacitor}{26}{section*.5}%
+\contentsline {subsubsection}{Charge, Current, and Voltage in a Discharging Capacitor}{26}{section*.6}%
 \contentsfinish 
