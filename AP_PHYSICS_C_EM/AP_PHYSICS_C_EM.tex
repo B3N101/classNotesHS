@@ -972,5 +972,52 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
   $$ B = m\frac{v_0^2}{R v_0 q } = m \frac{v_0}{R q} = \frac{m}{Rq} \sqrt{\frac{2qED}{m}} = \frac{2}{x_0}$$
 }
 
+\section{Magnetic Force on Currents}
+
+\subsection{Magnetic Force on a Current-Carrying Wire}
+\dfn{Magnetic Force on a Current-Carrying Wire}{
+  The force on a current-carrying wire in a magnetic field is perpendicular to both the current and the magnetic field. \\
+  $$ F = I\vec{L}x\vec{B} $$ 
+  $$ F = ILB\sin(90) = ILB $$ 
+  $$ F = ILB\sin(180) = 0 $$ 
+}
+
+\subsection{Torque on a Current Loop}
+\dfn{Torque on a Current Loop}{
+  The torque on a current loop in a magnetic field is perpendicular to both the current and the magnetic field. \\
+  $$ \vec{\tau} = \vec{R} x \vec{F} \text{ where R is the distance from the axis of rotation}$$ 
+  $$ \vec{\tau} = \vec{R}x\vec{F} = \vec{R}xI\vec{L}x\vec{B} =  I\vec{A}x\vec{B} $$
+  $$ \vec{\tau} = I\vec{A}x\vec{B} $$ 
+  $$ \vec{\tau} = IAB\sin(90) = IAB $$ 
+  $$ \vec{\tau} = IAB\sin(180) = 0 $$ 
+}
+\nt{
+  How to find the direction of the torque: \\
+  It should be up the axis of rotation if the current is going counter-clockwise. \\
+  It should be down the axis of rotation if the current is going clockwise.
+}
+
+\subsection{Magnetic Dipole Moment}
+\dfn{Magnetic Dipole Moment}{
+  $$ \mu \equiv NI\vec{A} $$
+  $$ \vec{\tau} = NI\vec{A}x\vec{B} = \vec{\mu}x\vec{B} $$
+  $$ \vec{\tau} = \vec{\mu} x \vec{B} $$
+}
+\nt{
+  $\mu $ makes torque easy! \\
+  The torque always wants to line $ \mu $ up with $B$. It turns towards $B$. \\
+  Torque is greatest when $ \mu $ is perpendicular to $B$.
+}
+
+\subsection{Work Done By a Magnetic Field on a Current Loop}
+\dfn{Work Done By a Magnetic Field on a Current Loop}{
+  $$ W = \int \tau d\theta $$ 
+  $$ \vec{\tau} = \vec{\mu} x \vec{B} = \mu B \sin(\theta) $$ 
+  $$ W = \int \mu B \sin(\theta) d\theta = - \mu \cdot B \cos(\theta) |^{\theta_2}_{\theta_1} = \vec{\mu} \cdot \vec{B} (\cos(\theta_1) - \cos(\theta_2)) $$
+  $$ \Delta U = -W $$ 
+  $$ U \equiv = - \vec{\mu} \cdot \vec{B} $$
+}
+
+
 
 \end{document}

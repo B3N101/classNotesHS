@@ -51,4 +51,9 @@
 \contentsline {subsection}{\numberline {3.1.6}Hall Effect}{28}{subsection.3.1.6}%
 \contentsline {subsection}{\numberline {3.1.7}Compass Needles}{28}{subsection.3.1.7}%
 \contentsline {section}{\numberline {3.2}Magnetic Materials}{28}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Magnetic Force on Currents}{29}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Magnetic Force on a Current-Carrying Wire}{29}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Torque on a Current Loop}{29}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Magnetic Dipole Moment}{30}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Work Done By a Magnetic Field on a Current Loop}{30}{subsection.3.3.4}%
 \contentsfinish 
