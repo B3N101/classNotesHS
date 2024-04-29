@@ -1018,6 +1018,49 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
   $$ U \equiv = - \vec{\mu} \cdot \vec{B} $$
 }
 
+\section{Finding the Magnetic Field}
 
+\subsection{Magnetic Constant}
+\dfn{Magnetic Constant}{
+  $$ \mu_0 = 4\pi \cdot 10^{-7} Tm/A $$
+  $$ K' = \frac{\mu_0}{4\pi} $$ 
+}
 
+\subsection{Boit-Savant Law}
+\dfn{Boit-Savant Law}{
+  The fundamental law for determining the direction and magnitude of the magnetic field due to an element of current. \\
+  $$ dB = \frac{\mu_0I}{4\pi} \frac{d\vec{s} x \hat{r}}{r^2} $$
+  Infinite straight wire: $$ B = \frac{\mu_0I}{2\pi r} $$ 
+  Circular loop: $$ B = \frac{\mu_0I R^2}{2(R^2 + z^2)^{\frac{3}{2}}} $$
+}
+
+\qs{Derive the magnetic field from a long wire}{
+  $$ dB = \frac{\mu_0I}{4\pi} \frac{d\vec{x} x \hat{r}}{r^2} \to dB = \frac{u_0 I}{4\pi } \frac{dx}{r^2} \cos \theta $$
+  $$ x = R \tan \theta \to dx = R \sec^2 \theta d\theta $$ 
+  $$ r = \frac{R}{\cos \theta } $$
+  $$ B = \int dB $$ 
+  $$ B = \frac{\mu I}{4\pi R} \ldots $$ 
+}
+
+\qs{Are two parallel wires with currents in the same direction attracted to each other?}{
+  Yes, because the magnetic field of one wire is in the same direction as the magnetic field of the other wire. EDIT
+}
+
+\subsection{Ampere's Law}
+\dfn{Ampere's Law}{
+  Ampere's Law is a general law that relates the magnetic field around a closed loop to the current passing through the loop. \\
+  $$ \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enclosed}} $$
+  $$ B = \frac{\mu_0 I}{2\pi r} $$
+}
+
+\qs{Find the magnetic field of a concentric wire}{
+  $$ A_{\text{enc}} = \pi b^2 - \pi a^2 $$
+  $$ A = \pi r^2 - \pi a^2 $$
+  $$ j = \frac{I}{A_{\text{enc}}} $$ 
+  $$ I_{\text{enclosed}} = jA = \frac{I}{\pi b^2 - \pi a^2} (\pi r^2 - \pi a^2) = I $$
+  $$ B_{0\to a} = 0 $$ 
+  $$ B_{a\to b} = \frac{\mu_0}{2\pi r} I\left(\pi \frac{r^2 - a^2}{b^2 - a^2}\right) $$
+  $$ B_{b\to r} = \frac{\mu_0 I}{2\pi r} $$
+
+}
 \end{document}

@@ -56,4 +56,8 @@
 \contentsline {subsection}{\numberline {3.3.2}Torque on a Current Loop}{29}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Magnetic Dipole Moment}{30}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Work Done By a Magnetic Field on a Current Loop}{30}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Finding the Magnetic Field}{30}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Magnetic Constant}{30}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Boit-Savant Law}{31}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Ampere's Law}{31}{subsection.3.4.3}%
 \contentsfinish 
