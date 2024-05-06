@@ -1052,15 +1052,101 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
   $$ \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enclosed}} $$
   $$ B = \frac{\mu_0 I}{2\pi r} $$
 }
+\nt{
+  \textbf{Amperian loop goals:} 
+  \begin{itemize}
+    \item $ B \cdot dl = Bdl $ 
+    \item Everything is perpendicular to the loop. 
+  \end{itemize}
+}
 
 \qs{Find the magnetic field of a concentric wire}{
-  $$ A_{\text{enc}} = \pi b^2 - \pi a^2 $$
-  $$ A = \pi r^2 - \pi a^2 $$
-  $$ j = \frac{I}{A_{\text{enc}}} $$ 
-  $$ I_{\text{enclosed}} = jA = \frac{I}{\pi b^2 - \pi a^2} (\pi r^2 - \pi a^2) = I $$
-  $$ B_{0\to a} = 0 $$ 
-  $$ B_{a\to b} = \frac{\mu_0}{2\pi r} I\left(\pi \frac{r^2 - a^2}{b^2 - a^2}\right) $$
-  $$ B_{b\to r} = \frac{\mu_0 I}{2\pi r} $$
-
 }
+
+\subsection{Solenoids and Toroids}
+\dfn{Solenoids}{
+  A long coil of wire. \\
+  $$ B = \frac{\mu_0 nI}{l} $$
+  $$ n = \frac{N}{L} $$
+  $$ B = \mu_0 nI $$
+}
+
+\dfn{Toroids}{
+  A solenoid bent into a circle. \\
+  $$ B = \frac{\mu_0 nI}{2\pi r} $$
+}
+
+\qs{Find the magnetic field $ z $ above a 2d infinite sheet of current}{
+  $$ \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enclosed}} = \mu_0 (L \cdot J) $$
+  $$ \oint \vec{B} d\vec{l} = \mu_0 I_{\text{enclosed}} = \int _{1\to 2} \vec{B} d\vec{l} + \int_{2\to z} \vec{B} d\vec{l} + \int _{2\to 1} \ldots + \int _{1 \to -z} \ldots  $$ 
+  $$ BL + 0 + BL + 0 = 2BL \text{ (L is the length of the amperian loop)} $$ 
+  $$ B = \frac{\mu_0J}{2} $$ 
+  Magnetic field doesn't depend on distance from the sheet for an infinite sheet of current. Or a sheet of current with a length much greater than the distance from the sheet.
+}
+
+\qs{Find the magnetic field $z$ above a 3d infinite sheet of current}{
+  $$ \oint \vec{B} \cdot d\vec{l} = \mu _0 I_{\text{enclosed}} = \mu_0 J \cdot A $$
+  $$ \oint \vec{B} \cdot d\vec{l} = \mu_0 J \cdot L \cdot 2z $$
+  $$ B = \mu_0 Jz $$ 
+  $$ B = 
+    \begin{dcases}
+        -\mu_0 J z \cdot \hat{y}  & 0 < z < \frac{t}{2} \\
+        \mu_0 J z \cdot \hat{y} &  0 > z > -\frac{t}{2} \\    
+    \end{dcases}
+  $$
+}
+
+
+\chapter{Electromagnetic Induction}
+
+\nt{
+  \textbf{Big Idea:} \\
+  When a conductor moves through a magnetic field:
+  \begin{itemize}
+    \item Magnetic forces may be exerted on the charge carriers in the conductor. 
+    \item These forces produce a charge seperation in the conductor. 
+    \item This charge dstribution creates an electric field in the conductor. 
+    \item The equilibrium distribution is reached when the forces from the electric and magnetic field cancel. 
+    \item The equilibrium electric field produces a potential difference (motional emf) in the conductor. 
+  \end{itemize}
+  $$ qvB = qE \to E = vB $$
+  $$ V = EL \to V = vBL $$ 
+  $$ \mathcal{E} = vBL $$
+  \hline
+  $$ F = I \vec{L} x \vec{B} $$ 
+  $$ F = \frac{vBL}{R} LB \to P = Fv = \frac{vBL}{R} LBv = I^2R $$
+}
+
+\section{Magnetic Flux}
+\dfn{Flux}{
+  The rate of flow through a surface.
+  $$ \Phi = \int \vec{B} d\vec{A} = \vec{B}\vec{A}\cos \theta  $$
+}
+
+\dfn{Magnetic Flux}{
+  Units: Weber(Wb) = Tesla $\cdot$ m$^2$ \\
+}
+
+\section{Faraday's Law}
+\dfn{Faraday's Law}{
+  The induced emf in a circuit is equal to the rate of change of magnetic flux through the circuit. One of Maxwell's equations. \\
+  $$ \mathcal{E} = - N \frac{d\Phi}{dt} $$
+  $$ \mathcal{E} = \oint \vec{E} \cdot d\vec{l} = - \frac{d\Phi}{dt} $$
+  \\
+  The changing magnetic flux produces an electric field. \\
+  Electricity and magnetism are two sides of the same coin.
+}
+
+\section{Lenz's Law}
+\dfn{Lenz's Law}{
+  When the flux $ \Phi $ through a loop changes, an emf is induced in the loop. \\
+  The emf will make a current flow if it can (like a battery). \\
+  The current that flows induces a new magnetic field. \\ \\
+  The new magnetic field opposes the change in the original magnetic field that created it. (Lenz's Law). The direction of the induced emf is such that it opposes the change in magnetic flux that produced it. \\ \\
+  \textbf{Example:} If the magnetic field is increasing, the induced emf will create a magnetic field that opposes the increase. 
+
+  $$ \mathcal{E} 
+}
+
+
 \end{document}
