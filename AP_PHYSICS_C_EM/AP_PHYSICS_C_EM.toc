@@ -51,7 +51,7 @@
 \contentsline {subsection}{\numberline {3.1.6}Hall Effect}{29}{subsection.3.1.6}%
 \contentsline {subsection}{\numberline {3.1.7}Compass Needles}{29}{subsection.3.1.7}%
 \contentsline {section}{\numberline {3.2}Magnetic Materials}{29}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Magnetic Force on Currents}{30}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Magnetic Force \& Torque on Currents}{30}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Magnetic Force on a Current-Carrying Wire}{30}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Torque on a Current Loop}{30}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Magnetic Dipole Moment}{31}{subsection.3.3.3}%
@@ -65,4 +65,8 @@
 \contentsline {section}{\numberline {4.1}Magnetic Flux}{34}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Faraday's Law}{35}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Lenz's Law}{35}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Inductor Circuits}{35}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}LR Circuits}{35}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}LC Circuits}{35}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}Maxwell's Equations}{36}{chapter.5}%
 \contentsfinish 

@@ -972,7 +972,7 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
   $$ B = m\frac{v_0^2}{R v_0 q } = m \frac{v_0}{R q} = \frac{m}{Rq} \sqrt{\frac{2qED}{m}} = \frac{2}{x_0}$$
 }
 
-\section{Magnetic Force on Currents}
+\section{Magnetic Force \& Torque on Currents}
 
 \subsection{Magnetic Force on a Current-Carrying Wire}
 \dfn{Magnetic Force on a Current-Carrying Wire}{
@@ -1102,6 +1102,7 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
 \nt{
   \textbf{Big Idea:} \\
   When a conductor moves through a magnetic field:
+
   \begin{itemize}
     \item Magnetic forces may be exerted on the charge carriers in the conductor. 
     \item These forces produce a charge seperation in the conductor. 
@@ -1109,10 +1110,11 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
     \item The equilibrium distribution is reached when the forces from the electric and magnetic field cancel. 
     \item The equilibrium electric field produces a potential difference (motional emf) in the conductor. 
   \end{itemize}
+}
+\nt{
   $$ qvB = qE \to E = vB $$
   $$ V = EL \to V = vBL $$ 
   $$ \mathcal{E} = vBL $$
-  \hline
   $$ F = I \vec{L} x \vec{B} $$ 
   $$ F = \frac{vBL}{R} LB \to P = Fv = \frac{vBL}{R} LBv = I^2R $$
 }
@@ -1121,10 +1123,7 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
 \dfn{Flux}{
   The rate of flow through a surface.
   $$ \Phi = \int \vec{B} d\vec{A} = \vec{B}\vec{A}\cos \theta  $$
-}
-
-\dfn{Magnetic Flux}{
-  Units: Weber(Wb) = Tesla $\cdot$ m$^2$ \\
+  Magnetic Flux Units: Weber(Wb) = Tesla $\cdot$ m$^2$
 }
 
 \section{Faraday's Law}
@@ -1144,9 +1143,31 @@ $$ E_{eff} = \frac{kQ}{\pi r^2} \int_0^{\frac{3\pi}{2}} \sin \theta d\theta = \f
   The current that flows induces a new magnetic field. \\ \\
   The new magnetic field opposes the change in the original magnetic field that created it. (Lenz's Law). The direction of the induced emf is such that it opposes the change in magnetic flux that produced it. \\ \\
   \textbf{Example:} If the magnetic field is increasing, the induced emf will create a magnetic field that opposes the increase. 
-
-  $$ \mathcal{E} 
+}
+\section{Inductor Circuits}
+\subsection{LR Circuits}
+\dfn{LR Time Constant}{
+  The time it takes for the current in an LR circuit to reach 63.2\% of its final value. \\
+  $$ \tau = \frac{L}{R} $$
+  \\
+  \textbf{Current when voltage supply is connected:} \\
+  $$ I = \frac{\mathcal{E}}{R} (1 - e^{-\frac{t}{\tau}}) $$ 
+  \\
+  \textbf{Current when voltage supply is disconnected:} \\
+  $$ I = I_0 e^{-\frac{t}{\tau}} $$
+}
+\subsection{LC Circuits}
+\dfn{LC Circuits}{
 }
 
+\chapter{Maxwell's Equations}
+\dfn{Maxwell's Equations}{
+  \begin{enumerate}
+    \item Gauss's Law for Electricity: $$ \oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enclosed}}}{\varepsilon_0} $$ 
+    \item Gauss's Law for Magnetism: $$ \oint \vec{B} \cdot d\vec{A} = 0 $$ 
+    \item Faraday's Law: $$ \oint \vec{E} \cdot d\vec{l} = - \frac{d\Phi}{dt} $$ 
+    \item Ampere's Law/Maxwell's Law of Induction: $$ \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enclosed}} + \mu_0 \varepsilon_0 \frac{d\Phi}{dt} = \mu _0 I_{\text{enc}} + \mu_0 \varepsilon_0 \frac{d}{dt} \oint \vec{E} \cdot \vec{dA} $$
+  \end{enumerate}
+}
 
 \end{document}
