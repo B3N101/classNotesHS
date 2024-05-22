@@ -1,7 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1716391598 "215Notes.tex" "215Notes.pdf" "215Notes" 1716391602
+["pdflatex"] 1716398016 "215Notes.tex" "215Notes.pdf" "215Notes" 1716398020
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm0900.tfm" 1136768653 1536 c4f439db76ef96a9c53bc437f35ffe20 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -45,6 +46,7 @@
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb" 1248133631 24457 5cbb7bdf209d5d1ce9892a9b80a307cc ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb" 1248133631 28902 2f5c04fd2884d1878057baa5aad22765 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb" 1215737283 149037 995a6f1e12c1d647b99b1cf55db78699 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1215737283 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb" 1591219423 25273 57c06ae0831a03c4eb441ef7894a1639 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb" 1634156854 55131 37a379baccd50ac17c5ca120b382f7a1 ""
@@ -296,9 +298,9 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1665240450 2826442 433bf6dce69847cd99bacf7d8a1741b2 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "215Notes.aux" 1716391602 6338 70bcde46068d9c76ddb201fa8fa246c6 "pdflatex"
-  "215Notes.tex" 1716391593 8422 30745a2a64e436cb4e46fd4a999deae0 ""
-  "215Notes.toc" 1716391602 888 3c89419f480a81a6bddee46960379b61 "pdflatex"
+  "215Notes.aux" 1716398020 9651 0a3f6849e40869e79269fd589ce820eb "pdflatex"
+  "215Notes.tex" 1716398007 11530 e25539e63ecaae72999a798c341c3a5c ""
+  "215Notes.toc" 1716398020 1467 20ce7f1c4190aba322a3252ba6503706 "pdflatex"
   "letterfonts.tex" 1716218367 8702 ef32ca12e97530ef5734ca4adcb1f6b1 ""
   "macros.tex" 1716218367 3389 93000260d2aea292d29c76d4ace77a29 ""
   "preamble.tex" 1716218367 20104 117f53d978753ce139aca04fe12207d0 ""

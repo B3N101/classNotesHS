@@ -311,7 +311,159 @@
     \item Identify the premises and conclusion of the argument form. 
     \item Construct the truth table showing the truth values for all the premises and the conclusion. 
     \item A row of the table in which \textbf{all the premises are true is called a critical row}. \textit{If there is a critical row in which the conclusion is false, then the arguement is invalid.} If the conclusion in every critical row is true, then the argument form is valid.
+    \item If there are no critical rows, then the argument is \textbf{vacuously true}.
   \end{enumerate}
+}
+
+\section{Modus Ponens and Modus Tollens}
+
+\dfn{Modus Ponens}{
+  If $P \implies Q$ and $P$ are true, then $Q$ is true. It is a method of affirming.
+
+  \begin{align*}
+    P \implies Q \\
+    P \\
+    \therefore Q 
+  \end{align*}
+
+  % truth table 
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $P$ & $Q$ & $P \implies Q$ & P &  Q  \\
+    \hline 
+    T & T & T & T & T \\
+    T & F & F & T &  \\
+    F & T & T & F &  \\
+    F & F & T & F &  \\
+    \hline 
+  \end{tabular} 
+}
+\ex{Modus Ponens}{
+  \begin{itemize}
+    \item If the sum of the digits of 371487 is divisible by 3, then 371487 is divisible by 3. 
+    \item The sum of the digits of 371487 is divisible by 3. 
+    \item $ \therefore $ 371487 is divisible by 3.
+  \end{itemize}
+}
+
+\dfn{Modus Tollens}{
+  If $P \implies Q$ and $\lnot Q$ are true, then $\lnot P$ is true. It is a method of denying.
+
+  \begin{align*}
+    P \implies Q \\
+    \lnot Q \\
+    \therefore \lnot P 
+  \end{align*}
+
+  % truth table 
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    $P$ & $Q$ & $P \implies Q$ & $\lnot Q$ &  $\lnot P$  \\
+    \hline 
+    T & T & T & F & T \\
+    T & F & F & T & F \\
+    F & T & T & F &  \\
+    F & F & T & T &  \\
+    \hline 
+  \end{tabular} 
+}
+
+\nt{
+  Modus Tollens is valid because: 
+  \begin{itemize}
+    \item Modus ponens is valid and the fact that a conditional statement is logically equivalent to its contrapositive. Or 
+    \item It can be established formally using a truth table.
+  \end{itemize}
+}
+
+\ex{Modus Tollens}{
+  \begin{itemize}
+    \item If Zeus is human, then Zeus is mortal. 
+    \item Zeus is not mortal. 
+    \item $ \therefore $ Zeus is not human.
+  \end{itemize}
+}
+
+\subsection{Generalization}
+
+\dfn{Generalization}{
+
+  \begin{align*}
+    P \\
+    \therefore P \lor Q
+  \end{align*} 
+
+  And 
+
+  \begin{align*}
+    Q \\
+    \therefore P \lor Q 
+  \end{align*} 
+
+  EX: Anton is a junior. Therefore, Anton is a junior or Anton is a senior.
+}
+
+\subsection{Specialization}
+
+\dfn{Specialization}{
+
+  \begin{align*}
+    P \land Q \\
+    \therefore P
+  \end{align*} 
+
+  And 
+
+  \begin{align*}
+    P \land Q \\
+    \therefore Q 
+  \end{align*} 
+
+  EX: If it is raining and the sun is shining, then it is raining.
+}
+
+\subsection{Elimination}
+
+\dfn{Elimination}{
+
+  \begin{align*}
+    P \lor Q \\
+    \lnot P \\
+    \therefore Q
+  \end{align*} 
+
+  And 
+
+  \begin{align*}
+    P \lor Q \\
+    \lnot Q \\
+    \therefore P 
+  \end{align*} 
+
+  EX: If it is raining or the sun is shining, and it is not raining, then the sun is shining
+}
+
+\subsection{Transitivity}
+
+\dfn{Transitivity}{
+
+  \begin{align*}
+    P \implies Q \\
+    Q \implies R \\
+    \therefore P \implies R
+  \end{align*} 
+
+  EX: If it is raining, then the sun is shining. If the sun is shining, then the grass is wet. Therefore, if it is raining, then the grass is wet.
+}
+
+\chapter{Proof Techniques}
+
+\section{Proof by Contradiction}
+
+\dfn{Proof by contradiction}{
+  To prove a proposition $P$, assume that $\lnot P$ is true and show that this assumption leads to a contradiction.
 }
 
 
