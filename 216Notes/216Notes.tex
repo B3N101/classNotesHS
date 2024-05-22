@@ -1,0 +1,253 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{CSE 216}\\Class Notes}
+\author{\huge{Ben Feuer}}
+\date{Spring 2024}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{Concepts and terms to know}
+
+\section{From Lecture 1}
+\nt{
+  Bit, Byte, Word, RAM, CPU, Fetch-Decode-Execute, Instruction Set Architecture, Hertz, K, M, G, T, Assembler, Byte-Addressable, Compiler, Interpreter, Native Code, Virtual Machine, Call stack segment, Heap segment, Text segment, Global segment.
+}
+
+\dfn{Bit}{
+  A bit is the smallest unit of data in a computer. It can be either a 0 or a 1. Has two possible values. $2^1$.
+}
+
+\dfn{Byte}{
+  A byte is a group of 8 bits. Has $2^8$ possible values. ASCII = 1 byte, Unicode = 2 bytes.
+}
+
+\dfn{Word}{
+  A word is a group of bytes. The size of a word is dependent on the architecture of the computer. For example, a 32-bit computer has 4-byte words. A 64-bit computer has 8-byte words. Unit of data that a CPU can process in one go. A word is essentially one instruction.
+}
+
+\dfn{Integers - Java}{
+  Integer - 4 bytes, Short - 2 bytes, Long - 8 bytes. Two's complement representation.
+}
+
+\dfn{Real Numbers - Java}{
+  Float - 4 bytes, Double - 8 bytes. IEEE 754 standard. Have three parts: sign, exponent, and mantissa.
+}
+
+\dfn{RAM}{
+  Random Access Memory. A type of computer memory that can be accessed randomly. It is volatile, meaning that it loses its contents when the power is turned off. Ram is used for storing data and instructions that are currently being used by the CPU. Short term memory for computer's current needs. Ram stores data and instructions that are currently being used by the CPU.
+}
+
+\dfn{CPU}{
+  Central Processing Unit. The part of the computer that performs most of the processing. It is the brain of the computer.
+}
+
+\dfn{ALU}{
+  Arithmetic Logic Unit. The part of the CPU that performs arithmetic and logical operations. Part of CPU that does math.
+}
+
+\dfn{Fetch-Decode-Execute}{
+  The process by which a CPU executes instructions. The CPU fetches an instruction from memory, decodes it, and then executes it. Size of instruction is dependent on the architecture of the computer. Fetches from RAM.
+}
+
+\dfn{Jump instruction}{
+  An instruction that changes the flow of control in a program. It is used to implement loops and conditional statements. 
+}
+
+\dfn{Instruction}{
+  A command that tells the CPU to perform a specific operation. It is the basic unit of execution in a computer program.
+}
+
+\dfn{Instruction Set Architecture}{
+  The set of instructions that a CPU can execute. It is the interface between the hardware and the software. x86, x64 (32bit), ARM, MIPS, RISC-V. 
+}
+
+\dfn{Hertz}{
+  A unit of frequency equal to one cycle per second. It is used to measure the clock speed of a CPU. How many fetch-decode-execute cycles per second can our CPU do. $1Hz = 1 cycle per second$.
+}
+
+\dfn{K, M, G, T}{
+  Kilo, Mega, Giga, Tera. Units of measurement used to represent large numbers. $1K = 10^3$, $1M = 10^6$, $1G = 10^9$, $1T = 10^{12}$.
+}
+
+\dfn{Assembler}{
+  A program that translates assembly language into machine code.
+}
+
+\dfn{Byte-Addressable}{
+  A memory system in which each byte has a unique address. This is the most common type of memory system.
+}
+
+\dfn{Compiler}{
+  A program that translates high-level code into machine code. Originally, compilers were used to translate code from high level languages (HLLs) to assembly. Now, they are used to translate high-level code into machine code (two steps).
+}
+\nt{
+  Java vs. C/C++ 
+  \\
+  Java -> IJVM (instruction set for java virtual machine) -> JVM (native program that selects proper instructions for the computer, go between java and computer) -> managed system. Right once, run anywhere. Same complier, different JVM.
+  \\
+  C/C++ -> compiled to native code -> runs on the computer. Different compiler for different instruction set architectures (ISAs).
+}
+
+\dfn{Interpreter}{
+  A program that executes code line by line without translating it into machine code (raw binary code).
+}
+
+\dfn{Transpiler}{
+  A program that translates code from one high-level language to another. Typescript.
+}
+
+\dfn{Native Code}{
+  Machine code that is specific to a particular CPU architecture.
+}
+
+\dfn{Virtual Machine}{
+  A software implementation of a computer that runs on another computer. It allows you to run code that is specific to a different architecture.
+}
+
+\dfn{Call stack segment}{
+  A segment of memory that is used to store function calls and local variables.
+}
+
+\dfn{Heap segment}{
+  A segment of memory that is used to store dynamically allocated memory.
+}
+
+\dfn{Text segment}{
+  A segment of memory that is used to store the code of a program.
+}
+
+\dfn{Global segment}{
+  A segment of memory that is used to store global variables.
+}
+
+\chapter{Programming Abstractions - OOP++ and C++}
+
+\nt{
+  Why do rules in a language exist? Use the reasoning to help you understand the language and be a better programmer.
+}
+
+\dfn{What is memory}{
+  A giant array of bytes. \\
+  How do we assign data to/get data from memory?
+
+  \begin{itemize}
+    \item In java, we don't 
+    \item the JVM does 
+    \item Using memory addresses
+  \end{itemize}
+
+  We use object ids.
+}
+\nt{
+  There are four regions of memory:
+  \begin{itemize}
+    \item Stack segment - call stack segment of memory for all the local variables for methods that are still active. Active method means that the method hasn't returned yet. Temporary variables declared inside methods, method arguments, removed from memory when a method returns. Dynanic - allocated at runtime.
+    \item Heap segment - for dyanmic data (whenever you use new), data for constructed objects, persistant as long as an existing object variable references this region of memory, for C, C++, Java, C\#, Python, etc. Dynamic - allocated at runtime.
+    \item Text segment - instructions
+    \item Global segment - data known at compile time - static/global variables
+  \end{itemize}
+
+  Instant variables (iv): associated with an instanciated object. Not known at compile time. Stored in heap segment of memory. New instruction signifies heap segment. Malloc for C or callco or realloc.
+  \\ \\
+  Static Variables(sv)/Global Variables: known at compile time -> stored in global segment of memory. Only one copy of the variable is needed.
+  \\ \\
+  Local Variables(lv): (declared in methods) not known at runtime -> stored in stack segment of memory.
+  \\ \\
+  Top of memory is the stack segment, bottom is the global segment. 0xffffffff to 0x00000000.
+}
+
+\dfn{When a function is active}{
+  When a function is active, it is on the call stack. When the function has not returned yet, it is active. When the function returns, it is no longer active.
+}
+
+\section{OOP terms to know}
+\nt{
+  Abstraction, strongly typed, class casting, actual vs. apparent, abstract class, concrete class, interface, virtual functions, anonymous class, generics, global, static, call-by-value, HAS-A vs IS-A.
+}
+
+\subsection{What is abstraction}
+\dfn{Abstraction}{
+  Ignoring certain low-level details of a problem to get a simpler solution. \\
+  Not focusing on the details, but on the big picture.
+}
+
+\dfn{Abstraction Techniques}{
+  \begin{itemize}
+    \item Type Abstraction. 
+    \item Iteration Abstraction (iterator design pattern). 
+    \item Data Abstraction (State design pattern). 
+    \item Etc.
+  \end{itemize}
+
+  Chunking is a form of abstraction our brain uses.
+}
+
+\dfn{Types}{
+  A type specifies a well-defined set of values. Ex: int, string. 
+  \\ \\
+  Java, C++, C\# are strongly typed languages. 
+  \begin{itemize}
+    \item compiled code is guaranteed to be type safe. 
+    \item only exception is casting.
+  \end{itemize}
+
+  Student s = new Student(); \\
+  Person p = (Person) s; // ok when Student is a subclass of Person - IS-A relationship. \\ \\
+  Person p = new Person(); \\
+  Student s = (Student) p; // not ok - ClassCastException. Runtime error. \\
+}
+\nt{
+  An instanciated object has data stored but not in the object itself it is just data associated with the type.
+}
+
+\ex{Type casting}{
+  public class Person \{  \\
+    public String firstName;
+    public String lastName; \\
+    public String toString() 
+    \{
+      return firstName + " " + lastName;
+    \}
+  \} \\
+
+  public class Student extends Person \{ \\
+    public double GPA; \\
+    public String toString() \{
+      return super.toString() + " " + GPA;
+    \}
+  \} \\
+
+  Type casting: \\
+  Person p = \textbf{new (means instanciated)} Student(); // ok \\
+  Student s = new Student(); // ok \\
+  p = new Student(); // ok \\
+  s = new Person(); // not ok - compile time error \\
+  p = (Person) new Student(); // ok, typecast not needed as it is done already implicitly \\
+  p = (Student) new Student(); // ok, because there is an implicit typecast after to Person\\
+  s = (Person)new Person(); // not ok - compile time error, doesn't work because it lacks GPA \\
+  s = (Student)new Person(); // not ok - runtime error, Person is not a Student \\
+  
+}
+
+\dfn{Apparent vs. Actual type}{
+  Apparent type is the declared type of a variable. - Compiler enforces all rules \\
+  Actula type is the type of a variable at runtime. - Machine (new, heap, JVM) \\
+}
+
+\nt{
+  JVM has a table of all variables. Stores name, id, and memory address.
+}
+
+
+\end{document}

@@ -1,0 +1,318 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{CSE 215}\\Class Notes}
+\author{\huge{Ben Feuer}}
+\date{Summer 2024}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{Logic}
+
+\nt{
+  Why formalize logic?
+  \\
+  \begin{itemize}
+    \item to remove ambiguity
+    \item to represent facts on a computer and use it for proving, proof-checking, etc
+    \item to detect unsound reasoning in arguments
+  \end{itemize}
+
+  Mathematical logic is a tool for dealing with formal reasoning. 
+  \\
+  Logic does: assess if an argument is valid/invalid 
+  \\
+  Logic does not directly: assess the truth of atomic statements.
+}
+
+\section{Propositional logic}
+\dfn{Propositional logic}{
+  Propositional logic is the study of:
+  \begin{itemize}
+    \item the structure (syntax) and 
+    \item the meaning (semantics) of (simple and complex) propositions. 
+  \end{itemize}
+
+  \textbf{A proposition is a sentence  that is either true or false, but not both.}
+}
+\ex{Simple propositions}{
+  \begin{itemize}
+    \item $P$: It is raining.
+    \item $Q$: The sun is shining.
+    \item $R$: $2 + 2 = 4$.
+  \end{itemize}
+}
+\ex{Complex propositions}{
+  \begin{itemize}
+    \item $P \land Q$: It is raining and the sun is shining.
+    \item $P \lor Q$: It is raining or the sun is shining.
+    \item $\lnot P$: It is not raining.
+    \item $P \implies Q$: If it is raining, then the sun is shining.
+    \item $P \iff Q$: It is raining if and only if the sun is shining.
+  \end{itemize}
+}
+
+\dfn{Operators and operands}{
+  \begin{itemize}
+    \item \textbf{Operators} are symbols that combine propositions to form complex propositions.
+    \item \textbf{Operands} are the propositions that are combined by operators.
+  \end{itemize}
+  ex: $P \land Q$ where $\land$ is the operator and $P$ and $Q$ are the operands.
+}
+
+\section{Quiz \#1}
+
+\qs{Table for implication}{
+  \begin{tabular}{|c|c|c|}
+    \hline
+    $P$ & $Q$ & $P \implies Q$ \\
+    \hline
+    T & T & T \\
+    T & F & F \\
+    F & T & T \\
+    F & F & T \\
+    \hline
+  \end{tabular}
+
+  Vacuously true when $P$ is false.
+}
+
+\qs{Complete rule for communativity as it relates to AND}{
+  $P \land Q \equiv Q \land P$ 
+}
+
+\qs{Complete rule for absorbtion (both cases) as it relates to AND and OR}{
+  $P \land (P \lor Q) \equiv P$ \\
+  $P \lor (P \land Q) \equiv P$ \\
+
+  Got this wrong. Basically, these expressions above show Q become irrelevant when combined with P.
+}
+
+\qs{What is the inverse of p $implies$ q? Is it logically equivalent? }{
+  $ \lnot P \implies \lnot Q$
+  \\
+  No, it is not logically equivalent.
+}
+
+\qs{What is the converse of p $implies$ q? Is it logically equivalent? }{
+  $Q \implies P$
+  \\
+  No, it is not logically equivalent.
+}
+
+\qs{What is the contrapositive of p $implies$ q? Is it logically equivalent? }{
+  $\lnot Q \implies \lnot P$
+  \\
+  Yes, it is logically equivalent.
+}
+
+\qs{What are De Morgan's Law?}{
+  $\lnot (P \land Q) \equiv \lnot P \lor \lnot Q$ \\
+  $\lnot (P \lor Q) \equiv \lnot P \land \lnot Q$
+}
+
+\section{Logical Operators}
+
+\dfn{Conditional}{
+  The \textbf{conditional} operator is denoted by $\implies$ and is read as ``implies'' or ``if-then''. 
+  \\
+  The proposition $P \implies Q$ is true when $P$ is false or when $Q$ is true.
+}
+
+\dfn{Biconditional}{
+  The \textbf{biconditional} operator is denoted by $\iff$ and is read as ``if and only if''.
+  \\
+  The proposition $P \iff Q$ is true when $P$ and $Q$ have the same truth value.
+}
+
+\dfn{Conjunction}{
+  The \textbf{conjunction} operator is denoted by $\land$ and is read as ``and''.
+  \\
+  The proposition $P \land Q$ is true when both $P$ and $Q$ are true.
+}
+
+\dfn{Disjunction}{
+  The \textbf{disjunction} operator is denoted by $\lor$ and is read as ``or''.
+  \\
+  The proposition $P \lor Q$ is true when at least one of $P$ and $Q$ is true.
+}
+
+\dfn{Negation}{
+  The \textbf{negation} operator is denoted by $\lnot$ and is read as ``not''.
+  \\
+  The proposition $\lnot P$ is true when $P$ is false.
+}
+
+\section{Truth Tables}
+
+\dfn{Truth table}{
+  A \textbf{truth table} is a table that shows the truth value of a complex proposition for all possible truth values of its operands.
+}
+
+\ex{Truth table for conjunction}{
+  \begin{tabular}{|c|c|c|}
+    \hline
+    $P$ & $Q$ & $P \land Q$ \\
+    \hline
+    T & T & T \\
+    T & F & F \\
+    F & T & F \\
+    F & F & F \\
+    \hline
+  \end{tabular}
+}
+
+\ex{Truth table for disjunction}{
+  \begin{tabular}{|c|c|c|}
+    \hline
+    $P$ & $Q$ & $P \lor Q$ \\
+    \hline
+    T & T & T \\
+    T & F & T \\
+    F & T & T \\
+    F & F & F \\
+    \hline
+  \end{tabular}
+}
+
+\ex{Truth table for biconditional}{
+  \begin{tabular}{|c|c|c|}
+    \hline
+    $P$ & $Q$ & $P \iff Q$ \\
+    \hline
+    T & T & T \\
+    T & F & F \\
+    F & T & F \\
+    F & F & T \\
+    \hline
+  \end{tabular}
+}
+
+\section{Logical Equivalence}
+
+\dfn{Logical equivalence}{
+  Two propositions are \textbf{logically equivalent} if they have the same truth value for all possible truth values of their operands.
+}
+
+\section{Logical Rules}
+
+\dfn{Communativity}{
+  $P \land Q \equiv Q \land P$ \\
+  $P \lor Q \equiv Q \lor P$
+}
+
+\dfn{Associativity}{
+  $(P \land Q) \land R \equiv P \land (Q \land R)$ \\
+  $(P \lor Q) \lor R \equiv P \lor (Q \lor R)$
+}
+
+\dfn{Distributivity}{
+  $P \land (Q \lor R) \equiv (P \land Q) \lor (P \land R)$ \\
+  $P \lor (Q \land R) \equiv (P \lor Q) \land (P \lor R)$
+}
+
+\dfn{Identity}{
+  $P \land T \equiv P$ \\
+  $P \lor F \equiv P$
+}
+
+\dfn{Domination}{
+  $P \land F \equiv F$ \\
+  $P \lor T \equiv T$
+}
+
+\dfn{Double negation}{
+  $\lnot \lnot P \equiv P$
+}
+
+\dfn{Idempotent}{
+  $P \land P \equiv P$ \\
+  $P \lor P \equiv P$
+}
+
+\dfn{Absorption}{
+  $P \land (P \lor Q) \equiv P$ \\
+  $P \lor (P \land Q) \equiv P$
+}
+
+\dfn{Negation}{
+  $P \land \lnot P \equiv F$ \\
+  $P \lor \lnot P \equiv T$
+}
+
+\dfn{De Morgan's}{
+  $\lnot (P \land Q) \equiv \lnot P \lor \lnot Q$ \\
+  $\lnot (P \lor Q) \equiv \lnot P \land \lnot Q$
+}
+
+
+\section{Necessary and Sufficient Conditions}
+
+\dfn{Necessary condition}{
+  A proposition $P$ is a \textbf{necessary condition} for a proposition $Q$ if $Q$ is true only when $P$ is true.
+}
+
+\dfn{Sufficient condition}{
+  A proposition $P$ is a \textbf{sufficient condition} for a proposition $Q$ if $P$ being true guarantees that $Q$ is true.
+}
+
+\section{Tautologies}
+
+\dfn{Tautology}{
+  A proposition that is always true, regardless of the truth values of its operands, is called a \textbf{tautology}.
+}
+
+\ex{Tautologies}{
+  A propositional formula p is logically equivalent to q if and only if p $\iff$ q is a tautology.
+}
+
+\chapter{Logical Arguments}
+
+\dfn{Argument}{
+  An arguement (form) is a (finite) sequence of statements (forms), usually written as follows: 
+  \begin{align*}
+    P_1 \\
+    \vdots \\
+    P_n \\
+    \because q
+  \end{align*}
+
+  We call $P_1, \ldots, P_n$ the \textbf{premises} and $q$ the \textbf{conclusion}.\\
+  "$ p_{1}, p_{2}, p_{n}$ therefore $q$" OR "From premises $p_{1}, p_{2}, p_{n}$, we can conclude $q$."
+}
+\nt{
+  Arguement forms are also called inference rules. \\
+  An inference rule is said to be valid, or (logically sound), if it is the case that, for each truth valuation, if all the premises are true, tehn the conclusion is also true. \\
+  Theorem: An argument is valid if and only if the corresponding argument form is a tautology.
+}
+
+\nt{
+  If not all the premises are true, then the argument is vacuously true; it is neither valid nor invalid. Validity can only be assessed when all premises are true and determined whether the conclusion is true or false.
+}
+
+\dfn{Syllogism}{
+  A syllogism is a form of reasoning in which a conclusion is drawn from two given or assumed propositions (premises).
+}
+
+\subsection{Determining the validity or invalidity of an argument}
+
+\thm{Formula to determine validity}{
+  \begin{enumerate}
+    \item Identify the premises and conclusion of the argument form. 
+    \item Construct the truth table showing the truth values for all the premises and the conclusion. 
+    \item A row of the table in which \textbf{all the premises are true is called a critical row}. \textit{If there is a critical row in which the conclusion is false, then the arguement is invalid.} If the conclusion in every critical row is true, then the argument form is valid.
+  \end{enumerate}
+}
+
+
+\end{document}
