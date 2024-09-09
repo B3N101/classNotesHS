@@ -1,0 +1,144 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{CSE 215}\\Homework 6}
+\author{\huge{Ben Feuer}}
+\date{June 10th, 2024}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+
+\qs{Problem 1}{
+  $$ U = {\text{natural numbers}}; A = {2, 4, 6, 8, 10}; B = {1, 3, 6, 7, 8} $$ 
+  State whether each of the following is true or false:
+  \\
+  a) $2 \in A$ \\
+  Answer: True \\
+  b) $11 \in B$ \\
+  Answer: False \\
+  c) $4 \notin B$ \\
+  Answer: True \\
+  d) $A \in U$ \\
+  Answer: True \\
+}
+
+\qs{Problem 2}{
+  $$ U = R; A = {4, \sqrt{2} , \frac{2}{3}, -2.5, -5, 33, \sqrt{9}, \pi } $$
+
+  Using the $ {\dots} $ set notation, write the sets of: \\
+  (a) natural numbers in A \\
+  Answer: $ \{ 4, 33, \sqrt{9}  \} = \{ 4, 33, 3 \} $ \\
+  (b) integers in A \\
+  Answer: $ \{ 4, -5, 33, \sqrt{9} \} = \{ 4, -5, 33, 3  \} $ \\
+  (c) rational numbers in A \\
+  Answer: $ \{ 4, \frac{2}{3}, -2.5, -5, 33, \sqrt{9} \} = \{ 4, \frac{2}{3}, -2.5, -5, 33, 3 \} $
+  (d) irrational numbers in A \\
+  Answer: $ \{ \sqrt{2}, \pi \} $ \\
+}
+
+
+\begin{figure}[t!]
+  \begin{center} 
+    \includegraphics[width=0.95\textwidth]{figures/venn_diagram.png}
+  \end{center}
+\end{figure}
+
+\newpage
+\qs{Problem 3}{
+ $$ U = {a, b, c, d, e, f, g, h}; P = {c, f}; Q = {a, c, d, e, f, h}; R = {c, d, h} $$
+
+  (a) Draw a Venn diagram, showing these sets with all the elements entered into the appropriate regions. If necessary, redraw the diagram to eliminate any empty regions. \\
+  Answer: Diagram is shown above. \\
+  
+
+  (b) Which of sets P, Q and R are proper subsets of others? Write your answer(s) using the $ \subset $ symbol. \\
+  Answer: $ P \subset Q, R \subset Q, Q \subset U, R \subset U, P \subset U$ \\
+  (c) P and R are disjoint sets. True or False? \\
+  Answer: False
+}
+
+\qs{Problem 4}{
+  $$ U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10} $$ 
+  $$ A = {2, 4, 6, 8, 10} $$  
+  $$ B = {1, 3, 6, 7, 8} $$ 
+  $$ C = {3, 7} $$
+
+(a) Illustrate the sets U, A, B and C in a Venn diagram, marking all the elements in the appropriate places. \\
+(Note: if any region in your diagram does not contain any elements, re-draw the set loops to correct this.) \\
+Answer: Diagram is shown above. \\
+
+(b) Using your Venn diagram, list the elements in each of the following sets: \\
+(i) $ A \cap B = {6, 8}  $ \\
+(ii) $ A \cup B = {1, 2, 3, 4, 6, 7, 8, 10} $ \\
+(iii) $ A^C = {1, 3, 5, 7, 9} $ \\
+(iv) $ B^C = {2, 4, 5, 9, 10} $ \\
+(v) $ B \cap A^C = {1, 3, 7} $ \\
+(vi) $ B \cap C^C = {1, 6, 7, 8 } $ \\
+(vii) $ A - B = {2, 4, 10} $
+
+}
+\begin{figure}[t!]
+  \begin{center} 
+    \includegraphics[width=0.95\textwidth]{figures/venn_diagram2.png}
+  \end{center}
+\end{figure}
+
+\newpage
+
+\qs{Problem 5}{
+  In a group of 100 students, 72 students can speak English and 43 students can speak Hindi. Based on these data, answer the following questions: \\ \\
+  a) Find the number of students who can speak English only.\\
+  Answer: 57 \\
+  b) Find the number of students who can speak Hindi only. \\
+  Answer: 28 \\
+  c) Find the number of students who can speak both English and Hindi. \\
+  Answer: 15
+}
+
+\qs{Problem 6}{
+ There are 350 farmers in a large region. 260 farm beetroot, 100 farm yams, 70 farm radish, 40 farm beetroot and radish, 40 farm yams and radish, and 30 farm beetroot and yams. Let B, Y, and R denote the set of farms that farm beetroot, yams and radish respectively. \\
+
+Determine the number of farmers that farm beetroot, yams, and radish  \\
+$$ |B| = 260 $$ 
+$$ |Y| = 100 $$ 
+$$ |R| = 70 $$ 
+$$ |B \cup Y \cup R| = 350 $$ 
+$$ |B \cap R| = 40 $$
+$$ |Y \cap R| = 40 $$ 
+$$ |B \cap Y| = 30 $$
+$$ B \cup Y \cup R| = |B| + |Y| + |R| - |B \cap Y| - |B \cap R| - |Y \cap R| + |B \cap Y \cap R| $$
+$$ |B \cap Y \cap R| = 30 $$ 
+}
+
+\qs{Problem 7}{
+  List all the elements of a set of integers described as: \\
+
+a) $ (0, 3) \to  \{ 1, 2 \} $ \\
+
+b) $ (0, 3] \to \{ 1, 2, 3 \} $ \\
+
+c) $ [0, 3) \to \{ 0, 1, 2 \} $ \\
+
+d) $ [0, 3] \to \{ 0, 1, 2, 3 \} $ \\
+}
+
+\qs{Problem 8}{
+  If A is a set of real numbers described as (0, 3] and B is a set of real numbers described as [1, 7), what are: \\
+  \begin{itemize}
+    \item $ A \cap B = [1, 3] $ 
+    \item $ A \cup B = (0,7) $
+    \item $ A^C = (-\infty, 0] \cup (3, \infty) $ 
+    \item $ B^C = (-\infty, 1) \cup [7, \infty) $ 
+    \item $ B \cap A^C = (3, 7) $
+    \item $ A - B = (0, 1) $
+  \end{itemize}
+}
+
+\end{document}

@@ -1,0 +1,175 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{CSE 215 Homework 8}}
+\author{\huge{Ben Feuer}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\qs{Problem 1}{
+  Let A be the set of all strings of length 6 consisting of x's and y's. Then A is denoted $\sum^6$ where $\sum = \{x,y\}$. Define a binary relation R from A to A as follows:
+  \\
+  For all strings s and t in A, $s R t \iff$ the first four characters of s equal the first four characters of t.
+  \\ \\
+  a) Is xxyxyx R xxxyxy ? \\
+  Answer: No, because the first four characters of xxyxyx are xxyx, and the first four characters of xxxyxy are xxxy, which are not equal. \\
+  \\
+  b) Is yxyyyx R yxyyxy? \\
+  Answer: Yes, because the first four characters of yxyyyx are yxyy, and the first four characters of yxyyxy are yxyy, which are equal. \\
+  \\
+  c) Is xyxxxx R yxxxxx? \\
+  Answer: No, because the first four characters of xyxxxx are xyxx, and the first four characters of yxxxxx are yxxx, which are not equal.
+}
+
+\qs{Problem 2}{
+  Let A = { 2, 3, 4 } and B = { 6, 8, 10 } and define a binary relation R from A to B as follows: \\
+  for all $(x, y) \in A \times B, (x, y) \in R \iff x | y$.
+  \\ \\
+  a) Is 4 R 6? \\
+  Answer: No, because 4 does not divide 6. \\ \\
+  b) Is 4 R 8? \\
+  Answer: Yes, because 4 divides 8, and 4 is in A and 8 is in B. \\ \\
+  c) Is $(3, 8) \in R$? Is $(2, 10) \in R$? \\
+  Answer: No and Yes, respectively. 3 does not divide 8, but 2 divides 10. \\ \\
+  d) Write R as a set of ordered pairs. \\
+  Answer: $R = \{(2, 6), (2, 8), (2, 10), (3, 6), (4, 8)\}$ \\
+  Equal to the set of ordered pairs where the first element divides the second element.
+}
+
+\qs{Problem 3}{
+  Prove that for all integers m and n, m - n is even if and only if both m and n are even or both m and n are odd. \\
+
+  $$  m - n = 2k \iff (m = 2i \land n = 2j) \lor (m = 2i + 1 \land n = 2j + 1) $$
+  
+  \begin{align*}
+    \equiv [(m-n) = 2k \implies (m = 2i \land n = 2j) \lor (m = 2i + 1 \land n = 2j + 1)] \\
+    \land [(m=2i \land n = 2j) \lor (m = 2i + 1 \lor n = 2j+1) \implies (m-n) = 2k]
+  \end{align*}
+
+  Proof: \\
+  Case 1: m and n are both even. \\
+  Let $m = 2i$ and $n = 2j$. \\
+  Then $m - n = 2i - 2j = 2(i - j) = 2k$ where $k = i - j$. \\
+  Thus, if m and n are both even, then m - n is even. \\
+
+  Case 2: m and n are both odd. \\
+  Let $m = 2i + 1$ and $n = 2j + 1$. \\
+  Then $m - n = 2i + 1 - 2j - 1 = 2(i - j) = 2k$ where $k = i - j$. \\
+  Thus, if m and n are both odd, then m - n is even. \\
+
+  Case 3: m is even and n is odd. \\
+  Let $m = 2i$ and $n = 2j + 1$. \\
+  Then $m - n = 2i - 2j - 1 = 2(i - j) - 1 = 2k - 1$ where $k = i - j$. \\
+  Thus, if m is even and n is odd, then m - n is odd. \\
+
+  Case 4: m is odd and n is even. \\
+  Let $m = 2i + 1$ and $n = 2j$. \\
+  Then $m - n = 2i + 1 - 2j = 2(i - j) + 1 = 2k + 1$ where $k = i - j$. \\
+  Thus, if m is odd and n is even, then m - n is odd. \\
+
+  Therefore, m - n is even if and only if both m and n are even or both m and n are odd.
+}
+
+\qs{Problem 4}{
+  Declare a binary relation S from R to R as: \\
+  For all $(x, y) \in R \times R$, $x S y \iff x \ge y$. \\
+  Draw the graph of S in the Cartesian plane. \\
+  Graph below where the area below the line $y = x$ is shaded in red, including the line itself.
+}
+
+\begin{figure}[b!]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/p4Graph.png}
+  \end{center}
+  \caption{Graph for problem 4}\label{fig:p4Graph}
+\end{figure}
+
+\newpage
+
+
+\qs{Problem 5}{
+  Define a binary relation T from R to R as follows: \\
+  For all $(x, y) \in R \times R, x T y \iff y = x^2$. \\
+  Draw the graph of T in the Cartesian plane. \\
+  Answer: The graph of T is the line of the parabola $y = x^2$ which is shown below.
+}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/p5Graph.png}
+  \end{center}
+  \caption{Graph for problem 5}\label{fig:p5Graph}
+\end{figure}
+
+
+\qs{Problem 6}{
+  For the following relations, 1) draw the directed graph, 2) determine whether it is reflexive, symmetric, and transitive. Give a counterexample in each case in which the relation does not satisfy one of these properties.
+
+  \textbf{All graphs are shown below.} \\
+  a) $R_{1} = \{(0, 0), (0, 1), (0, 3), (1, 1), (1, 0), (2, 3), (3, 3)\} $ \\
+  Answer: not reflexive, not symmetric, not transitive. \\
+  Reflexivity: (2, 2) is not in the relation. \\
+  Symmetry: (0, 3) is in the relation, but (3, 0) is not. \\
+  Transitivity: (1,3) is missing but (1, 0) and (0, 3) are present. \\ \\
+  b) $R_{2} = \{(2, 3), (3, 2)\} $ \\
+  Answer: not reflexive, symmetric, transitive. \\
+  Reflexivity: (2, 2) and (3, 3) are not in the relation. \\
+  Symmetry: No counterexample. \\
+  Transitivity: Vacuously transitive. \\ \\
+  c) $R_{3} = \{(0, 1), (0, 2)\} $ \\
+  Answer: not reflexive, not symmetric, transitive. \\
+  Reflexivity: (0, 0) is not in the relation. \\
+  Symmetry: (0, 1) is in the relation, but (1, 0) is not. \\
+  Transitivity: Vacuously transitive.
+}
+\newpage
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{figures/p6GraphA.png}
+  \end{center}
+  \caption{Graph for problem 6 A}\label{fig:p6GraphA}
+\end{figure}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{figures/p6GraphB.png}
+  \end{center}
+  \caption{Graph for problem 6 B}\label{fig:p6GraphB}
+\end{figure}
+
+\newpage
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{figures/p6GraphC.png}
+  \end{center}
+  \caption{Graph for problem 6 C}\label{fig:p6GraphC}
+\end{figure}
+
+
+\qs{Problem 7}{
+  D is the binary relation defined on R as follows: \\
+  For all $ x, y \in R, x D y \iff xy \ge 0 $. \\ \\
+  a) Draw a Cartesian Graph of the relation. \\
+  Answer: The graph is shown below. \\
+  b) Is it Reflexive? \\
+  Answer: Yes, because all real numbers multiplied by themselves are greater than or equal to 0, meaning that all real numbers are related to themselves. \\
+  c) Is it Symmetric? \\
+  Answer: Yes, because if $ xy \ge 0 $, then $ yx \ge 0 $, so the relation is symmetric. \\
+  d) Is it Transitive? \\
+  Answer: Yes, because if $ xy \ge 0 $ and $ yz \ge 0 $, then $ xz \ge 0 $, so the relation is transitive as x and z must have the same sign, meaning that their product is greater than or equal to 0.
+}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.25\textwidth]{figures/p7Graph.png}
+  \end{center}
+  \caption{Graph for problem 7}\label{fig:p7Graph}
+\end{figure}
+
+\end{document}
