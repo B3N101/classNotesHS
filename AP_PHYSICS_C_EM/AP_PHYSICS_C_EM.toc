@@ -1,72 +1,72 @@
-\contentsline {chapter}{\numberline {1}Electrostatics}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Electric Charge, Electric Force, and Electric Field}{3}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Electric Charge}{3}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Conductors and Insulators}{4}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Polarization}{4}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Coulomb's Law / Electric Force}{5}{subsection.1.1.4}%
-\contentsline {subsection}{\numberline {1.1.5}Electric Field}{6}{subsection.1.1.5}%
-\contentsline {subsection}{\numberline {1.1.6}Calculating Electric Field}{7}{subsection.1.1.6}%
-\contentsline {subsection}{\numberline {1.1.7}Electric Field from Electric Dipole}{8}{subsection.1.1.7}%
-\contentsline {subsection}{\numberline {1.1.8}Electric Field Lines}{9}{subsection.1.1.8}%
-\contentsline {subsection}{\numberline {1.1.9}Electric Flux}{9}{subsection.1.1.9}%
-\contentsline {subsection}{\numberline {1.1.10}Parallel Plate Capacitors}{9}{subsection.1.1.10}%
-\contentsline {section}{\numberline {1.2}Electric Potential Energy}{10}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Electric Potential}{11}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Voltage}{12}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Equipotential Surfaces \& Lines}{13}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Conductors and Equipotential Surfaces}{13}{subsection.1.3.3}%
-\contentsline {subsection}{\numberline {1.3.4}Electric Potential on and in a conducting sphere}{13}{subsection.1.3.4}%
-\contentsline {subsection}{\numberline {1.3.5}Electric Potential on and in a non-conducting sphere}{14}{subsection.1.3.5}%
-\contentsline {section}{\numberline {1.4}Capacitance}{14}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Parallel Plate Capacitors}{15}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Energy Stored in a Capacitor}{16}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Dielectrics}{17}{subsection.1.4.3}%
-\contentsline {chapter}{\numberline {2}Circuits}{19}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Circuits with Capacitors}{19}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Parallel Capacitor Circuits}{19}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}Electric Current}{19}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Thermal Effects of Current}{20}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Drift Motion}{20}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Current Density}{20}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Direct Current vs. Alternating Current}{20}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Resistance and Resistivity}{21}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Ohm's Law}{21}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Resistors in Series}{22}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Resistors in Parallel}{23}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Kirchhoff's Rules}{23}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Terminal Voltage}{24}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}RC Circuits}{24}{subsection.2.3.6}%
-\contentsline {subsubsection}{RC Time Constant}{24}{section*.2}%
-\contentsline {subsubsection}{Charging a Capacitor}{25}{section*.3}%
-\contentsline {subsubsection}{Charge, Current, and Voltage in a Charging Capacitor}{25}{section*.4}%
-\contentsline {subsubsection}{Discharging a Capacitor}{26}{section*.5}%
-\contentsline {subsubsection}{Charge, Current, and Voltage in a Discharging Capacitor}{26}{section*.6}%
-\contentsline {chapter}{\numberline {3}Magnetism}{27}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Magnetic Fields and Forces}{27}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Magnetic Fields}{27}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Magnetic Force on a Moving Charge}{27}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Trajectories of Charged Particles}{27}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Velocity Selector}{28}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Lorentz Force}{28}{subsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.1.6}Hall Effect}{28}{subsection.3.1.6}%
-\contentsline {subsection}{\numberline {3.1.7}Compass Needles}{28}{subsection.3.1.7}%
-\contentsline {section}{\numberline {3.2}Magnetic Materials}{28}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Magnetic Force \& Torque on Currents}{29}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Magnetic Force on a Current-Carrying Wire}{29}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Torque on a Current Loop}{29}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Magnetic Dipole Moment}{30}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Work Done By a Magnetic Field on a Current Loop}{30}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Finding the Magnetic Field}{30}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Magnetic Constant}{30}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Boit-Savant Law}{31}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Ampere's Law}{31}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Solenoids and Toroids}{32}{subsection.3.4.4}%
-\contentsline {chapter}{\numberline {4}Electromagnetic Induction}{33}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Magnetic Flux}{33}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Faraday's Law}{34}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Lenz's Law}{34}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Inductor Circuits}{34}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}LR Circuits}{34}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}LC Circuits}{34}{subsection.4.4.2}%
-\contentsline {chapter}{\numberline {5}Maxwell's Equations}{35}{chapter.5}%
+\contentsline {chapter}{\numberline {1}Electrostatics}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Electric Charge, Electric Force, and Electric Field}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Electric Charge}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Conductors and Insulators}{5}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Polarization}{5}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Coulomb's Law / Electric Force}{6}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Electric Field}{7}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}Calculating Electric Field}{8}{subsection.1.1.6}%
+\contentsline {subsection}{\numberline {1.1.7}Electric Field from Electric Dipole}{9}{subsection.1.1.7}%
+\contentsline {subsection}{\numberline {1.1.8}Electric Field Lines}{10}{subsection.1.1.8}%
+\contentsline {subsection}{\numberline {1.1.9}Electric Flux}{10}{subsection.1.1.9}%
+\contentsline {subsection}{\numberline {1.1.10}Parallel Plate Capacitors}{10}{subsection.1.1.10}%
+\contentsline {section}{\numberline {1.2}Electric Potential Energy}{11}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Electric Potential}{12}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Voltage}{13}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Equipotential Surfaces \& Lines}{14}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Conductors and Equipotential Surfaces}{14}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Electric Potential on and in a conducting sphere}{14}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}Electric Potential on and in a non-conducting sphere}{15}{subsection.1.3.5}%
+\contentsline {section}{\numberline {1.4}Capacitance}{15}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Parallel Plate Capacitors}{16}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Energy Stored in a Capacitor}{17}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Dielectrics}{18}{subsection.1.4.3}%
+\contentsline {chapter}{\numberline {2}Circuits}{20}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Circuits with Capacitors}{20}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Parallel Capacitor Circuits}{20}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Electric Current}{20}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Thermal Effects of Current}{21}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Drift Motion}{21}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Current Density}{21}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Direct Current vs. Alternating Current}{21}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Resistance and Resistivity}{22}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Ohm's Law}{22}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Resistors in Series}{23}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Resistors in Parallel}{24}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Kirchhoff's Rules}{24}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Terminal Voltage}{25}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}RC Circuits}{25}{subsection.2.3.6}%
+\contentsline {subsubsection}{RC Time Constant}{25}{section*.2}%
+\contentsline {subsubsection}{Charging a Capacitor}{26}{section*.3}%
+\contentsline {subsubsection}{Charge, Current, and Voltage in a Charging Capacitor}{26}{section*.4}%
+\contentsline {subsubsection}{Discharging a Capacitor}{27}{section*.5}%
+\contentsline {subsubsection}{Charge, Current, and Voltage in a Discharging Capacitor}{27}{section*.6}%
+\contentsline {chapter}{\numberline {3}Magnetism}{28}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Magnetic Fields and Forces}{28}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Magnetic Fields}{28}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Magnetic Force on a Moving Charge}{28}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Trajectories of Charged Particles}{28}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Velocity Selector}{29}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Lorentz Force}{29}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Hall Effect}{29}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Compass Needles}{29}{subsection.3.1.7}%
+\contentsline {section}{\numberline {3.2}Magnetic Materials}{29}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Magnetic Force \& Torque on Currents}{30}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Magnetic Force on a Current-Carrying Wire}{30}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Torque on a Current Loop}{30}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Magnetic Dipole Moment}{31}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Work Done By a Magnetic Field on a Current Loop}{31}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Finding the Magnetic Field}{31}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Magnetic Constant}{31}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Boit-Savant Law}{32}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Ampere's Law}{32}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Solenoids and Toroids}{33}{subsection.3.4.4}%
+\contentsline {chapter}{\numberline {4}Electromagnetic Induction}{34}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Magnetic Flux}{34}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Faraday's Law}{35}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Lenz's Law}{35}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Inductor Circuits}{35}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}LR Circuits}{35}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}LC Circuits}{35}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}Maxwell's Equations}{36}{chapter.5}%
 \contentsfinish 

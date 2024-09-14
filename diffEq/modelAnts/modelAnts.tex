@@ -1,0 +1,79 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Differential Equations}\\Modeling Ants}
+\author{\huge{Ben Feuer and Eva Zhao}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Candidate Functions}
+
+$$ T(x) = kx + 2^x c $$ 
+$$ T(x) = kx + 2cx^2 $$
+$$ T(x) = kx + 2cx^3 $$ 
+
+\section*{Evaluating example models}
+a. $ T(x + h) - T(x) = x + h $ \\
+This model makes sense, but would be better if x was multiplied by 2 to signify the trip back and forth taken when the ants need to dig more. \\ \\
+b. $ T(x + h) - T(x) = x - h $ \\
+This doesn't make sense because the larger the h the more time it should take. \\ \\
+c. $ T(x + h) - T(x) = x^h $ \\
+This doesn't make sense because the amount of h is minimal and should not affect the time it takes to dig. \\ \\
+d. $ T(x + h) - T(x) = x \cdot h $ \\
+This makes some sense because the larger the value of x the more time an increasing level of h takes to dig. However, it would make more sense if it was multiplied by some constant k.\\ \\
+e. $ T(x + h) - T(x) = h^x $ \\
+This doesn't make sense because the amount of h should not affect the time it takes to dig. \\ \\
+f. $ T(x + h) - T(x) = c $ \\
+This doesn't make sense because the time will be increased for a longer tunnel because the ants will have to spend more time crawling. 
+
+\section*{Creating a differential equation}
+
+Task: Convert your model difference equation (1.26) to a related differential equation with appropriate initial conditions. It may be helpful to consider the familiar expression $\frac{T(x+h)-T(x)}{h}$ and what happens as h approaches 0. \\ \\
+Let: $ T(x + h ) - T(x) = kx \cdot h $ \\
+$$ \lim_{h \to 0} \frac{T(x+h)-T(x)}{h} = \lim_{h \to 0} \frac{kx \cdot h}{h} = kx $$
+$$ \frac{dT}{dx} = kx $$
+
+\section*{Solving the differential equation}
+Task: Solve the differential equation you created in the previous task. \\ \\
+
+$$ \frac{dT}{dx} = kx $$ 
+$$ \int dT = \int kx dx $$ 
+$$ T(x) = \frac{kx^2}{2} + C $$ 
+
+$$ T(0) = 0 \text{ (because the time it takes to dig a tunnel of length 0 is 0)} $$
+$$ T(x) = \frac{kx^2}{2} $$
+
+\section*{Doubling the length, then what is the increase in time?}
+
+Our model: $ T(2x) - T(x) = \frac{k(2x)^2}{2} - \frac{kx^2}{2} =  2kx^2 - 0.5kx^2 = 1.5kx^2 $ \\
+a. $ T(x+x) - T(x) = x + x = 2x $ \\
+b. $ T(x+x) - T(x) = x - x = 0 $ \\
+c. $ T(x+x) - T(x) = x^x $ \\
+d. $ T(x+x) - T(x) = x \cdot x = x^2 $ \\
+e. $ T(x+x) - T(x) = x^x $ \\
+f. $ T(x+x) - T(x) = c $ \\
+
+\section*{Two ants from opposite sides}
+Task: Suppose two ants dig from opposite sides of the sand hill, directly toward each other along the same straight line. How would this alter the total time for digging the tunnel? \\ \\ 
+In this scenario, the two ants both dig $ \frac{1}{2} x $, meaning that $t = T(x/2)$ compared to the normal amount of $ t = T(x) $. \\
+Time when they dig from opposite sides: $ T(\frac{x}{2}) = \frac{k \frac{x}{2}^2}{2} = \frac{kx^2}{8} $ 
+Time normally: $T(x) = \frac{kx^2}{2} $ 
+
+
+\section*{Engineering Equivalency}
+Task: Evaluate the following - Of course, the same principles can be applied to model tunnel building for engineers. If we were considering the two ants scenario as related to engineering the construction of a long tunnel of length L, outline some of the issues we should be aware of when having two crews (one from each end of the tunnel) working on it. \\ \\ 
+Issues: \\
+\begin{enumerate}
+  \item Keeping both boring machines on the same line. 
+  \item Making sure each machine completes one half of the total length L. 
+  \item Keeping both crews on the same schedule/speed.
+\end{enumerate}
+
+
+\end{document}
